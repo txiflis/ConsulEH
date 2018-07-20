@@ -1,0 +1,35 @@
+I"Ä(function() {
+  App.Managers = {
+    generatePassword: function() {
+      var chars, i, pass, x;
+      chars = 'aAbcdeEfghiJkmnpqrstuUvwxyz23456789';
+      pass = '';
+      x = 0;
+      while (x < 12) {
+        i = Math.floor(Math.random() * chars.length);
+        pass += chars.charAt(i);
+        x++;
+      }
+      return pass;
+    },
+    togglePassword: function(type) {
+      return $('#user_password').prop('type', type);
+    },
+    initialize: function() {
+      $(".generate-random-value").on("click", function(event) {
+        var password;
+        password = App.Managers.generatePassword();
+        return $('#user_password').val(password);
+      });
+      return $(".show-password").on("click", function(event) {
+        if ($("#user_password").is("input[type='password']")) {
+          return App.Managers.togglePassword('text');
+        } else {
+          return App.Managers.togglePassword('password');
+        }
+      });
+    }
+  };
+
+}).call(this);
+:ET

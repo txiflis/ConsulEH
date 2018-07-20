@@ -1,0 +1,11 @@
+I"ß(function() {
+  App.SendNewsletterAlert = {
+    initialize: function() {
+      return $('#js-send-newsletter-alert').on('click', function() {
+        return confirm(this.dataset.alert);
+      });
+    }
+  };
+
+}).call(this);
+:ET
