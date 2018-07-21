@@ -3,6 +3,10 @@ require 'rails_helper'
 feature 'Officing Results' do
 
   background do
+<<<<<<< HEAD
+=======
+    travel_to Time.now # TODO: use `freeze_time` after migrating to Rails 5.
+>>>>>>> v0.16
     @poll_officer = create(:poll_officer)
     @officer_assignment = create(:poll_officer_assignment, :final, officer: @poll_officer)
     @poll = @officer_assignment.booth_assignment.poll
@@ -17,6 +21,13 @@ feature 'Officing Results' do
     login_as(@poll_officer.user)
   end
 
+<<<<<<< HEAD
+=======
+  after do
+    travel_back
+  end
+
+>>>>>>> v0.16
   scenario 'Only polls where user is officer for results are accessible' do
     regular_officer_assignment_1 = create(:poll_officer_assignment, officer: @poll_officer)
     regular_officer_assignment_2 = create(:poll_officer_assignment, officer: @poll_officer)

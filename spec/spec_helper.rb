@@ -18,6 +18,10 @@ RSpec.configure do |config|
   config.include(EmailSpec::Helpers)
   config.include(EmailSpec::Matchers)
   config.include(CommonActions)
+<<<<<<< HEAD
+=======
+  config.include(ActiveSupport::Testing::TimeHelpers)
+>>>>>>> v0.16
   config.before(:suite) do
     DatabaseCleaner.clean_with :truncation
   end
@@ -41,6 +45,10 @@ RSpec.configure do |config|
   config.before do |example|
     DatabaseCleaner.strategy = :transaction
     I18n.locale = :en
+<<<<<<< HEAD
+=======
+    Globalize.locale = I18n.locale
+>>>>>>> v0.16
     load Rails.root.join('db', 'seeds.rb').to_s
     Setting["feature.user.skip_verification"] = nil
   end

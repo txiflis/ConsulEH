@@ -26,4 +26,8 @@ module Polymorphic
       send("#{resource_name}_params")
     end
 
+<<<<<<< HEAD
 end
+=======
+end
+>>>>>>> v0.16

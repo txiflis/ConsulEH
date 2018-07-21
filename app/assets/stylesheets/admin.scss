@@ -27,6 +27,13 @@ $sidebar-active: #f4fcd0;
     font-weight: 100;
     margin-bottom: $line-height;
 
+<<<<<<< HEAD
+=======
+    small {
+      color: $text-medium;
+    }
+
+>>>>>>> v0.16
     &.title {
       text-transform: uppercase;
     }
@@ -58,6 +65,44 @@ $sidebar-active: #f4fcd0;
       box-shadow: 0 2px 2px #eee;
     }
 
+<<<<<<< HEAD
+=======
+    @include breakpoint(small only) {
+
+      .top-bar-left ul {
+        display: inline-block;
+      }
+
+      .top-bar-right {
+
+        .submenu {
+          border: 0;
+          display: block;
+          margin-top: 0;
+          position: initial;
+          width: 100%;
+        }
+
+        .is-active {
+          font-weight: normal;
+          text-decoration: none;
+        }
+
+        .is-submenu-item {
+          padding: $line-height / 2 0;
+        }
+
+        a {
+          font-weight: normal !important;
+        }
+      }
+
+      [class^="icon-"] {
+        display: none;
+      }
+    }
+
+>>>>>>> v0.16
     [class^="icon-"]:not(.icon-circle) {
       font-size: $base-font-size;
     }
@@ -244,6 +289,10 @@ $sidebar-active: #f4fcd0;
 }
 
 .admin-content {
+<<<<<<< HEAD
+=======
+  overflow: scroll;
+>>>>>>> v0.16
   padding: $line-height !important;
 }
 
@@ -526,7 +575,11 @@ $sidebar-active: #f4fcd0;
 
 .account-info,
 .login-as {
+<<<<<<< HEAD
   background-color: #e7e7e7;
+=======
+  background-color: $highlight;
+>>>>>>> v0.16
   border-radius: rem-calc(3);
   font-size: rem-calc(16);
   font-weight: normal;
@@ -598,6 +651,10 @@ $sidebar-active: #f4fcd0;
 .admin-content .select-heading {
 
   a {
+<<<<<<< HEAD
+=======
+    color: $text;
+>>>>>>> v0.16
     display: block;
 
     &.is-active {
@@ -633,6 +690,13 @@ $sidebar-active: #f4fcd0;
   }
 }
 
+<<<<<<< HEAD
+=======
+.management-list {
+  max-width: rem-calc(1200);
+}
+
+>>>>>>> v0.16
 // 06. Polls
 // -----------------
 
@@ -711,6 +775,7 @@ table {
   }
 }
 
+<<<<<<< HEAD
 .legislation-process-index {
 
   .legislation-process-new {
@@ -720,6 +785,8 @@ table {
   }
 }
 
+=======
+>>>>>>> v0.16
 // 08. CMS
 // --------------
 .cms-page-list {
@@ -1129,6 +1196,20 @@ table {
   }
 }
 
+<<<<<<< HEAD
+=======
+.max-headings-label {
+  color: $text-medium;
+  font-size: $small-font-size;
+  margin-left: $line-height / 2;
+}
+
+.current-of-max-headings {
+  color: #000;
+  font-weight: bold;
+}
+
+>>>>>>> v0.16
 // 11. Newsletters
 // -----------------
 

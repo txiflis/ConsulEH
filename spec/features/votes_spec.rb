@@ -83,6 +83,15 @@ feature 'Votes' do
         visit debate_path(create(:debate))
 
         find('.in-favor a').click
+<<<<<<< HEAD
+=======
+
+        within('.in-favor') do
+          expect(page).to have_content "100%"
+          expect(page).to have_css("a.voted")
+        end
+
+>>>>>>> v0.16
         find('.against a').click
 
         within('.in-favor') do

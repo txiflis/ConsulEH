@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="<%= I18n.locale %>" data-current-user-id="<%= current_user.try(:id) %>">
   <head>
+<<<<<<< HEAD
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -15,6 +16,15 @@
     <%= javascript_include_tag "application", 'data-turbolinks-track' => true %>
     <%= csrf_meta_tags %>
     <%= favicon_link_tag "favicon.ico" %>
+=======
+    <%= render "layouts/common_head", default_title: setting['org_name'] %>
+    <%= render "layouts/tracking_data" %>
+    <%= render "layouts/meta_tags" %>
+    <%= content_for :canonical %>
+    <!--[if lt IE 9]>
+      <%= stylesheet_link_tag "ie" %>
+    <![endif]-->
+>>>>>>> v0.16
     <%= favicon_link_tag image_path_for("apple-touch-icon-200.png"),
                      rel: "icon apple-touch-icon",
                      sizes: "200x200",

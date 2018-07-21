@@ -9,7 +9,11 @@ feature 'EmailVerifications' do
 
     visit management_document_verifications_path
     fill_in 'document_verification_document_number', with: '12345678Z'
+<<<<<<< HEAD
     click_button 'Check'
+=======
+    click_button 'Check document'
+>>>>>>> v0.16
 
     expect(page).to have_content "Please introduce the email used on the account"
 

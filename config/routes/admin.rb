@@ -38,6 +38,16 @@ namespace :admin do
     get :summary, on: :collection
   end
 
+<<<<<<< HEAD
+=======
+  resources :proposal_notifications, only: :index do
+    member do
+      put :restore
+      put :confirm_hide
+    end
+  end
+
+>>>>>>> v0.16
   resources :budgets do
     member do
       put :calculate_winners
@@ -55,6 +65,11 @@ namespace :admin do
     resources :budget_phases, only: [:edit, :update]
   end
 
+<<<<<<< HEAD
+=======
+  resources :budget_investment_statuses, only: [:index, :new, :create, :update, :edit, :destroy]
+
+>>>>>>> v0.16
   resources :signature_sheets, only: [:index, :new, :create, :show]
 
   resources :banners, only: [:index, :new, :create, :edit, :update, :destroy] do

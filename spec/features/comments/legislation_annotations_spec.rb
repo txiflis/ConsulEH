@@ -553,6 +553,14 @@ feature 'Commenting legislation questions' do
 
       within("#comment_#{@comment.id}_votes") do
         find('.in_favor a').click
+<<<<<<< HEAD
+=======
+
+        within('.in_favor') do
+          expect(page).to have_content "1"
+        end
+
+>>>>>>> v0.16
         find('.against a').click
 
         within('.in_favor') do

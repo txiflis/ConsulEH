@@ -20,6 +20,12 @@ es:
       email_on_direct_message_label: Recibir emails con mensajes privados
       email_digest_label: Recibir resumen de notificaciones sobre propuestas
       official_position_badge_label: Mostrar etiqueta de tipo de usuario
+<<<<<<< HEAD
+=======
+      recommendations: Recomendaciones
+      show_debates_recommendations: Mostrar recomendaciones en el listado de debates
+      show_proposals_recommendations: Mostrar recomendaciones en el listado de propuestas
+>>>>>>> v0.16
       title: Mi cuenta
       user_permission_debates: Participar en debates
       user_permission_info: Con tu cuenta ya puedes...
@@ -110,6 +116,13 @@ es:
       recommendations:
         without_results: No existen debates relacionados con tus intereses
         without_interests: Sigue propuestas para que podamos darte recomendaciones
+<<<<<<< HEAD
+=======
+        disable: "Si ocultas las recomendaciones para debates, no se volverán a mostrar. Puedes volver a activarlas en 'Mi cuenta'"
+        actions:
+          success: "Las recomendaciones de debates han sido desactivadas"
+          error: "Ha ocurrido un error. Por favor dirígete al apartado 'Mi cuenta' para desactivar las recomendaciones manualmente"
+>>>>>>> v0.16
       search_form:
         button: Buscar
         placeholder: Buscar debates...
@@ -361,6 +374,13 @@ es:
       recommendations:
         without_results: No existen propuestas relacionadas con tus intereses
         without_interests: Sigue propuestas para que podamos darte recomendaciones
+<<<<<<< HEAD
+=======
+        disable: "Si ocultas las recomendaciones para propuestas, no se volverán a mostrar. Puedes volver a activarlas en 'Mi cuenta'"
+        actions:
+          success: "Las recomendaciones de propuestas han sido desactivadas"
+          error: "Ha ocurrido un error. Por favor dirígete al apartado 'Mi cuenta' para desactivar las recomendaciones manualmente"
+>>>>>>> v0.16
       retired_proposals: Propuestas retiradas
       retired_proposals_link: "Propuestas retiradas por sus autores"
       retired_links:
@@ -505,7 +525,10 @@ es:
       zoom_plus: Ampliar imagen
       read_more: "Leer más sobre %{answer}"
       read_less: "Leer menos sobre %{answer}"
+<<<<<<< HEAD
       participate_in_other_polls: Participar en otras votaciones
+=======
+>>>>>>> v0.16
       videos: "Vídeo externo"
       info_menu: "Información"
       stats_menu: "Estadísticas de participación"
@@ -632,6 +655,13 @@ es:
       title: Modo de vista
       cards: Tarjetas
       list: Lista
+<<<<<<< HEAD
+=======
+    recommended_index:
+        title: Recomendaciones
+        see_more: Ver más recomendaciones
+        hide: Ocultar recomendaciones
+>>>>>>> v0.16
   social:
     blog: "Blog de %{org}"
     facebook: "Facebook de %{org}"
@@ -845,4 +875,15 @@ es:
       budget_investment: "Proyecto de gasto"
   admin/widget:
     header:
+<<<<<<< HEAD
       title: Administración
+=======
+      title: Administración
+  annotator:
+    help:
+      alt: Selecciona el texto que quieres comentar y pulsa en el botón con el lápiz.
+      text: Para comentar este documento debes %{sign_in} o %{sign_up}. Después selecciona el texto que quieres comentar y pulsa en el botón con el lápiz.
+      text_sign_in: iniciar sesión
+      text_sign_up: registrarte
+      title: "¿Cómo puedo comentar este documento?"
+>>>>>>> v0.16

@@ -1,5 +1,6 @@
 module Consul
   class Application < Rails::Application
+<<<<<<< HEAD
 
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
@@ -38,5 +39,7 @@ module Consul
     config.autoload_paths << "#{Rails.root}/app/controllers/custom"
     config.autoload_paths << "#{Rails.root}/app/models/custom"
     config.paths['app/views'].unshift(Rails.root.join('app', 'views', 'custom'))
+=======
+>>>>>>> v0.16
   end
 end

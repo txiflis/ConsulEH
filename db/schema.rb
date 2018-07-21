@@ -11,7 +11,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 20180519132610) do
+=======
+ActiveRecord::Schema.define(version: 20180711224810) do
+>>>>>>> v0.16
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -63,8 +67,20 @@ ActiveRecord::Schema.define(version: 20180519132610) do
   add_index "annotations", ["legacy_legislation_id"], name: "index_annotations_on_legacy_legislation_id", using: :btree
   add_index "annotations", ["user_id"], name: "index_annotations_on_user_id", using: :btree
 
+<<<<<<< HEAD
   create_table "banners", force: :cascade do |t|
     t.string   "title",           limit: 80
+=======
+  create_table "banner_sections", force: :cascade do |t|
+    t.integer  "banner_id"
+    t.integer  "web_section_id"
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
+  end
+
+  create_table "banners", force: :cascade do |t|
+    t.string   "title",            limit: 80
+>>>>>>> v0.16
     t.string   "description"
     t.string   "target_url"
     t.string   "style"
@@ -72,8 +88,15 @@ ActiveRecord::Schema.define(version: 20180519132610) do
     t.date     "post_started_at"
     t.date     "post_ended_at"
     t.datetime "hidden_at"
+<<<<<<< HEAD
     t.datetime "created_at",                 null: false
     t.datetime "updated_at",                 null: false
+=======
+    t.datetime "created_at",                  null: false
+    t.datetime "updated_at",                  null: false
+    t.text     "background_color"
+    t.text     "font_color"
+>>>>>>> v0.16
   end
 
   add_index "banners", ["hidden_at"], name: "index_banners_on_hidden_at", using: :btree
@@ -137,8 +160,26 @@ ActiveRecord::Schema.define(version: 20180519132610) do
     t.datetime "created_at",                  null: false
     t.datetime "updated_at",                  null: false
     t.datetime "publication_date"
+<<<<<<< HEAD
   end
 
+=======
+    t.integer  "status_id"
+  end
+
+  add_index "budget_investment_milestones", ["status_id"], name: "index_budget_investment_milestones_on_status_id", using: :btree
+
+  create_table "budget_investment_statuses", force: :cascade do |t|
+    t.string   "name"
+    t.text     "description"
+    t.datetime "hidden_at"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  add_index "budget_investment_statuses", ["hidden_at"], name: "index_budget_investment_statuses_on_hidden_at", using: :btree
+
+>>>>>>> v0.16
   create_table "budget_investments", force: :cascade do |t|
     t.integer  "author_id"
     t.integer  "administrator_id"
@@ -861,8 +902,17 @@ ActiveRecord::Schema.define(version: 20180519132610) do
     t.text     "body"
     t.integer  "author_id"
     t.integer  "proposal_id"
+<<<<<<< HEAD
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
+=======
+    t.datetime "created_at",                        null: false
+    t.datetime "updated_at",                        null: false
+    t.boolean  "moderated",         default: false
+    t.datetime "hidden_at"
+    t.datetime "ignored_at"
+    t.datetime "confirmed_hide_at"
+>>>>>>> v0.16
   end
 
   create_table "proposals", force: :cascade do |t|
@@ -1130,6 +1180,11 @@ ActiveRecord::Schema.define(version: 20180519132610) do
     t.integer  "failed_email_digests_count",                default: 0
     t.text     "former_users_data_log",                     default: ""
     t.boolean  "public_interests",                          default: false
+<<<<<<< HEAD
+=======
+    t.boolean  "recommended_debates",                       default: true
+    t.boolean  "recommended_proposals",                     default: true
+>>>>>>> v0.16
   end
 
   add_index "users", ["confirmation_token"], name: "index_users_on_confirmation_token", unique: true, using: :btree
@@ -1241,6 +1296,15 @@ ActiveRecord::Schema.define(version: 20180519132610) do
     t.datetime "updated_at",             null: false
   end
 
+<<<<<<< HEAD
+=======
+  create_table "web_sections", force: :cascade do |t|
+    t.text     "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+>>>>>>> v0.16
   add_foreign_key "administrators", "users"
   add_foreign_key "annotations", "legacy_legislations"
   add_foreign_key "annotations", "users"

@@ -152,13 +152,21 @@ class Budget < ActiveRecord::Base
   end
 
   def email_selected
+<<<<<<< HEAD
     investments.selected.each do |investment|
+=======
+    investments.selected.order(:id).each do |investment|
+>>>>>>> v0.16
       Mailer.budget_investment_selected(investment).deliver_later
     end
   end
 
   def email_unselected
+<<<<<<< HEAD
     investments.unselected.each do |investment|
+=======
+    investments.unselected.order(:id).each do |investment|
+>>>>>>> v0.16
       Mailer.budget_investment_unselected(investment).deliver_later
     end
   end

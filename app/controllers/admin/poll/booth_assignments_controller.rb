@@ -55,7 +55,11 @@ class Admin::Poll::BoothAssignmentsController < Admin::Poll::BaseController
   end
 
   def manage
+<<<<<<< HEAD
     @booths = ::Poll::Booth.all
+=======
+    @booths = ::Poll::Booth.all.order(name: :asc).page(params[:page]).per(300)
+>>>>>>> v0.16
     @poll = Poll.find(params[:poll_id])
   end
 

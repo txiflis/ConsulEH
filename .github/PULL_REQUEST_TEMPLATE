@@ -1,4 +1,5 @@
 References
+<<<<<<< HEAD
 ==========
 > Add references to related Issues/Pull Requests/Travis Builds/Rollbar errors/etc...
 
@@ -8,10 +9,25 @@ Objectives
 
 Visual Changes (if any)
 =======================
+=======
+===================
+> Add references to related Issues/Pull Requests/Travis Builds/Rollbar errors/etc...
+
+Objectives
+===================
+> What are the objectives of this changes? (If there is no related Issue with an explanation)
+
+Visual Changes
+===================
+>>>>>>> v0.16
 > Any visual changes? please attach screenshots (or gifs) showing them.
 > If modified views are public (not the admin panel), try them in mobile display (with your browser's developer console) and add screenshots.
 
 Notes
+<<<<<<< HEAD
 =====================
+=======
+===================
+>>>>>>> v0.16
 > Mention rake tasks or actions to be done when deploying this changes to a server (if any).
 > Explain any caveats, or important things to notice like deprecations (if any).

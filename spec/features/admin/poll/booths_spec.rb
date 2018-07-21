@@ -14,7 +14,11 @@ feature 'Admin booths' do
       click_link "Booths location"
     end
 
+<<<<<<< HEAD
     expect(page).to have_content "There are no booths"
+=======
+    expect(page).to have_content "There are no active booths for any upcoming poll."
+>>>>>>> v0.16
   end
 
   scenario 'Index' do

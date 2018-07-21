@@ -18,7 +18,11 @@ feature 'Managed User' do
 
       visit management_document_verifications_path
       fill_in 'document_verification_document_number', with: user.document_number
+<<<<<<< HEAD
       click_button 'Check'
+=======
+      click_button 'Check document'
+>>>>>>> v0.16
 
       expect(page).to have_content "already verified"
 
@@ -35,7 +39,11 @@ feature 'Managed User' do
 
       visit management_document_verifications_path
       fill_in 'document_verification_document_number', with: user.document_number
+<<<<<<< HEAD
       click_button 'Check'
+=======
+      click_button 'Check document'
+>>>>>>> v0.16
 
       expect(page).to have_content "Vote proposals"
 
@@ -58,7 +66,11 @@ feature 'Managed User' do
 
       visit management_document_verifications_path
       fill_in 'document_verification_document_number', with: '12345678Z'
+<<<<<<< HEAD
       click_button 'Check'
+=======
+      click_button 'Check document'
+>>>>>>> v0.16
 
       within(".account-info") do
         expect(page).not_to have_content "Identified as"
@@ -89,7 +101,11 @@ feature 'Managed User' do
 
       visit management_document_verifications_path
       fill_in 'document_verification_document_number', with: '12345678Z'
+<<<<<<< HEAD
       click_button 'Check'
+=======
+      click_button 'Check document'
+>>>>>>> v0.16
 
       expect(page).to have_content "Please introduce the email used on the account"
 
@@ -117,7 +133,11 @@ feature 'Managed User' do
 
       visit management_document_verifications_path
       fill_in 'document_verification_document_number', with: '12345678Z'
+<<<<<<< HEAD
       click_button 'Check'
+=======
+      click_button 'Check document'
+>>>>>>> v0.16
 
       expect(page).to have_content "Please introduce the email used on the account"
 
@@ -145,7 +165,11 @@ feature 'Managed User' do
 
     visit management_document_verifications_path
     fill_in 'document_verification_document_number', with: user.document_number
+<<<<<<< HEAD
     click_button 'Check'
+=======
+    click_button 'Check document'
+>>>>>>> v0.16
 
     expect(page).to have_content "already verified"
 

@@ -10,5 +10,9 @@ resources :debates do
   collection do
     get :map
     get :suggest
+<<<<<<< HEAD
+=======
+    put 'recommendations/disable', only: :index, controller: 'debates', action: :disable_recommendations
+>>>>>>> v0.16
   end
 end

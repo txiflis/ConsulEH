@@ -6,6 +6,10 @@ es:
       index:
         title: Presidir mesa de votaciones
         info: Aquí puedes validar documentos de ciudadanos y guardar los resultados de las urnas
+<<<<<<< HEAD
+=======
+        no_shifts: No tienes turnos de presidente de mesa asignados hoy.
+>>>>>>> v0.16
     menu:
       voters: Validar documento y votar
       total_recounts: Recuento total y escrutinio
@@ -57,6 +61,10 @@ es:
         table_poll: Votación
         table_status: Estado de las votaciones
         table_actions: Acciones
+<<<<<<< HEAD
+=======
+        not_to_vote: La persona ha decidido no votar por el momento
+>>>>>>> v0.16
       show:
         can_vote: Puede votar
         error_already_voted: Ya ha participado en esta votación.

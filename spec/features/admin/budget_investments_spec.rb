@@ -91,6 +91,7 @@ feature 'Admin budget investments' do
       end
     end
 
+<<<<<<< HEAD
     scenario 'Display valuator group assignments' do
       budget_investment1 = create(:budget_investment, budget: budget)
       budget_investment2 = create(:budget_investment, budget: budget)
@@ -118,6 +119,8 @@ feature 'Admin budget investments' do
       end
     end
 
+=======
+>>>>>>> v0.16
     scenario "Filtering by budget heading", :js do
       group1 = create(:budget_group, name: "Streets", budget: budget)
       group2 = create(:budget_group, name: "Parks", budget: budget)
@@ -1056,7 +1059,11 @@ feature 'Admin budget investments' do
 
       visit admin_budget_budget_investments_path(budget)
 
+<<<<<<< HEAD
       expect(page).not_to have_css("#budget_investment_visible_to_valuators")
+=======
+      expect(page).to have_css("#budget_investment_visible_to_valuators")
+>>>>>>> v0.16
 
       within('#filter-subnav') { click_link 'Under valuation' }
 
@@ -1127,4 +1134,97 @@ feature 'Admin budget investments' do
     end
   end
 
+<<<<<<< HEAD
+=======
+  context "Mark as visible to valuators" do
+
+    let(:valuator) { create(:valuator) }
+    let(:admin) { create(:administrator) }
+
+    let(:group) { create(:budget_group, budget: budget) }
+    let(:heading) { create(:budget_heading, group: group) }
+
+    let(:investment1) { create(:budget_investment, heading: heading) }
+    let(:investment2) { create(:budget_investment, heading: heading) }
+
+    scenario "Mark as visible to valuator", :js do
+      investment1.valuators << valuator
+      investment2.valuators << valuator
+      investment1.update(administrator: admin)
+      investment2.update(administrator: admin)
+
+      visit admin_budget_budget_investments_path(budget)
+
+      within("#budget_investment_#{investment1.id}") do
+        check "budget_investment_visible_to_valuators"
+      end
+
+      visit admin_budget_budget_investments_path(budget)
+      within('#filter-subnav') { click_link 'Under valuation' }
+
+      within("#budget_investment_#{investment1.id}") do
+        expect(find("#budget_investment_visible_to_valuators")).to be_checked
+      end
+    end
+
+    scenario "Unmark as visible to valuator", :js do
+      budget.update(phase: 'valuating')
+
+      valuator = create(:valuator)
+      admin = create(:administrator)
+
+      group = create(:budget_group, budget: budget)
+      heading = create(:budget_heading, group: group)
+
+      investment1 = create(:budget_investment, heading: heading, visible_to_valuators: true)
+      investment2 = create(:budget_investment, heading: heading, visible_to_valuators: true)
+
+      investment1.valuators << valuator
+      investment2.valuators << valuator
+      investment1.update(administrator: admin)
+      investment2.update(administrator: admin)
+
+      visit admin_budget_budget_investments_path(budget)
+      within('#filter-subnav') { click_link 'Under valuation' }
+
+      within("#budget_investment_#{investment1.id}") do
+        uncheck "budget_investment_visible_to_valuators"
+      end
+
+      visit admin_budget_budget_investments_path(budget)
+
+      within("#budget_investment_#{investment1.id}") do
+        expect(find("#budget_investment_visible_to_valuators")).not_to be_checked
+      end
+    end
+
+    scenario "Showing the valuating checkbox" do
+      investment1 = create(:budget_investment, budget: budget, visible_to_valuators: true)
+      investment2 = create(:budget_investment, budget: budget, visible_to_valuators: false)
+
+      investment1.valuators << create(:valuator)
+      investment2.valuators << create(:valuator)
+      investment2.valuators << create(:valuator)
+      investment1.update(administrator: create(:administrator))
+      investment2.update(administrator: create(:administrator))
+
+      visit admin_budget_budget_investments_path(budget)
+
+      expect(page).to have_css("#budget_investment_visible_to_valuators")
+
+      within('#filter-subnav') { click_link 'Under valuation' }
+
+      within("#budget_investment_#{investment1.id}") do
+        valuating_checkbox = find('#budget_investment_visible_to_valuators')
+        expect(valuating_checkbox).to be_checked
+      end
+
+      within("#budget_investment_#{investment2.id}") do
+        valuating_checkbox = find('#budget_investment_visible_to_valuators')
+        expect(valuating_checkbox).not_to be_checked
+      end
+    end
+  end
+
+>>>>>>> v0.16
 end

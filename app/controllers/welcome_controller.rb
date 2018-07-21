@@ -8,6 +8,10 @@ class WelcomeController < ApplicationController
     @header = Widget::Card.header.first
     @feeds = Widget::Feed.active
     @cards = Widget::Card.body
+<<<<<<< HEAD
+=======
+    @banners = Banner.in_section('homepage').with_active
+>>>>>>> v0.16
   end
 
   def welcome

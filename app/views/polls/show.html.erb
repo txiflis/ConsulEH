@@ -31,8 +31,11 @@
           <%= t('poll_questions.show.voted_token') %>
         </div>
       <% end %>
+<<<<<<< HEAD
 
       <%= link_to t("polls.show.participate_in_other_polls"), polls_path, class: "button hollow" %>
+=======
+>>>>>>> v0.16
     </div>
   </div>
 
@@ -124,10 +127,17 @@
 
   </div>
 
+<<<<<<< HEAD
   <div class="tabs-content" data-tabs-content="polls_tabs" role="tablist">
     <%= render "filter_subnav" %>
 
     <div class="tabs-panel is-active" id="tab-comments" role="tab">
+=======
+  <div class="tabs-content" data-tabs-content="polls_tabs">
+    <%= render "filter_subnav" %>
+
+    <div class="tabs-panel is-active" id="tab-comments">
+>>>>>>> v0.16
       <%= render "comments" %>
     </div>
   </div>

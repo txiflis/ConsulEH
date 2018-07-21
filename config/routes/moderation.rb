@@ -22,4 +22,12 @@ namespace :moderation do
     put :hide, on: :member
     put :moderate, on: :collection
   end
+<<<<<<< HEAD
+=======
+
+  resources :proposal_notifications, only: :index do
+    put :hide, on: :member
+    put :moderate, on: :collection
+  end
+>>>>>>> v0.16
 end

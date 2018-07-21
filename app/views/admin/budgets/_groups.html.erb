@@ -1,4 +1,5 @@
 <h3 class="inline-block"><%= t('admin.budgets.show.groups', count: groups.count) %></h3>
+<<<<<<< HEAD
 <% if groups.blank? %>
   <div class="callout primary">
     <%= t("admin.budgets.form.no_groups") %>
@@ -11,6 +12,22 @@
 <% end %>
 
 <%= render 'admin/budgets/group_form', budget: @budget, group: Budget::Group.new, id: "new-group-form", button_title: t("admin.budgets.form.create_group"), css_class: '' %>
+=======
+<%= link_to t("admin.budgets.form.add_group"), "#", class: "button float-right js-toggle-link", data: { "toggle-selector" => "#new-group-form" } %>
+
+<% if groups.blank? %>
+  <div class="callout primary clear">
+    <%= t("admin.budgets.form.no_groups") %>
+  </div>
+<% end %>
+
+<%= render 'admin/budgets/group_form',
+            budget: @budget,
+            group: Budget::Group.new,
+            id: "new-group-form",
+            button_title: t("admin.budgets.form.create_group"),
+            css_class: '' %>
+>>>>>>> v0.16
 
 <% groups.each do |group| %>
   <div id="<%= dom_id(group) %>">

@@ -13,6 +13,12 @@ es:
       budget/investment/milestone:
         one: "hito"
         other: "hitos"
+<<<<<<< HEAD
+=======
+      budget/investment/status:
+        one: "Estado de proyecto"
+        other: "Estados de proyecto"
+>>>>>>> v0.16
       comment:
         one: "Comentario"
         other: "Comentarios"
@@ -100,6 +106,12 @@ es:
       poll:
         one: "Votación"
         other: "Votaciones"
+<<<<<<< HEAD
+=======
+      proposal_notification:
+        one: "Notificación de propuesta"
+        other: "Notificaciones de propuestas"
+>>>>>>> v0.16
     attributes:
       budget:
         name: "Nombre"
@@ -123,9 +135,19 @@ es:
         image: "Imagen descriptiva del proyecto de gasto"
         image_title: "Título de la imagen"
       budget/investment/milestone:
+<<<<<<< HEAD
         title: "Título"
         description: "Descripción"
         publication_date: "Fecha de publicación"
+=======
+        status_id: "Estado actual del proyecto (opcional)"
+        title: "Título"
+        description: "Descripción (opcional si se ha asignado un estado de proyecto)"
+        publication_date: "Fecha de publicación"
+      budget/investment/status:
+        name: "Nombre"
+        description: "Descripción (opcional)"
+>>>>>>> v0.16
       budget/heading:
         name: "Nombre de la partida"
         price: "Cantidad"
@@ -201,6 +223,10 @@ es:
         body: Contenido
       legislation/process:
         title: Título del proceso
+<<<<<<< HEAD
+=======
+        summary: Resumen
+>>>>>>> v0.16
         description: En qué consiste
         additional_info: Información adicional
         start_date: Fecha de inicio del proceso

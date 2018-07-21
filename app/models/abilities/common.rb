@@ -94,6 +94,11 @@ module Abilities
 
       can [:create], Topic
       can [:update, :destroy], Topic, author_id: user.id
+<<<<<<< HEAD
+=======
+
+      can :disable_recommendations, [Debate, Proposal]
+>>>>>>> v0.16
     end
   end
 end

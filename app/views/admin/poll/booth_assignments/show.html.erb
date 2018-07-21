@@ -12,6 +12,7 @@
   </p>
 <% end %>
 
+<<<<<<< HEAD
 <div class="tabs-content" data-tabs-content="booths-tabs" role="tablist">
   <ul class="tabs" data-tabs id="booths-tabs">
     <li class="tabs-title">
@@ -26,6 +27,27 @@
   </ul>
 
   <div class="tabs-panel" id="tab-officers" role="tab">
+=======
+<ul class="tabs" id="booths_tabs"
+    data-deep-link="true"
+    data-update-history="true"
+    data-deep-link-smudge="true"
+    data-deep-link-smudge-delay="500"
+    data-tabs>
+  <li class="tabs-title">
+    <%= link_to t("admin.poll_booth_assignments.show.officers"), "#tab-officers" %>
+  </li>
+  <li class="tabs-title">
+    <%= link_to t("admin.poll_booth_assignments.show.recounts"), "#tab-recounts" %>
+  </li>
+  <li class="tabs-title is-active">
+    <%= link_to t("admin.poll_booth_assignments.show.results"), "#tab-results" %>
+  </li>
+</ul>
+
+<div class="tabs-content" data-tabs-content="booths_tabs">
+  <div class="tabs-panel" id="tab-officers">
+>>>>>>> v0.16
     <% if @booth_assignment.officers.empty? %>
       <div class="callout primary margin-top">
         <%= t("admin.poll_booth_assignments.show.no_officers") %>
@@ -46,7 +68,11 @@
     <% end %>
   </div>
 
+<<<<<<< HEAD
   <div class="tabs-panel" id="tab-recounts" role="tab">
+=======
+  <div class="tabs-panel" id="tab-recounts">
+>>>>>>> v0.16
     <h3><%= t("admin.poll_booth_assignments.show.recounts_list") %></h3>
 
     <table id="totals">
@@ -86,7 +112,11 @@
       </tbody>
     </table>
   </div>
+<<<<<<< HEAD
   <div class="tabs-panel is-active" id="tab-results" role="tab">
+=======
+  <div class="tabs-panel is-active" id="tab-results">
+>>>>>>> v0.16
     <%= render "results" %>
   </div>
 </div>

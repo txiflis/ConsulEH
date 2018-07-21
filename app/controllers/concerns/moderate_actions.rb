@@ -57,4 +57,8 @@ module ModerateActions
       :author_id
     end
 
+<<<<<<< HEAD
 end
+=======
+end
+>>>>>>> v0.16

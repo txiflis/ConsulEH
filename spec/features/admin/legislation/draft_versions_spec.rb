@@ -26,7 +26,11 @@ feature 'Admin legislation draft versions' do
       visit admin_legislation_processes_path(filter: 'all')
 
       click_link 'An example legislation process'
+<<<<<<< HEAD
       click_link 'Text'
+=======
+      click_link 'Drafting'
+>>>>>>> v0.16
       click_link 'Version 1'
 
       expect(page).to have_content(draft_version.title)
@@ -49,7 +53,11 @@ feature 'Admin legislation draft versions' do
       expect(page).to have_content 'An example legislation process'
 
       click_link 'An example legislation process'
+<<<<<<< HEAD
       click_link 'Text'
+=======
+      click_link 'Drafting'
+>>>>>>> v0.16
 
       click_link 'Create version'
 
@@ -82,7 +90,11 @@ feature 'Admin legislation draft versions' do
       expect(page).to have_content 'An example legislation process'
 
       click_link 'An example legislation process'
+<<<<<<< HEAD
       click_link 'Text'
+=======
+      click_link 'Drafting'
+>>>>>>> v0.16
 
       click_link 'Version 1'
 

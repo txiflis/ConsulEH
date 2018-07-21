@@ -2,11 +2,24 @@
   <section class="small-12 medium-9 column">
     <div class="account-info">
 
+<<<<<<< HEAD
       <%= link_to(t("management.account_info.change_user"), logout_management_users_path, method: :delete, class: 'float-right change-user') %>
 
       <% if managed_user.level_two_or_three_verified? %>
         <p>
           <%= t("management.account_info.identified_label") %>
+=======
+      <%= link_to(t("management.account_info.change_user"),
+                    logout_management_users_path,
+                    method: :delete,
+                    class: "float-right btchange-user button hollow") %>
+
+      <% if managed_user.level_two_or_three_verified? %>
+        <p>
+          <strong>
+            <%= t("management.account_info.identified_label") %>
+          </strong>
+>>>>>>> v0.16
         </p>
       <% end %>
 

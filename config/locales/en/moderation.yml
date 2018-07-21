@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 ---
+=======
+>>>>>>> v0.16
 en:
   moderation:
     comments:
@@ -48,6 +51,10 @@ en:
       flagged_comments: Comments
       flagged_debates: Debates
       proposals: Proposals
+<<<<<<< HEAD
+=======
+      proposal_notifications: Proposals notifications
+>>>>>>> v0.16
       users: Block users
     proposals:
       index:
@@ -68,6 +75,28 @@ en:
           created_at: Most recent
           flags: Most flagged
         title: Proposals
+<<<<<<< HEAD
+=======
+    proposal_notifications:
+      index:
+        block_authors: Block authors
+        confirm: Are you sure?
+        filter: Filter
+        filters:
+          all: All
+          pending_review: Pending review
+          ignored: Mark as viewed
+        headers:
+          moderate: Moderate
+          proposal_notification: Proposal notification
+        hide_proposal_notifications: Hide proposals
+        ignore_flags: Mark as viewed
+        order: Order by
+        orders:
+          created_at: Most recent
+          moderated: Moderated
+        title: Proposal notifications
+>>>>>>> v0.16
     users:
       index:
         hidden: Blocked
@@ -75,4 +104,8 @@ en:
         search: Search
         search_placeholder: email or name of user
         title: Block users
+<<<<<<< HEAD
       notice_hide: User blocked. All of this user's debates and comments have been hidden.
+=======
+      notice_hide: User blocked. All of this user's debates and comments have been hidden.
+>>>>>>> v0.16
