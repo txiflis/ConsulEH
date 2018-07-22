@@ -1,7 +1,3 @@
-<<<<<<< HEAD
----
-=======
->>>>>>> v0.16
 en:
   helpers:
     page_entries_info:
@@ -23,8 +19,4 @@ en:
       last: Last
       next: Next
       previous: Previous
-<<<<<<< HEAD
       truncate: "&hellip;"
-=======
-      truncate: "&hellip;"
->>>>>>> v0.16

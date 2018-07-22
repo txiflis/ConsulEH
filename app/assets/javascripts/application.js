@@ -33,10 +33,7 @@
 //= require moderator_comment
 //= require moderator_debates
 //= require moderator_proposals
-<<<<<<< HEAD
-=======
 //= require moderator_proposal_notifications
->>>>>>> v0.16
 //= require prevent_double_submission
 //= require gettext
 //= require annotator

@@ -43,11 +43,16 @@ eu-ES:
       user:
         recommendations: Gomendioak
         skip_verification: Erabiltzaileen egiaztapena saltatu
+        recommendations_on_debates: Gomendioak eztabaidetan
+        recommendations_on_proposals: Gomendioak proposamenetan
       community: Proposamen eta gastu proiektuen komunitatea
       map: Proposamen eta gastu proiektuen geokokapena
       allow_images: Irudiak igotea eta erakustea baimendu
       allow_attached_documents: Itsatsitako domumentuak sortzea baimendu
-    map_latitude: Latitudeaea
+      guides: Inbertsio proiektuak edo proposamenak sortzko gidak
+      public_stats: Estatistika publikoak
+    related_content_score_threshold: Erlazionatutako edukiaren puntuazio muga
+    map_latitude: Latitudea
     map_londotude: Londotudea
     map_zoom: Zoom
     mailer_from_name: Bidaltzaile email izena

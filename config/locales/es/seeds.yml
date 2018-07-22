@@ -36,8 +36,6 @@ es:
       groups:
         all_city: Toda la Ciudad
         districts: Distritos
-<<<<<<< HEAD
-=======
       valuator_groups:
         culture_and_sports: Cultura y Deportes
         gender_and_diversity: Políticas de Género y Diversidad
@@ -48,15 +46,10 @@ es:
         bidding: Licitación
         executing_project: Ejecutando el proyecto
         executed: Ejecutado
->>>>>>> v0.16
     polls:
       current_poll: "Votación Abierta"
       current_poll_geozone_restricted: "Votación Abierta restringida por geozona"
       incoming_poll: "Siguiente Votación"
       recounting_poll: "Votación en Recuento"
       expired_poll_without_stats: "Votación Finalizada (sin Estadísticas o Resultados)"
-<<<<<<< HEAD
       expired_poll_with_stats: "Votación Finalizada (con Estadísticas y Resultado)"
-=======
-      expired_poll_with_stats: "Votación Finalizada (con Estadísticas y Resultado)"
->>>>>>> v0.16

@@ -6,6 +6,7 @@ eu-ES:
       index:
         title: Bozka mahaiburua
         info: Hemen herri agiriak egiaztatu eta hautetsontzien emaitzak gorde ditzakezu
+        no_shifts: Gaur ez duzu mahaiburu txandarik esleituta.
     menu:
       voters: Agiria egiaztatu eta bozkatu 
       total_recounts: Zenbaketa
@@ -57,6 +58,7 @@ eu-ES:
         table_poll: Bozkaketa
         table_status: Bozkaketen egoera
         table_actions: Ekintzak
+        not_to_vote: Pertsonak momentuz ez bozkatzea erabaki du
       show:
         can_vote: Bozka dezakezu
         error_already_voted: Jadanik bozkaketa honetan parte hartu duzu.

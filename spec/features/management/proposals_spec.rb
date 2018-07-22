@@ -159,10 +159,7 @@ feature 'Proposals' do
       click_link "Support proposals"
 
       within(".proposals-list") { click_link proposal.title }
-<<<<<<< HEAD
-=======
       expect(page).to have_content proposal.code
->>>>>>> v0.16
       within("#proposal_#{proposal.id}_votes") { click_link('Support') }
 
       expect(page).to have_content "1 support"

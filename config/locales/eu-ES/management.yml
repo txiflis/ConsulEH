@@ -17,7 +17,7 @@ eu-ES:
           reset_email_send: Emaila ondo bidalita.
           reseted: Pahahitza ondo berrezarrita
           random: Zorizko pasahitza sortu
-          save: Gorde
+          save: Pasahitza gorde
           print: Pasahitza inprimatu
           print_help: Pasahitza gordetzen denean inprimatu ahalko duzu.
     account_info:
@@ -27,7 +27,7 @@ eu-ES:
       email_label: 'Emaila:'
       identified_label: 'Izen identifikatzailea:'
       username_label: 'Erabiltzailea:'
-    check: Egiaztatu
+    check: Agiria egiaztatu
     dashboard:
       index:
         title: Kudeaketa
@@ -68,9 +68,9 @@ eu-ES:
       create_budget_investment: Gastu proiektuak sortu
       print_budget_investments: Gastu proiektuak inprimatu
       support_budget_investments: Gastu proiektuak babestu
-      users: Erabiltzaileak
-      edit_user_accounts: Erabiltzaile kontua editatu
-      user_invites: Gonbidapenak erabiltzaileentzat
+      users: Erabiltzaile kudeaketa
+      user_invites: Gonbidapenak bidali
+      select_user: Erabiltzailea aukeratu
     permissions:
       create_proposals: Proposamen berriak sortu
       debates: Eztabaidetan parte hartu
@@ -91,10 +91,16 @@ eu-ES:
       create_proposal: Proposamena sortu
       print:
         print_button: Inprimitu
+      index:
+        title: Apoyar propuestas
     budgets:
-      create_new_investment: Proiektu berria sortu
-      print_investments: Proiektuak inprimitu
-      support_investments: Proiektuak babestu
+      create_new_investment: Gastu proiektu berriak sortu
+      print_investments: Gastu proiektuak inprimatu
+      support_investments: Gastu proiektuak babestu
+      table_name: Izena
+      table_phase: Fasea
+      table_actions: Ekintzak
+      no_budgets: Ez dago partaidetzazko aurrekontu aktiborik.
     budget_investments:
       alert:
         unverified_user: Erabiltzaile hau ez dago egiaztatuta
@@ -140,8 +146,8 @@ eu-ES:
       new:
         label: Emailak
         info: "Emailak koma bibez banatuta sartu (',')"
-        submit: Gonbidapenak bialdu
+        submit: Gonbidapenak bidali
         title: Erabiltzaileentzako gonbidapenak
       create:
         success_html: <strong>%{count} gonbidapen</strong> bidali dira.
-        title: Erabiltzaileentzako gonbidapenak
+        title: Gonbidapenak bidali

@@ -10,8 +10,6 @@
       </span>
     <% end %>
 
-<<<<<<< HEAD
-=======
     <% if milestone.status.present? %>
       <p>
         <strong>
@@ -24,7 +22,6 @@
       </p>
     <% end %>
 
->>>>>>> v0.16
     <%= image_tag(milestone.image_url(:large), { id: "image_#{milestone.id}", alt: milestone.image.title, class: "margin" }) if milestone.image.present? %>
 
     <% globalize(neutral_locale(locale)) do %>

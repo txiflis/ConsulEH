@@ -83,44 +83,22 @@
 
   <div class="row">
     <div class="small-12 medium-4 column">
-<<<<<<< HEAD
-      <label><%= t('admin.legislation.processes.form.allegations_phase') %></label>
-=======
       <label><%= t('admin.legislation.processes.form.proposals_phase') %></label>
->>>>>>> v0.16
     </div>
     <div class="small-12 medium-1 column legislation-process-start">
       <%= t('admin.legislation.processes.form.start') %>
     </div>
     <div class="small-12 medium-2 column">
-<<<<<<< HEAD
-      <%= f.text_field :allegations_start_date,
-                        label: false,
-                        value: format_date_for_calendar_form(@process.allegations_start_date),
-                        class: "js-calendar-full",
-                        id: "allegations_start_date" %>
-=======
       <%= f.text_field :proposals_phase_start_date,
                         label: false,
                         value: format_date_for_calendar_form(@process.proposals_phase_start_date),
                         class: "js-calendar-full",
                         id: "proposals_phase_start_date" %>
->>>>>>> v0.16
     </div>
     <div class="small-12 medium-1 column legislation-process-end">
       <%= t('admin.legislation.processes.form.end') %>
     </div>
     <div class="small-12 medium-2 column">
-<<<<<<< HEAD
-      <%= f.text_field :allegations_end_date,
-                        label: false,
-                        value: format_date_for_calendar_form(@process.allegations_end_date),
-                        class: "js-calendar-full",
-                        id: "allegations_end_date" %>
-    </div>
-    <div class="small-12 medium-2 column">
-      <%= f.check_box :allegations_phase_enabled, checked: @process.allegations_phase.enabled?, label: t('admin.legislation.processes.form.enabled') %>
-=======
       <%= f.text_field :proposals_phase_end_date,
                         label: false,
                         value: format_date_for_calendar_form(@process.proposals_phase_end_date),
@@ -129,7 +107,6 @@
     </div>
     <div class="small-12 medium-2 column">
       <%= f.check_box :proposals_phase_enabled, checked: @process.proposals_phase.enabled?, label: t('admin.legislation.processes.form.enabled') %>
->>>>>>> v0.16
     </div>
 
     <div class="small-12 column">
@@ -139,44 +116,22 @@
 
   <div class="row">
     <div class="small-12 medium-4 column">
-<<<<<<< HEAD
-      <label><%= t('admin.legislation.processes.form.proposals_phase') %></label>
-=======
       <label><%= t('admin.legislation.processes.form.allegations_phase') %></label>
->>>>>>> v0.16
     </div>
     <div class="small-12 medium-1 column legislation-process-start">
       <%= t('admin.legislation.processes.form.start') %>
     </div>
     <div class="small-12 medium-2 column">
-<<<<<<< HEAD
-      <%= f.text_field :proposals_phase_start_date,
-                        label: false,
-                        value: format_date_for_calendar_form(@process.proposals_phase_start_date),
-                        class: "js-calendar-full",
-                        id: "proposals_phase_start_date" %>
-=======
       <%= f.text_field :allegations_start_date,
                         label: false,
                         value: format_date_for_calendar_form(@process.allegations_start_date),
                         class: "js-calendar-full",
                         id: "allegations_start_date" %>
->>>>>>> v0.16
     </div>
     <div class="small-12 medium-1 column legislation-process-end">
       <%= t('admin.legislation.processes.form.end') %>
     </div>
     <div class="small-12 medium-2 column">
-<<<<<<< HEAD
-      <%= f.text_field :proposals_phase_end_date,
-                        label: false,
-                        value: format_date_for_calendar_form(@process.proposals_phase_end_date),
-                        class: "js-calendar-full",
-                        id: "proposals_phase_end_date" %>
-    </div>
-    <div class="small-12 medium-2 column">
-      <%= f.check_box :proposals_phase_enabled, checked: @process.proposals_phase.enabled?, label: t('admin.legislation.processes.form.enabled') %>
-=======
       <%= f.text_field :allegations_end_date,
                         label: false,
                         value: format_date_for_calendar_form(@process.allegations_end_date),
@@ -185,7 +140,6 @@
     </div>
     <div class="small-12 medium-2 column">
       <%= f.check_box :allegations_phase_enabled, checked: @process.allegations_phase.enabled?, label: t('admin.legislation.processes.form.enabled') %>
->>>>>>> v0.16
     </div>
 
     <div class="small-12 column">

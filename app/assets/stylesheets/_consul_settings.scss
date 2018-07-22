@@ -81,24 +81,6 @@ $button-radius: $global-radius;
 
 $font-family-serif: Georgia, 'Times New Roman', Times, serif;
 
-<<<<<<< HEAD
-$header-sizes: (
-  small: (
-    'h1': 34,
-    'h2': 24,
-    'h3': 20,
-    'h4': 18,
-    'h5': 16,
-    'h6': 14,
-  ),
-  medium: (
-    'h1': 44,
-    'h2': 34,
-    'h3': 24,
-    'h4': 19,
-    'h5': 16,
-    'h6': 13,
-=======
 $header-styles: (
   small: (
     'h1': ('font-size': 34),
@@ -115,7 +97,6 @@ $header-styles: (
     'h4': ('font-size': 19),
     'h5': ('font-size': 16),
     'h6': ('font-size': 13),
->>>>>>> v0.16
   ),
 );
 

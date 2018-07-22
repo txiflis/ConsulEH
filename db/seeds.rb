@@ -82,11 +82,8 @@ Setting['feature.budgets'] = true
 Setting['feature.signature_sheets'] = true
 Setting['feature.legislation'] = true
 Setting['feature.user.recommendations'] = true
-<<<<<<< HEAD
-=======
 Setting['feature.user.recommendations_on_debates'] = true
 Setting['feature.user.recommendations_on_proposals'] = true
->>>>>>> v0.16
 Setting['feature.community'] = true
 Setting['feature.map'] = nil
 Setting['feature.allow_images'] = true

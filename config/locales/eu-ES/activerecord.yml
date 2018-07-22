@@ -13,6 +13,9 @@ eu-ES:
       budget/investment/milestone:
         one: "gertaera garrantsitzua"
         other: "gertaera garrantsitzuak"
+      budget/investment/status:
+        one: "Proiektuaren egoera"
+        other: "Proiektuen egoerak"
       comment:
         one: "Iruzkina"
         other: "Iruzkinak"
@@ -100,6 +103,9 @@ eu-ES:
       poll:
         one: "Bozkaketa"
         other: "Bozkaketak"
+      proposal_notification:
+        one: "Proposamen jakinarazpena"
+        other: "Proposamen jakinarazpenak"
     attributes:
       budget:
         name: "Izena"
@@ -123,9 +129,13 @@ eu-ES:
         image: "Gastu proiektuaren irudi deskriptiboa"
         image_title: "Irudiaren izenburua"
       budget/investment/milestone:
+        status_id: "Proiektuaren oraingo egoera (aukerakoa)"
         title: "Izenburua"
-        description: "Deskribapena"
+        description: "Deskribapena (aukerakoa proiektu egoera esleitu izan bada)"
         publication_date: "Argitaratze data"
+      budget/investment/status:
+        name: "Izena"
+        description: "Deskribapena (aukerakoa)"
       budget/heading:
         name: "Aurrekontu sailaren izenburua"
         price: "Kantitatea"
@@ -201,6 +211,7 @@ eu-ES:
         body: Edukia
       legislation/process:
         title: Prosezu izenburua
+        summary: Laburpena
         description: Zertan datza
         additional_info: Gehigarrizko informazioa
         start_date: Prosezuaren hasiera data

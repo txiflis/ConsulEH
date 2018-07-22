@@ -52,8 +52,6 @@ module Abilities
 
       can :block, User
       cannot :block, User, id: user.id
-<<<<<<< HEAD
-=======
 
       can :hide, ProposalNotification, hidden_at: nil
       cannot :hide, ProposalNotification, author_id: user.id
@@ -65,7 +63,6 @@ module Abilities
       cannot :moderate, ProposalNotification, author_id: user.id
 
       can :index, ProposalNotification
->>>>>>> v0.16
     end
   end
 end

@@ -81,11 +81,7 @@ feature 'Admin comments' do
     comment = create(:comment, :hidden, body: 'SPAM')
     visit admin_comments_path
 
-<<<<<<< HEAD
-    click_link 'Confirm'
-=======
     click_link 'Confirm moderation'
->>>>>>> v0.16
 
     expect(page).not_to have_content(comment.body)
     click_link('Confirmed')

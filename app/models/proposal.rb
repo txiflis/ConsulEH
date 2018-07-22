@@ -36,20 +36,12 @@ class Proposal < ActiveRecord::Base
   validates :question, presence: true
   validates :summary, presence: true
   validates :author, presence: true
-<<<<<<< HEAD
-  validates :responsible_name, presence: true
-=======
   validates :responsible_name, presence: true, unless: :skip_user_verification?
->>>>>>> v0.16
 
   validates :title, length: { in: 4..Proposal.title_max_length }
   validates :description, length: { maximum: Proposal.description_max_length }
   validates :question, length: { in: 10..Proposal.question_max_length }
-<<<<<<< HEAD
-  validates :responsible_name, length: { in: 6..Proposal.responsible_name_max_length }
-=======
   validates :responsible_name, length: { in: 6..Proposal.responsible_name_max_length }, unless: :skip_user_verification?
->>>>>>> v0.16
   validates :retired_reason, inclusion: { in: RETIRE_OPTIONS, allow_nil: true }
 
   validates :terms_of_service, acceptance: { allow_nil: false }, on: :create
@@ -218,17 +210,12 @@ class Proposal < ActiveRecord::Base
 
   def self.proposals_orders(user)
     orders = %w{hot_score confidence_score created_at relevance archival_date}
-<<<<<<< HEAD
-    orders << "recommendations" if user.present?
-    orders
-=======
     orders << "recommendations" if Setting['feature.user.recommendations_on_proposals'] && user&.recommended_proposals
     return orders
   end
 
   def skip_user_verification?
     Setting["feature.user.skip_verification"].present?
->>>>>>> v0.16
   end
 
   protected

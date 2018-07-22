@@ -17,8 +17,6 @@ section "Creating banners" do
                             created_at: rand((Time.current - 1.week)..Time.current))
   end
 end
-<<<<<<< HEAD
-=======
 
 section "Creating web sections" do
   WebSection.create(name: 'homepage')
@@ -27,4 +25,3 @@ section "Creating web sections" do
   WebSection.create(name: 'budgets')
   WebSection.create(name: 'help_page')
 end
->>>>>>> v0.16

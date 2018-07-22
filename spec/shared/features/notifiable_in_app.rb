@@ -3,8 +3,6 @@ shared_examples "notifiable in-app" do |described_class|
   let(:author) { create(:user, :verified) }
   let!(:notifiable) { create(model_name(described_class), author: author) }
 
-<<<<<<< HEAD
-=======
   scenario "Notification icon is shown" do
     notification = create(:notification, notifiable: notifiable, user: author)
 
@@ -14,7 +12,6 @@ shared_examples "notifiable in-app" do |described_class|
     expect(page).to have_css ".icon-notification"
   end
 
->>>>>>> v0.16
   scenario "A user commented on my notifiable", :js do
     notification = create(:notification, notifiable: notifiable, user: author)
 
@@ -38,21 +35,11 @@ shared_examples "notifiable in-app" do |described_class|
       within "#comments" do
         expect(page).to have_content "I agree"
       end
-<<<<<<< HEAD
-    end
-
-    logout
-    login_as author
-    visit root_path
-    visit root_path
-    find(".icon-notification").click
-=======
       logout
     end
 
     login_as author
     visit notifications_path
->>>>>>> v0.16
 
     expect(page).to have_css ".notification", count: 1
     expect(page).to have_content "There are 3 new comments on"
@@ -77,13 +64,7 @@ shared_examples "notifiable in-app" do |described_class|
 
     logout
     login_as author
-<<<<<<< HEAD
-    visit root_path
-    visit root_path
-    find(".icon-notification").click
-=======
     visit notifications_path
->>>>>>> v0.16
 
     expect(page).to have_css ".notification", count: 1
     expect(page).to have_content "Someone replied to your comment on"
@@ -110,13 +91,7 @@ shared_examples "notifiable in-app" do |described_class|
     end
 
     login_as author
-<<<<<<< HEAD
-    visit root_path
-    visit root_path
-    find(".icon-notification").click
-=======
     visit notifications_path
->>>>>>> v0.16
 
     expect(page).to have_css ".notification", count: 1
     expect(page).to have_content "There are 3 new replies to your comment on"
@@ -162,8 +137,4 @@ shared_examples "notifiable in-app" do |described_class|
 
   end
 
-<<<<<<< HEAD
 end
-=======
-end
->>>>>>> v0.16

@@ -45,11 +45,7 @@ feature 'Admin proposals' do
     proposal = create(:proposal, :hidden)
     visit admin_proposals_path
 
-<<<<<<< HEAD
-    click_link 'Confirm'
-=======
     click_link 'Confirm moderation'
->>>>>>> v0.16
 
     expect(page).not_to have_content(proposal.title)
     click_link('Confirmed')

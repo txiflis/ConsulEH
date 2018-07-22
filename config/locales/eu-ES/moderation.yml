@@ -47,6 +47,7 @@ eu-ES:
       flagged_comments: Iruzkinak
       flagged_debates: Eztabaidak
       proposals: Proposamenak
+      proposal_notifications: Proposamen jakinarazpenak
       users: Erabiltzaileak blokeatu
     proposals:
       index:
@@ -67,6 +68,25 @@ eu-ES:
           created_at: Berrienak
           flags: Salatuenak
         title: Proposamenak
+    proposal_notifications:
+      index:
+        block_authors: Sortzaileak blokeatu
+        confirm: 'Ziur zaude?'
+        filter: Iragazkia
+        filters:
+          all: Guztiak
+          pending_review: Berrikusteke
+          ignored: Ikusitzat markatuta
+        headers:
+          moderate: Moderatu
+          proposal_notification: Proposamen jakinarazpena
+        hide_proposal_notifications: Jakinarazpenal ezkutatu
+        ignore_flags: Berrikusitzat markatu
+        order: 'Ordena:'
+        orders:
+          created_at: Berrienak
+          moderated: Moderatutakoak
+        title: Proposamen jakinarazpenak
     users:
       index:
         hidden: Blokeatuta
@@ -74,4 +94,4 @@ eu-ES:
         search: Bilatu
         search_placeholder: erabiltzailea edo emaila
         title: Erabiltzaileak blokeatu
-      notice_hide: Erabiltzailea blokeatuta. Erabiltzaile honen eztabaida eta iruzkin guztiak ezkutatu dira.
+notice_hide: Erabiltzailea blokeatuta. Erabiltzaile honen eztabaida eta iruzkin guztiak ezkutatu dira.

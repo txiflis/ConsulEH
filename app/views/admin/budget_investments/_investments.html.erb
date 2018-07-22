@@ -36,23 +36,6 @@
     <thead>
       <tr>
         <th><%= t("admin.budget_investments.index.table_id") %></th>
-<<<<<<< HEAD
-        <th><%= t("admin.budget_investments.index.table_title") %></th>
-        <th><%= t("admin.budget_investments.index.table_supports") %></th>
-        <th><%= t("admin.budget_investments.index.table_admin") %></th>
-        <th><%= t("admin.budget_investments.index.table_valuator") %></th>
-        <th><%= t("admin.budget_investments.index.table_valuation_group") %></th>
-        <th><%= t("admin.budget_investments.index.table_geozone") %></th>
-        <th><%= t("admin.budget_investments.index.table_feasibility") %></th>
-        <th class="text-center"><%= t("admin.budget_investments.index.table_valuation_finished") %></th>
-        <th class="text-center">
-          <% if params[:filter] == "under_valuation" %>
-            <%= t("admin.budget_investments.index.table_evaluation") %>
-          <% else %>
-            <%= t("admin.budget_investments.index.table_selection") %>
-          <% end %>
-        </th>
-=======
         <th class="small-3"><%= t("admin.budget_investments.index.table_title") %></th>
         <th><%= t("admin.budget_investments.index.table_supports") %></th>
         <th><%= t("admin.budget_investments.index.table_admin") %></th>
@@ -65,7 +48,6 @@
         <th class="text-center"><%= t("admin.budget_investments.index.table_valuation_finished") %></th>
         <th class="text-center"><%= t("admin.budget_investments.index.table_evaluation") %></th>
         <th class="text-center"><%= t("admin.budget_investments.index.table_selection") %></th>
->>>>>>> v0.16
         <% if params[:filter]  == "selected" %>
           <th class="text-center"><%= t("admin.budget_investments.index.table_incompatible") %></th>
         <% end %>
@@ -90,11 +72,7 @@
           </td>
           <td class="small">
             <% if investment.administrator.present? %>
-<<<<<<< HEAD
-              <span title="<%= t('admin.budget_investments.index.assigned_admin') %>">
-=======
               <span title="<%= t("admin.budget_investments.index.assigned_admin") %>">
->>>>>>> v0.16
                 <%= investment.administrator.name %>
               </span>
             <% else %>
@@ -102,20 +80,11 @@
             <% end %>
           </td>
           <td class="small">
-<<<<<<< HEAD
-            <% no_valuators_assigned = t("admin.budget_investments.index.no_valuators_assigned") %>
-            <%= investment.assigned_valuators || no_valuators_assigned %>
-          </td>
-          <td class="small">
-            <% no_valuation_groups = t("admin.budget_investments.index.no_valuation_groups") %>
-            <%= investment.assigned_valuation_groups || no_valuation_groups %>
-=======
             <% no_valuation_groups = t("admin.budget_investments.index.no_valuation_groups") %>
             <%= investment.assigned_valuation_groups || no_valuation_groups %>
             <br>
             <% no_valuators_assigned = t("admin.budget_investments.index.no_valuators_assigned") %>
             <%= investment.assigned_valuators || no_valuators_assigned %>
->>>>>>> v0.16
           </td>
           <td class="small">
             <%= investment.heading.name %>
@@ -127,24 +96,15 @@
           <td class="small text-center">
             <%= investment.valuation_finished? ? t("shared.yes"): t("shared.no") %>
           </td>
-<<<<<<< HEAD
-        <td class="small text-center">
-          <% if params[:filter] == "under_valuation" %>
-=======
           <td class="small text-center">
->>>>>>> v0.16
             <%= form_for [:admin, investment.budget, investment], remote: true do |f| %>
               <%= f.check_box :visible_to_valuators,
                               label: false,
                               class: "js-submit-on-change",
                               id: "budget_investment_visible_to_valuators" %>
             <% end %>
-<<<<<<< HEAD
-          <% else %>
-=======
           </td>
           <td class="small text-center">
->>>>>>> v0.16
             <% if investment.selected? %>
               <%= link_to_unless investment.budget.finished?,
                                  t("admin.budget_investments.index.selected"),
@@ -172,10 +132,6 @@
                                  remote: true,
                                  class: "button small hollow expanded" %>
             <% end %>
-<<<<<<< HEAD
-            <% end %>
-=======
->>>>>>> v0.16
           </td>
           <% if params[:filter] == "selected" %>
             <td class="small text-center">

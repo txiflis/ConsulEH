@@ -182,20 +182,14 @@ class User < ActiveRecord::Base
     debates_ids = Debate.where(author_id: id).pluck(:id)
     comments_ids = Comment.where(user_id: id).pluck(:id)
     proposal_ids = Proposal.where(author_id: id).pluck(:id)
-<<<<<<< HEAD
-=======
     proposal_notification_ids = ProposalNotification.where(author_id: id).pluck(:id)
->>>>>>> v0.16
 
     hide
 
     Debate.hide_all debates_ids
     Comment.hide_all comments_ids
     Proposal.hide_all proposal_ids
-<<<<<<< HEAD
-=======
     ProposalNotification.hide_all proposal_notification_ids
->>>>>>> v0.16
   end
 
   def erase(erase_reason = nil)
@@ -334,12 +328,8 @@ class User < ActiveRecord::Base
   end
 
   def interests
-<<<<<<< HEAD
-    follows.map{|follow| follow.followable.tags.map(&:name)}.flatten.compact.uniq
-=======
     followables = follows.map(&:followable)
     followables.compact.map { |followable| followable.tags.map(&:name) }.flatten.compact.uniq
->>>>>>> v0.16
   end
 
   private

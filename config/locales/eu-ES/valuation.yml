@@ -35,6 +35,7 @@ eu-ES:
         table_title: Izenburua
         table_heading_name: Elementuaren izenburua
         table_actions: Ekintzak
+        no_investments: "Ez dago gastu proiekturik."
       show:
         back: Itzuli
         title: Gastu proiektua

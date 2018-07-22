@@ -36,8 +36,6 @@ en:
       groups:
         all_city: All City
         districts: Districts
-<<<<<<< HEAD
-=======
       valuator_groups:
         culture_and_sports: Culture & Sports
         gender_and_diversity: Gender & Diversity Policies
@@ -48,15 +46,10 @@ en:
         bidding: Bidding
         executing_project: Executing the project
         executed: Executed
->>>>>>> v0.16
     polls:
       current_poll: "Current Poll"
       current_poll_geozone_restricted: "Current Poll Geozone Restricted"
       incoming_poll: "Incoming Poll"
       recounting_poll: "Recounting Poll"
       expired_poll_without_stats: "Expired Poll without Stats & Results"
-<<<<<<< HEAD
       expired_poll_with_stats: "Expired Poll with Stats & Results"
-=======
-      expired_poll_with_stats: "Expired Poll with Stats & Results"
->>>>>>> v0.16

@@ -51,11 +51,7 @@ describe SignatureSheet do
       spending_proposal = create(:spending_proposal)
       signature_sheet.signable = spending_proposal
 
-<<<<<<< HEAD
-      expect(signature_sheet.name).to eq("Spending proposal #{spending_proposal.id}")
-=======
       expect(signature_sheet.name).to eq("Investment project #{spending_proposal.id}")
->>>>>>> v0.16
     end
 
     it "returns name for budget investment signature sheets" do
@@ -96,8 +92,4 @@ describe SignatureSheet do
     end
   end
 
-<<<<<<< HEAD
 end
-=======
-end
->>>>>>> v0.16

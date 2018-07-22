@@ -1,28 +1,3 @@
-<<<<<<< HEAD
----
-en:
-  activemodel:
-    attributes:
-      officing/residence:
-        document_number: Document number (including letters)
-        document_type: Document type
-        year_of_birth: Year born
-      verification:
-        email:
-          recipient: Email
-        residence:
-          date_of_birth: Date of birth
-          document_number: Document number (including letters)
-          document_type: Document type
-          postal_code: Postcode
-        sms:
-          confirmation_code: Confirmation code
-          phone: Telephone
-    models:
-      verification:
-        residence: Residence
-        sms: SMS
-=======
 en:
   activemodel:
     models:
@@ -45,4 +20,3 @@ en:
         document_type: "Document type"
         document_number: "Document number (including letters)"
         year_of_birth: "Year born"
->>>>>>> v0.16

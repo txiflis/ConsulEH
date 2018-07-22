@@ -18,11 +18,7 @@
 // 16. Flags
 // 17. Activity
 // 18. Banners
-<<<<<<< HEAD
-// 19. Recommended Section Home
-=======
 // 19. Recommendations
->>>>>>> v0.16
 // 20. Documents
 // 21. Related content
 // 22. Images
@@ -417,14 +413,6 @@ a {
   text-transform: uppercase;
 }
 
-<<<<<<< HEAD
-figure img {
-  height: 100%;
-  width: 100%;
-}
-
-=======
->>>>>>> v0.16
 // 02. Header
 // ----------
 
@@ -1970,12 +1958,8 @@ table {
   }
 }
 
-<<<<<<< HEAD
-.comment-body {
-=======
 .comment-body,
 .notification-body {
->>>>>>> v0.16
 
   img {
     margin-right: $line-height / 2;
@@ -2242,12 +2226,8 @@ table {
 
 .banner-style-one,
 .banner-style-two,
-<<<<<<< HEAD
-.banner-style-three {
-=======
 .banner-style-three,
 .banner {
->>>>>>> v0.16
   margin: 0;
   margin-bottom: $line-height;
 
@@ -2281,13 +2261,8 @@ table {
   }
 }
 
-<<<<<<< HEAD
-// 19. Recommended Section Home
-// ----------------------------
-=======
 // 19. Recommendations
 // -------------------
->>>>>>> v0.16
 
 .section-recommended {
   background: #fafafa;
@@ -2421,10 +2396,7 @@ table {
 
   .carousel-image .orbit-wrapper img {
     display: block;
-<<<<<<< HEAD
-=======
     height: rem-calc(120);
->>>>>>> v0.16
 
     @include breakpoint(small) {
       margin: 0 auto;
@@ -2432,8 +2404,6 @@ table {
   }
 }
 
-<<<<<<< HEAD
-=======
 .recommended-index {
   background: #fafafa;
   border-bottom: 1px solid #eee;
@@ -2482,7 +2452,6 @@ table {
   top: -18px;
 }
 
->>>>>>> v0.16
 // 20. Documents
 // -------------
 
@@ -2732,8 +2701,6 @@ table {
 
   .card {
     border: 0;
-<<<<<<< HEAD
-=======
     overflow: visible;
 
     a {
@@ -2756,7 +2723,6 @@ table {
     p {
       padding: 0 $line-height / 4;
     }
->>>>>>> v0.16
   }
 
   h3 {
@@ -2769,8 +2735,6 @@ table {
       padding: $line-height / 2 0;
     }
   }
-<<<<<<< HEAD
-=======
 
   .figure-card {
 
@@ -2791,7 +2755,6 @@ table {
     height: 100%;
     width: 100%;
   }
->>>>>>> v0.16
 }
 
 .feeds-list {

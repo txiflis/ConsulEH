@@ -83,32 +83,14 @@ feature 'Admin polls' do
 
     expect(page).to have_css("img[alt='#{poll.image.title}']")
 
-<<<<<<< HEAD
-    expect(page).to have_css("#poll_results_enabled")
-    expect(page).to have_css("#poll_stats_enabled")
-
     fill_in "poll_name", with: "Next Poll"
     fill_in 'poll_ends_at', with: end_date.strftime("%d/%m/%Y")
-    check 'poll_results_enabled'
-    check 'poll_stats_enabled'
-=======
-    fill_in "poll_name", with: "Next Poll"
-    fill_in 'poll_ends_at', with: end_date.strftime("%d/%m/%Y")
->>>>>>> v0.16
 
     click_button "Update poll"
 
     expect(page).to have_content "Poll updated successfully"
     expect(page).to have_content "Next Poll"
     expect(page).to have_content I18n.l(end_date.to_date)
-<<<<<<< HEAD
-
-    click_link "Edit poll"
-
-    expect(page).to have_field('poll_results_enabled', checked: true)
-    expect(page).to have_field('poll_stats_enabled', checked: true)
-
-=======
   end
 
   scenario 'Enable stats and results' do
@@ -162,7 +144,6 @@ feature 'Admin polls' do
 
     expect(page).to have_field('poll_stats_enabled', checked: true)
     expect(page).to have_field('poll_results_enabled', checked: true)
->>>>>>> v0.16
   end
 
   scenario 'Edit from index' do

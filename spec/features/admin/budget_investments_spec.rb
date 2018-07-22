@@ -91,36 +91,6 @@ feature 'Admin budget investments' do
       end
     end
 
-<<<<<<< HEAD
-    scenario 'Display valuator group assignments' do
-      budget_investment1 = create(:budget_investment, budget: budget)
-      budget_investment2 = create(:budget_investment, budget: budget)
-      budget_investment3 = create(:budget_investment, budget: budget)
-
-      health_group = create(:valuator_group, name: "Health")
-      culture_group = create(:valuator_group, name: "Culture")
-
-      budget_investment1.valuator_groups << health_group
-      budget_investment2.valuator_group_ids = [health_group.id, culture_group.id]
-
-      visit admin_budget_budget_investments_path(budget_id: budget)
-
-      within("#budget_investment_#{budget_investment1.id}") do
-        expect(page).to have_content("Health")
-      end
-
-      within("#budget_investment_#{budget_investment2.id}") do
-        expect(page).to have_content("Health")
-        expect(page).to have_content("Culture")
-      end
-
-      within("#budget_investment_#{budget_investment3.id}") do
-        expect(page).to have_content("No valuation groups assigned")
-      end
-    end
-
-=======
->>>>>>> v0.16
     scenario "Filtering by budget heading", :js do
       group1 = create(:budget_group, name: "Streets", budget: budget)
       group2 = create(:budget_group, name: "Parks", budget: budget)
@@ -1059,11 +1029,7 @@ feature 'Admin budget investments' do
 
       visit admin_budget_budget_investments_path(budget)
 
-<<<<<<< HEAD
-      expect(page).not_to have_css("#budget_investment_visible_to_valuators")
-=======
       expect(page).to have_css("#budget_investment_visible_to_valuators")
->>>>>>> v0.16
 
       within('#filter-subnav') { click_link 'Under valuation' }
 
@@ -1134,8 +1100,6 @@ feature 'Admin budget investments' do
     end
   end
 
-<<<<<<< HEAD
-=======
   context "Mark as visible to valuators" do
 
     let(:valuator) { create(:valuator) }
@@ -1226,5 +1190,4 @@ feature 'Admin budget investments' do
     end
   end
 
->>>>>>> v0.16
 end

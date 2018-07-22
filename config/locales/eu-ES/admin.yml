@@ -5,7 +5,7 @@ eu-ES:
     actions:
       actions: Ekintzak
       confirm: 'Ziur zaude?'
-      confirm_hide: Baieztatu
+      confirm_hide: Baieztatu moderaketa
       hide: Ezkutatu
       hide_author: Sortzailea blokeatu
       restore: Berriz erakutsi
@@ -29,10 +29,18 @@ eu-ES:
         title: Izenburua
         description: Deskribapena
         target_url: Lotura
-        style: Estiloa
-        image: Irudia
         post_started_at: Argitarapenaren hasiera
         post_ended_at: Argitarapenaren amaiera
+        sections_label: Agertzen diren sailak
+        sections:
+          homepage: Homepage
+          debates: Eztabaidak
+          proposals: Proposamenak
+          budgets: Partaidetzazko aurrekontuak
+          help_page: Laguntza orria
+        background_color: Azpiko kolorea
+        font_color: Testu kolorea
+
       edit:
         editing: Bannerra editatu
         form:
@@ -41,7 +49,7 @@ eu-ES:
         form:
           error:
             one: "errore batek bannerra gordetzea eragotzi du"
-            other: 'erroreek bannerra gordetzea eragotzi dute.'
+            other: 'erroreek bannerra gordetzea eragotzi dute'
       new:
         creating: Bannerra sortu
     activity:
@@ -71,7 +79,7 @@ eu-ES:
         filters:
           open: Irekiak
           finished: Amaitutakoak
-        budget_investments: Gastu proiektuak ikusi
+        budget_investments: Gastu proiektuak kudeatu
         table_name: Izena
         table_phase: Fasea
         table_investments: Gastu proiektuak
@@ -121,6 +129,7 @@ eu-ES:
         table_population: Biztanleria
         population_info: "Aurrekontu saileko biztanleria estatistikak kalkulatzeko soilik erabiltzen da, helburua aurrekontu sail bakoitzean egon den bozka portzentaia erakustea da. aukerakoa da, beraz erabili nahi ez baduzu hutsik laga dezakezu."
         max_votable_headings: "Erabiltzaile bakoitzak bozka ditzakeen gehienezko aurrekontu sailak"
+        current_of_max_headings: "%{max}-tik %{current}"
       winners:
         calculate: Proposamen irabazleak kalkulatu
         calculated: Irabazleak kalkulatzen, minutu bat tarda dezake.
@@ -251,6 +260,7 @@ eu-ES:
         table_title: "Izenburua"
         table_description: "Deskribapena"
         table_publication_date: "Argitaratze data"
+        table_status: Egoera
         table_actions: "Ekintzak"
         delete: "Une gogoangarria ezabatu"
         no_milestones: "Ez dira une gogoangarririk zehaztu"
@@ -260,6 +270,8 @@ eu-ES:
       form:
         add_language: Hizkuntza gehitu
         remove_language: Hizkuntza ezabatu
+        admin_statuses: Proiektu egoerak kudeatu
+        no_statuses_defined: Ez da egoerarik definitu
       new:
         creating: Une gogoangarria sortu
         date: Data
@@ -272,6 +284,26 @@ eu-ES:
         notice: Une gogoangarria eguneratuta
       delete:
         notice: Une gogoangarria ondo ezabatu da
+    statuses:
+      index:
+        title: Proiektu egoerak
+        empty_statuses: Oraindik ez da proiektu egoerarik sortu
+        new_status: Proiektu egoera berria sortu
+        table_name: Izena
+        table_description: Deskribapena
+        table_actions: Ekintzak
+        delete: Ezabatu
+        edit: Editatu
+      edit:
+        title: Proiektu egoera editatu
+      update:
+        notice: Proiektu egoera ondo editatu da
+      new:
+        title: Proiektu egoera sortu
+      create:
+        notice: Proiektu egoera ondo sortu da
+      delete:
+        notice: Proiektu egoera ondo ezabatu da
     comments:
       index:
         filter: Iragazkia
@@ -331,9 +363,9 @@ eu-ES:
         form:
           enabled: Habilitado
           process: Prosezua
-          debate_phase: Aurreko fasea
+          debate_phase: Eztabaida fasea
           allegations_phase: Alegazio fasea
-          proposals_phase: Proposamen fasea
+          proposals_phase: Idazketa fasea
           start: Hasiera
           end: Amaiera
           use_markdown: Markdown erabili testua formateatzeko
@@ -364,7 +396,7 @@ eu-ES:
           status_planned: Lazter
         subnav:
           info: Informazioa
-          draft_texts: Testua
+          draft_texts: Idazketa
           questions: Eztabaida
           proposals: Proposamenak
       proposals:
@@ -372,9 +404,6 @@ eu-ES:
           title: Proposamenak
           back: Itzuli
         form:
-          header_information: Informazio goiburua
-          header_information_description: Proposamenenei buruzko informazioa ematen du. Testu hau  proposamen ataleko goiburuan alerta moduan agertuko da. Markdown erabili testua formateatzeko.
-          header_information_placeholder: Proposamenen goibururako informazioa gehitu ezazu
           custom_categories: Kategoriak
           custom_categories_description: Erabiltzaileak proposamena sortzerakoan aukeratu ditzakeen kategoriak.
       draft_versions:
@@ -442,8 +471,10 @@ eu-ES:
             error: Errorea
         form:
           add_option: Erantzun itxia gehitu
+          title: Galdera
           title_placeholder: Galderaren izenburua idatz ezazu
           value_placeholder: Erantzun itxia idatz ezazu
+          question_options: "Erantzun posibleak (aukerakoa, lehenespenez erantzun irekiak)"
         index:
           back: Itzuli
           title: Prosezu honi esleitutako galderak
@@ -475,13 +506,14 @@ eu-ES:
       activity: Moderatzaileen jarduera
       admin: Administrazio menua
       banner: Bannerrak kudeatu
-      poll_questions: Herri galderak
+      poll_questions: Galderak
       proposals_topics: Proposatutako gaiak
       budgets: Partaidetzazko aurrekontuak
       geozones: Auzoak kudeatu
       hidden_comments: Ezkutatutako iruzkinak
       hidden_debates: Ezkutatutako eztabaidak
       hidden_proposals: Ezkutatutako proposamenak
+      hidden_proposal_notifications: Ezkutatutako proposamen jakinarazpenak
       hidden_users: Bloketatutako erabiltzaileak
       administrators: Administratzaileak
       managers: Kudeatzaileak
@@ -506,13 +538,15 @@ eu-ES:
         pages: Orriak pertsonalizatu
         images: Irudiak pertsonalizatu
         content_blocks: Blokeak pertsonalizatu
-      title_categories: Kategoriak
       title_moderated_content: Moderatutako edukia
       title_budgets: Aurrekontuak
       title_polls: Bozkaketak
       title_profiles: Perfilak
       title_banners: Bannerrak
       title_site_customization: Tokia pertsonalizatu
+      title_settings: Ezarpenak
+      title_site_customization: Lekuaren edukia
+      title_booths: Hautetsontziak
       legislation: Partaidetzazko legeak
       users: Erabiltzaileak
     administrators:
@@ -567,6 +601,7 @@ eu-ES:
         empty_newsletters: Ez dago albiste berririk erakusteko.
       new:
         title: Albiste-berri berria
+        from: Albiste-berrietan bidaltzaile moduan agertuko den helbide elektronikoa
       edit:
         title: Albiste-berria editatu
       show:
@@ -576,7 +611,7 @@ eu-ES:
         sent_at: Bidalita
         subject: Gaia
         segment_recipient: Hartzaileak
-        from: Bidaltzailea
+        from: Albiste-berrietan bidaltzaile moduan agertuko den helbide elektronikoa
         body: Emailaren edukia
         body_help_text: Honela ikusiko dute emaila erabiltzaileek
         send_alert: ¿Ziuir zauze albiste-berri hau %{n} erabiltzaileri bidali nahi diezula?
@@ -724,8 +759,8 @@ eu-ES:
         table_location: "Kokapena"
     polls:
       index:
-        title: "Bozkaketa zerrenda"
-        no_polls: "Ez dago bozkaketarik."
+        title: "Bozkaketa aktiboen zerrenda"
+        no_polls: "Ez dago bozkaketarik lazter."
         create: "Bozkaketa sortu"
         name: "Izena"
         dates: "Datak"
@@ -837,8 +872,8 @@ eu-ES:
         title: "hautetsontzia bakoitzeko emaitzak"
     booths:
       index:
-        title: "Hautetsontzi zerrenda"
-        no_booths: "Ez dago hautetsontzirik."
+        title: "Hautetsontzi aktiboen zerrenda"
+        no_booths: "Ez dago hautetsontzi aktiborik hureengo bozkaketarako."
         add_booth: "Hautetsontzia gehitu"
         name: "Izena"
         location: "Kokapena"
@@ -916,7 +951,16 @@ eu-ES:
           with_confirmed_hide: Baieztatutakoak
           without_confirmed_hide: Egiteke
         title: Ezkutatutako proposamenak
-        no_hidden_proposals: Ez ddago ezkutatutako proposamenik.
+        no_hidden_proposals: Ez dago ezkutatutako proposamenik.
+    proposal_notifications:
+      index:
+        filter: Iragazkia
+        filters:
+          all: Guztiak
+          with_confirmed_hide: Baieztutakoak
+          without_confirmed_hide: Egiteke
+        title: Ezkutatutako jakinarazpenak
+        no_hidden_proposals: Ez dago ezkutatutako jakinarazpenik.
     settings:
       flash:
         updated: Balorea eguneratuta
@@ -966,6 +1010,7 @@ eu-ES:
       description: Deskribapena
       image: Irudia
       show_image: Irudia erakutsi
+      moderated_content: "Moderatzaileek moderatutako edukia berrikus ezazu. Moderazioa egoki egin dala ziurta zaitez."
     spending_proposals:
       index:
         geozone_filter_all: Eremu guztiak
@@ -1128,6 +1173,7 @@ eu-ES:
         add_tag: Proposamen gai berri bat sortu
         title: Proposamen gaiak
         topic: Gaia
+        help: "Erabiltzaile batek porposamen bat sortzerakoan hurrengo gaiak eskeintzen zaizkio etiketa moduan."
       name:
         placeholder: Gaiaren izenburua idatzi ezazu
     users:
@@ -1151,10 +1197,11 @@ eu-ES:
     site_customization:
       content_blocks:
         form:
-          content_blocks_information: Testu blokeei buruzko informazioa
-          content_block_about: CONSUL oin edo goiburuan txertatuko diren HTML blokeak sortu ditzakezu.
-          content_block_top_links_html: "<strong>Goiburu blokea (top_links)</strong> formatu honekin sortu behar diren lotura blokeak dira:"
-          content_block_footer_html: "<strong>Oin-blokeak (footer)</strong> edozein formatu izan dezakete eta Javascript aztarnak , CSS edukia edo HTML eduki pertsonalizatua gordetzeko erabili daitezke."
+          information: Testu blokeei buruzko informazioa
+          about: Oin edo goiburuan txertatuko diren HTML blokeak sortu ditzakezu.
+          top_links_html: "<strong>Goiburu blokea (top_links)</strong> formatu honekin sortu behar diren lotura blokeak dira:"
+          footer_html: "<strong>Oin-blokeak (footer)</strong> edozein formatu izan dezakete eta Javascript aztarnak , CSS edukia edo HTML eduki pertsonalizatua gordetzeko erabili daitezke."
+          no_blocks: "Ez dago testu blokerik."
         create:
           notice: Blokea ondo sortuta
           error: Ezin izan da blokea sortu

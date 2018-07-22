@@ -12,10 +12,6 @@ feature 'Account' do
 
     visit management_root_path
 
-<<<<<<< HEAD
-    click_link 'Edit user account'
-=======
->>>>>>> v0.16
     click_link 'Reset password via email'
 
     expect(page).to have_content "No verified user logged in yet"
@@ -40,10 +36,6 @@ feature 'Account' do
     login_managed_user(user)
     visit management_root_path
 
-<<<<<<< HEAD
-    click_link 'Edit user account'
-=======
->>>>>>> v0.16
     click_link 'Reset password via email'
 
     click_link 'Send reset password email'
@@ -60,19 +52,11 @@ feature 'Account' do
     login_managed_user(user)
     visit management_root_path
 
-<<<<<<< HEAD
-    click_link 'Edit user account'
-=======
->>>>>>> v0.16
     click_link 'Reset password manually'
 
     find(:css, "input[id$='user_password']").set("new_password")
 
-<<<<<<< HEAD
-    click_button 'Save'
-=======
     click_button 'Save password'
->>>>>>> v0.16
 
     expect(page).to have_content 'Password reseted successfully'
 
@@ -88,20 +72,12 @@ feature 'Account' do
     login_managed_user(user)
     visit management_root_path
 
-<<<<<<< HEAD
-    click_link 'Edit user account'
-=======
->>>>>>> v0.16
     click_link 'Reset password manually'
     click_link 'Generate random password'
 
     new_password = find_field('user_password').value
 
-<<<<<<< HEAD
-    click_button 'Save'
-=======
     click_button 'Save password'
->>>>>>> v0.16
 
     expect(page).to have_content 'Password reseted successfully'
 
@@ -117,19 +93,11 @@ feature 'Account' do
     login_managed_user(user)
     visit management_root_path
 
-<<<<<<< HEAD
-    click_link 'Edit user account'
-=======
->>>>>>> v0.16
     click_link 'Reset password manually'
 
     find(:css, "input[id$='user_password']").set("another_new_password")
 
-<<<<<<< HEAD
-    click_button 'Save'
-=======
     click_button 'Save password'
->>>>>>> v0.16
 
     expect(page).to have_content 'Password reseted successfully'
     expect(page).to have_css("a[href='javascript:window.print();']", text: 'Print password')

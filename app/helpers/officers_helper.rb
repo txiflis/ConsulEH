@@ -4,9 +4,6 @@ module OfficersHelper
     truncate([officer.name, officer.email].compact.join(' - '), length: 100)
   end
 
-<<<<<<< HEAD
-end
-=======
   def vote_collection_shift?
     current_user.poll_officer.officer_assignments.where(date: Time.current.to_date).any?
   end
@@ -16,4 +13,3 @@ end
   end
 
 end
->>>>>>> v0.16

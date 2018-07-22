@@ -73,13 +73,9 @@ class Valuation::BudgetInvestmentsController < Valuation::BaseController
     end
 
     def heading_filters
-<<<<<<< HEAD
-      investments = @budget.investments.by_valuator(current_user.valuator.try(:id)).distinct
-=======
       investments = @budget.investments.by_valuator(current_user.valuator.try(:id))
                                        .visible_to_valuators.distinct
 
->>>>>>> v0.16
       investment_headings = Budget::Heading.where(id: investments.pluck(:heading_id).uniq)
                                            .order(name: :asc)
 

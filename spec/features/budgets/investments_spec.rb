@@ -956,8 +956,6 @@ feature 'Budget Investments' do
     expect(page).to have_content("This investment project has been marked as not feasible and will not go to balloting phase")
   end
 
-<<<<<<< HEAD
-=======
   scenario "Show (selected budget investment)" do
     user = create(:user)
     login_as(user)
@@ -993,7 +991,6 @@ feature 'Budget Investments' do
     expect(page).to have_content("Winning investment project")
   end
 
->>>>>>> v0.16
   scenario "Show (not selected budget investment)" do
     user = create(:user)
     login_as(user)
@@ -1055,10 +1052,7 @@ feature 'Budget Investments' do
       expect(page.find("#image_#{first_milestone.id}")['alt']).to have_content(image.title)
       expect(page).to have_link(document.title)
       expect(page).to have_link("https://consul.dev")
-<<<<<<< HEAD
-=======
       expect(page).to have_content(first_milestone.status.name)
->>>>>>> v0.16
     end
 
     select('Español', from: 'locale-switcher')

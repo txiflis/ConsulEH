@@ -20,6 +20,9 @@ eu-ES:
       email_on_direct_message_label: Mezu pribatudun emailak jaso
       email_digest_label: Proposamenei buruz jakinarazpenak jaso
       official_position_badge_label: Erabiltzailea mota etiketa erakutsi
+      recommendations: Gomendioak
+      show_debates_recommendations: Eztabaida zerrendetan gomeniak erakutsi
+      show_proposals_recommendations: Proposamen zerrendetan gomeniak erakutsi
       title: Nire kontua
       user_permission_debates: Eztabaidetan parte hartu
       user_permission_info: Zure kontuarekin egin dezakezu...
@@ -110,6 +113,10 @@ eu-ES:
       recommendations:
         without_results: Ez dago zure interesekin bat datorren eztabaidarik
         without_interests: Gomendiak ematea nahi baduzu proposamenak jarraitu behar dituzu
+        disable: "Eztabaidetan gomendioak eskutatu ezkero ez dira berriz agertuko. 'Nire kontua'-n berriz aktibatu ditzakezu'"
+        actions:
+          success: "Eztabaidetan gomendioak eskutatuak izan dira"
+          error: "Errore bat izan da. Mesedez, 'Nire kontua' saiera joan zaitez gomendioak deskatibatzeko"
       search_form:
         button: Bilatu
         placeholder: Eztabaidak bilatu...
@@ -363,6 +370,10 @@ eu-ES:
       recommendations:
         without_results: Ez daude zure interesekin bat datorren proposamenik.
         without_interests: Proposamenak jarraitu gomendiak eman ahal izateko
+        disable: "Proposamenetan gomendioak eskutatu ezkero ez dira berriz agertuko. 'Nire kontua'-n berriz aktibatu ditzakezu'"
+        actions:
+          success: "Proposamenetan gomendioak eskutatuak izan dira"
+          error: "Errore bat izan da. Mesedez, 'Nire kontua' saiera joan zaitez gomendioak deskatibatzeko"
       retired_proposals: Baztertutako proposamenak
       retired_proposals_link: "Haien sortzaileek baztertutako proposamenak"
       retired_links:
@@ -507,7 +518,6 @@ eu-ES:
       zoom_plus: Irudia handitu
       read_more: "%{answer}-(e)ri buruz gehiago irakurri"
       read_less: "%{answer}-(e)ri buruz gutxiago irakurri"
-      participate_in_other_polls: Beste bozkaketa batzutan parte hartu
       videos: "Kanpo bideoa"
       info_menu: "Informazioa"
       stats_menu: "Partaidetza estatistikak"
@@ -634,6 +644,10 @@ eu-ES:
       title: Ikusteko modua
       cards: Txartelak
       list: Zerenda
+    recommended_index:
+        title: Gomendioak
+        see_more: Gomendio gehiago ikusi
+        hide: Gomendioak ezkutatu
   social:
     blog: "%{org} bloga"
     facebook: "%{org} Facebooka"
@@ -848,3 +862,10 @@ eu-ES:
   admin/widget:
     header:
       title: Administrazioa
+  annotator:
+    help:
+      alt: Iruzkindu nahi duzun testua aukeratu eta arkatza duen botoia sakatu ezazu.
+      text: Agiri hau iruzkindu ahal izateko %{sign_in} edo %{sign_up} egin behar duzu. Gero, iruzkindu nahi duzun testua aukeratu eta arkatza duen botoia sakatu ezazu.
+      text_sign_in: saioa hasi
+      text_sign_up: Erregistratu zaitez
+      title: "Zelan iruzkindu dezaket agiri hau?"

@@ -36,6 +36,16 @@ eu-ES:
       groups:
         all_city: Herri osoa
         districts: Auzoak
+      valuator_groups:
+        culture_and_sports: Kirola eta kultura
+        gender_and_diversity: Dibertsitate eta gernero politikak
+        urban_development: Herri garapen jasangarria
+        equity_and_employment: Lana eta Ekitatea
+      statuses:
+        studying_project: Proiektua aztertzen
+        bidding: Lizitazioa
+        executing_project: Proiektua exekutatzen
+        executed: Exekutatzen
     polls:
       current_poll: "Bozka Irekia"
       current_poll_geozone_restricted: "Bozka Irekia baina geokokalekuz mugatuta"

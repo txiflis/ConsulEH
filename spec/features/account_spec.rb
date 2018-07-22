@@ -174,8 +174,6 @@ feature 'Account' do
 
     expect(page).to have_content "Invalid login or password"
   end
-<<<<<<< HEAD
-=======
 
   context 'Recommendations' do
 
@@ -225,5 +223,4 @@ feature 'Account' do
     end
 
   end
->>>>>>> v0.16
 end

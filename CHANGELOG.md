@@ -3,8 +3,6 @@
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
-<<<<<<< HEAD
-=======
 ## [0.16.0](https://github.com/consul/consul/compare/v0.15...v0.16) - 2018-07-16
 
 ### Added
@@ -74,7 +72,6 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - **Recommendations:** Deal gracefully with recommendations of hidden proposals https://github.com/consul/consul/pull/2751
 - **Maps:** Fix MapLocation json\_data to return mappable ids https://github.com/consul/consul/pull/2613
 
->>>>>>> v0.16
 ## [0.15.0](https://github.com/consul/consul/compare/v0.14...v0.15) - 2018-05-23
 
 ### Added
@@ -128,11 +125,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - **Social share:** Fixes social share buttons https://github.com/consul/consul/pull/2525
 - **Newsletters:** Fixed how newsletters controller and mailer handle recipients https://github.com/consul/consul/pull/2492
 - **Newsletters:** Fix UserSegment feasible and undecided investment authors https://github.com/consul/consul/pull/2491
-<<<<<<< HEAD
-- **Newsletters:** Remove empty emails from user segment usages 
-=======
 - **Newsletters:** Remove empty emails from user segment usages
->>>>>>> v0.16
 - **Design:** Mode view https://github.com/consul/consul/pull/2567
 - **Design:** Minor fixes https://github.com/consul/consul/pull/2566
 - **Design:** Improve Documents list https://github.com/consul/consul/pull/2490
@@ -423,12 +416,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Rails 4.2.6
 - Ruby 2.2.3
 
-<<<<<<< HEAD
-[Unreleased]: https://github.com/consul/consul/compare/v0.15...consul:master
-=======
 [Unreleased]: https://github.com/consul/consul/compare/v0.16...consul:master
 [0.16.0]: https://github.com/consul/consul/compare/v0.15...v.016
->>>>>>> v0.16
 [0.15.0]: https://github.com/consul/consul/compare/v0.14...v0.15
 [0.14.0]: https://github.com/consul/consul/compare/v0.13...v0.14
 [0.13.0]: https://github.com/consul/consul/compare/v0.12...v0.13

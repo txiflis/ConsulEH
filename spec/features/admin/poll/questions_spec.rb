@@ -36,28 +36,16 @@ feature 'Admin poll questions' do
       Pursued by the Empire's sinister agents, Princess Leia races home aboard her starship, custodian of the stolen plans that can save her
        people and restore freedom to the galaxy....
     }
-<<<<<<< HEAD
-    video_url = "https://puppyvideos.com"
-=======
->>>>>>> v0.16
 
     visit admin_questions_path
     click_link "Create question"
 
     select 'Movies', from: 'poll_question_poll_id'
     fill_in 'poll_question_title', with: title
-<<<<<<< HEAD
-    fill_in 'poll_question_video_url', with: video_url
-=======
->>>>>>> v0.16
 
     click_button 'Save'
 
     expect(page).to have_content(title)
-<<<<<<< HEAD
-    expect(page).to have_content(video_url)
-=======
->>>>>>> v0.16
   end
 
   scenario 'Create from successful proposal index' do

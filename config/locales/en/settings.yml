@@ -43,21 +43,15 @@ en:
       user:
         recommendations: Recommendations
         skip_verification: Skip user verification
-<<<<<<< HEAD
-=======
         recommendations_on_debates: Recommendations on debates
         recommendations_on_proposals: Recommendations on proposals
->>>>>>> v0.16
       community: Community on proposals and investments
       map: Proposals and budget investments geolocation
       allow_images: Allow upload and show images
       allow_attached_documents: Allow upload and show of attached documents
-<<<<<<< HEAD
-=======
       guides: Guides to create proposals or investment projects
       public_stats: Public stats
     related_content_score_threshold: Related content score threshold
->>>>>>> v0.16
     map_latitude: Latitude
     map_longitude: Longitude
     map_zoom: Zoom

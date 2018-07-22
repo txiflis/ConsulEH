@@ -12,17 +12,8 @@ module AdminHelper
     t("#{namespace}.header.title")
   end
 
-<<<<<<< HEAD
-  def menu_tags?
-    ["tags"].include?(controller_name)
-  end
-
-  def menu_moderated_content?
-    ["proposals", "debates", "comments", "hidden_users"].include?(controller_name) && controller.class.parent != Admin::Legislation
-=======
   def menu_moderated_content?
     ["proposals", "debates", "comments", "hidden_users", "activity"].include?(controller_name) && controller.class.parent != Admin::Legislation
->>>>>>> v0.16
   end
 
   def menu_budget?
@@ -30,21 +21,6 @@ module AdminHelper
   end
 
   def menu_polls?
-<<<<<<< HEAD
-    %w[polls questions officers booths officer_assignments booth_assignments recounts results shifts questions answers].include?(controller_name)
-  end
-
-  def menu_profiles?
-    %w[administrators organizations officials moderators valuators managers users activity].include?(controller_name)
-  end
-
-  def menu_banners?
-    ["banners"].include?(controller_name)
-  end
-
-  def menu_customization?
-    ["pages", "images", "content_blocks"].include?(controller_name) || menu_homepage?
-=======
     %w[polls questions answers].include?(controller_name)
   end
 
@@ -62,7 +38,6 @@ module AdminHelper
 
   def menu_customization?
     ["pages", "banners"].include?(controller_name) || menu_homepage?
->>>>>>> v0.16
   end
 
   def menu_homepage?

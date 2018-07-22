@@ -2,34 +2,6 @@
   Admin - <%= t("admin.menu.legislation") %> - <%= t("admin.legislation.processes.index.filters.#{@current_filter}") %>
 <% end %>
 
-<<<<<<< HEAD
-<div class="legislation-admin legislation-process-index">
-  <div class="row">
-    <div class="small-12 medium-9 column">
-      <h2 class="inline-block"><%= t("admin.legislation.processes.index.title") %></h2>
-    </div>
-    <div class="small-12 medium-3 column legislation-process-new">
-      <%= link_to t("admin.legislation.processes.index.create"), new_admin_legislation_process_path, class: "button" %>
-    </div>
-  </div>
-
-  <%= render 'shared/filter_subnav', i18n_namespace: "admin.legislation.processes.index" %>
-
-  <% if @processes.any? %>
-    <h3><%= page_entries_info @processes %></h3>
-
-    <table class="stack">
-      <thead>
-        <tr>
-          <th><%= t("admin.legislation.processes.process.title") %></th>
-          <th><%= t("admin.legislation.processes.process.status") %></th>
-          <th><%= t("admin.legislation.processes.process.creation_date") %></th>
-          <th><%= t("admin.legislation.processes.process.comments") %></th>
-          <th></th>
-        </tr>
-      </thead>
-      <tbody>
-=======
 <h2 class="inline-block"><%= t("admin.legislation.processes.index.title") %></h2>
 
 <%= link_to t("admin.legislation.processes.index.create"), new_admin_legislation_process_path,
@@ -52,7 +24,6 @@
     </thead>
 
     <tbody>
->>>>>>> v0.16
       <% @processes.each do |process| %>
         <tr id="<%= dom_id(process) %>">
           <td class="small-12 medium-8">
@@ -68,19 +39,6 @@
           </td>
         </tr>
       <% end %>
-<<<<<<< HEAD
-      </tbody>
-    </table>
-
-    <%= paginate @processes %>
-  <% else %>
-    <div class="callout primary">
-      <%= page_entries_info @processes %>
-    </div>
-  <% end %>
-
-</div>
-=======
     </tbody>
   </table>
 
@@ -90,4 +48,3 @@
     <%= page_entries_info @processes %>
   </div>
 <% end %>
->>>>>>> v0.16

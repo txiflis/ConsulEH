@@ -24,11 +24,7 @@ FactoryBot.define do
     end
 
     trait :level_two do
-<<<<<<< HEAD
-      residence_verified_at Time.current
-=======
       residence_verified_at { Time.current }
->>>>>>> v0.16
       unconfirmed_phone "611111111"
       confirmed_phone "611111111"
       sms_confirmation_code "1234"
@@ -40,28 +36,12 @@ FactoryBot.define do
     end
 
     trait :level_three do
-<<<<<<< HEAD
-      verified_at Time.current
-=======
       verified_at { Time.current }
->>>>>>> v0.16
       document_type "1"
       document_number
     end
 
     trait :hidden do
-<<<<<<< HEAD
-      hidden_at Time.current
-    end
-
-    trait :with_confirmed_hide do
-      confirmed_hide_at Time.current
-    end
-
-    trait :verified do
-      residence_verified_at Time.current
-      verified_at Time.current
-=======
       hidden_at { Time.current }
     end
 
@@ -72,17 +52,12 @@ FactoryBot.define do
     trait :verified do
       residence_verified_at { Time.current }
       verified_at { Time.current }
->>>>>>> v0.16
     end
 
     trait :in_census do
       document_number "12345678Z"
       document_type "1"
-<<<<<<< HEAD
-      verified_at Time.current
-=======
       verified_at { Time.current }
->>>>>>> v0.16
     end
   end
 
@@ -137,11 +112,7 @@ FactoryBot.define do
   factory :lock do
     user
     tries 0
-<<<<<<< HEAD
-    locked_until Time.current
-=======
     locked_until { Time.current }
->>>>>>> v0.16
   end
 
   factory :verified_user do
@@ -156,17 +127,6 @@ FactoryBot.define do
     association :author, factory: :user
 
     trait :hidden do
-<<<<<<< HEAD
-      hidden_at Time.current
-    end
-
-    trait :with_ignored_flag do
-      ignored_flag_at Time.current
-    end
-
-    trait :with_confirmed_hide do
-      confirmed_hide_at Time.current
-=======
       hidden_at { Time.current }
     end
 
@@ -176,7 +136,6 @@ FactoryBot.define do
 
     trait :with_confirmed_hide do
       confirmed_hide_at { Time.current }
->>>>>>> v0.16
     end
 
     trait :flagged do
@@ -214,17 +173,6 @@ FactoryBot.define do
     association :author, factory: :user
 
     trait :hidden do
-<<<<<<< HEAD
-      hidden_at Time.current
-    end
-
-    trait :with_ignored_flag do
-      ignored_flag_at Time.current
-    end
-
-    trait :with_confirmed_hide do
-      confirmed_hide_at Time.current
-=======
       hidden_at { Time.current }
     end
 
@@ -234,7 +182,6 @@ FactoryBot.define do
 
     trait :with_confirmed_hide do
       confirmed_hide_at { Time.current }
->>>>>>> v0.16
     end
 
     trait :flagged do
@@ -422,13 +369,8 @@ FactoryBot.define do
     kind        :balloting
     summary     Faker::Lorem.sentence(3)
     description Faker::Lorem.sentence(10)
-<<<<<<< HEAD
-    starts_at   Date.yesterday
-    ends_at     Date.tomorrow
-=======
     starts_at   { Date.yesterday }
     ends_at     { Date.tomorrow }
->>>>>>> v0.16
     enabled     true
   end
 
@@ -462,13 +404,6 @@ FactoryBot.define do
     reason "unfeasible"
   end
 
-<<<<<<< HEAD
-  factory :budget_investment_milestone, class: 'Budget::Investment::Milestone' do
-    association :investment, factory: :budget_investment
-    sequence(:title)     { |n| "Budget investment milestone #{n} title" }
-    description          'Milestone description'
-    publication_date     Date.current
-=======
   factory :budget_investment_status, class: 'Budget::Investment::Status' do
     sequence(:name)        { |n| "Budget investment status #{n} name" }
     sequence(:description) { |n| "Budget investment status #{n} description" }
@@ -480,7 +415,6 @@ FactoryBot.define do
     sequence(:title)     { |n| "Budget investment milestone #{n} title" }
     description          'Milestone description'
     publication_date     { Date.current }
->>>>>>> v0.16
   end
 
   factory :vote do
@@ -533,17 +467,6 @@ FactoryBot.define do
     sequence(:body) { |n| "Comment body #{n}" }
 
     trait :hidden do
-<<<<<<< HEAD
-      hidden_at Time.current
-    end
-
-    trait :with_ignored_flag do
-      ignored_flag_at Time.current
-    end
-
-    trait :with_confirmed_hide do
-      confirmed_hide_at Time.current
-=======
       hidden_at { Time.current }
     end
 
@@ -553,7 +476,6 @@ FactoryBot.define do
 
     trait :with_confirmed_hide do
       confirmed_hide_at { Time.current }
->>>>>>> v0.16
     end
 
     trait :flagged do
@@ -679,11 +601,7 @@ FactoryBot.define do
   factory :poll_officer_assignment, class: 'Poll::OfficerAssignment' do
     association :officer, factory: :poll_officer
     association :booth_assignment, factory: :poll_booth_assignment
-<<<<<<< HEAD
-    date Date.current
-=======
     date { Date.current }
->>>>>>> v0.16
 
     trait :final do
       final true
@@ -693,11 +611,7 @@ FactoryBot.define do
   factory :poll_shift, class: 'Poll::Shift' do
     association :booth, factory: :poll_booth
     association :officer, factory: :poll_officer
-<<<<<<< HEAD
-    date Date.current
-=======
     date { Date.current }
->>>>>>> v0.16
 
     trait :vote_collection_task do
       task 0
@@ -755,11 +669,7 @@ FactoryBot.define do
     year_of_birth    "1980"
 
     trait :invalid do
-<<<<<<< HEAD
-      year_of_birth Time.current.year
-=======
       year_of_birth { Time.current.year }
->>>>>>> v0.16
     end
   end
 
@@ -769,19 +679,11 @@ FactoryBot.define do
     sequence(:name) { |n| "org#{n}" }
 
     trait :verified do
-<<<<<<< HEAD
-      verified_at Time.current
-    end
-
-    trait :rejected do
-      rejected_at Time.current
-=======
       verified_at { Time.current }
     end
 
     trait :rejected do
       rejected_at { Time.current }
->>>>>>> v0.16
     end
   end
 
@@ -800,21 +702,13 @@ FactoryBot.define do
 
   factory :ahoy_event, class: Ahoy::Event do
     id { SecureRandom.uuid }
-<<<<<<< HEAD
-    time DateTime.current
-=======
     time { DateTime.current }
->>>>>>> v0.16
     sequence(:name) {|n| "Event #{n} type"}
   end
 
   factory :visit  do
     id { SecureRandom.uuid }
-<<<<<<< HEAD
-    started_at DateTime.current
-=======
     started_at { DateTime.current }
->>>>>>> v0.16
   end
 
   factory :campaign do
@@ -827,11 +721,7 @@ FactoryBot.define do
     association :notifiable, factory: :proposal
 
     trait :read do
-<<<<<<< HEAD
-      read_at Time.current
-=======
       read_at { Time.current }
->>>>>>> v0.16
     end
   end
 
@@ -848,13 +738,6 @@ FactoryBot.define do
   factory :banner do
     sequence(:title) { |n| "Banner title #{n}" }
     sequence(:description) { |n| "This is the text of Banner #{n}" }
-<<<<<<< HEAD
-    style {["banner-style-one", "banner-style-two", "banner-style-three"].sample}
-    image {["banner.banner-img-one", "banner.banner-img-two", "banner.banner-img-three"].sample}
-    target_url {["/proposals", "/debates" ].sample}
-    post_started_at Time.current - 7.days
-    post_ended_at Time.current + 7.days
-=======
     target_url {["/proposals", "/debates" ].sample}
     post_started_at { Time.current - 7.days }
     post_ended_at { Time.current + 7.days }
@@ -869,15 +752,12 @@ FactoryBot.define do
   factory :banner_section, class: 'Banner::Section' do
     association :banner_id, factory: :banner
     association :web_section, factory: :web_section
->>>>>>> v0.16
   end
 
   factory :proposal_notification do
     sequence(:title) { |n| "Thank you for supporting my proposal #{n}" }
     sequence(:body) { |n| "Please let others know so we can make it happen #{n}" }
     proposal
-<<<<<<< HEAD
-=======
     association :author, factory: :user
 
     trait :moderated do
@@ -895,7 +775,6 @@ FactoryBot.define do
     trait :with_confirmed_hide do
       confirmed_hide_at Time.current
     end
->>>>>>> v0.16
   end
 
   factory :direct_message do
@@ -920,16 +799,6 @@ FactoryBot.define do
     title "A collaborative legislation process"
     description "Description of the process"
     summary "Summary of the process"
-<<<<<<< HEAD
-    start_date Date.current - 5.days
-    end_date Date.current + 5.days
-    debate_start_date Date.current - 5.days
-    debate_end_date Date.current + 2.days
-    draft_publication_date Date.current - 1.day
-    allegations_start_date Date.current
-    allegations_end_date Date.current + 3.days
-    result_publication_date Date.current + 5.days
-=======
     start_date { Date.current - 5.days }
     end_date { Date.current + 5.days }
     debate_start_date { Date.current - 5.days }
@@ -938,7 +807,6 @@ FactoryBot.define do
     allegations_start_date { Date.current }
     allegations_end_date { Date.current + 3.days }
     result_publication_date { Date.current + 5.days }
->>>>>>> v0.16
     debate_phase_enabled true
     allegations_phase_enabled true
     draft_publication_enabled true
@@ -946,38 +814,6 @@ FactoryBot.define do
     published true
 
     trait :next do
-<<<<<<< HEAD
-      start_date Date.current + 2.days
-      end_date Date.current + 8.days
-      debate_start_date Date.current + 2.days
-      debate_end_date Date.current + 4.days
-      draft_publication_date Date.current + 5.days
-      allegations_start_date Date.current + 5.days
-      allegations_end_date Date.current + 7.days
-      result_publication_date Date.current + 8.days
-    end
-
-    trait :past do
-      start_date Date.current - 12.days
-      end_date Date.current - 2.days
-      debate_start_date Date.current - 12.days
-      debate_end_date Date.current - 9.days
-      draft_publication_date Date.current - 8.days
-      allegations_start_date Date.current - 8.days
-      allegations_end_date Date.current - 4.days
-      result_publication_date Date.current - 2.days
-    end
-
-    trait :in_debate_phase do
-      start_date Date.current - 5.days
-      end_date Date.current + 5.days
-      debate_start_date Date.current - 5.days
-      debate_end_date Date.current + 1.day
-      draft_publication_date Date.current + 1.day
-      allegations_start_date Date.current + 2.days
-      allegations_end_date Date.current + 3.days
-      result_publication_date Date.current + 5.days
-=======
       start_date { Date.current + 2.days }
       end_date { Date.current + 8.days }
       debate_start_date { Date.current + 2.days }
@@ -1008,7 +844,6 @@ FactoryBot.define do
       allegations_start_date { Date.current + 2.days }
       allegations_end_date { Date.current + 3.days }
       result_publication_date { Date.current + 5.days }
->>>>>>> v0.16
     end
 
     trait :published do

@@ -13,8 +13,6 @@ namespace :settings do
     Setting['feature.allow_attached_documents'] = true
   end
 
-<<<<<<< HEAD
-=======
   desc "Enable recommendations settings"
   task enable_recommendations: :environment do
     Setting['feature.user.recommendations'] = true
@@ -22,5 +20,4 @@ namespace :settings do
     Setting['feature.user.recommendations_on_proposals'] = true
   end
 
->>>>>>> v0.16
 end

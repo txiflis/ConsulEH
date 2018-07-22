@@ -124,8 +124,11 @@ eu-ES:
         milestones_tab: Jarraipena
         no_milestones: Ez da gertaera garrantsitzurik zehaztu
         milestone_publication_date: "%{publication_date} -(a)n argitaratuta"
+        milestone_status_changed: Proiektuaren egoera aldatu egin da
         author: Sortzailea
         project_unfeasible_html: 'Inbertsio proiektu hau <strong>bideragarri ezin moduan markatu da</strong>, beraz ez da bozkaketa fasera pasatuko.'
+        project_selected_html: 'Inbertsio proiektu hau bozkaketa faserako <strong>aukeratua izan da</strong>.'
+        project_winner: 'Gastu proiektu irabazlea'
         project_not_selected_html: 'Inbertsio proiektu hau <strong>ez da aukeratu</strong> bozkaketa faserako.'
       wrong_price_format: Zenbakiak solik sartu daitezke
       investment:

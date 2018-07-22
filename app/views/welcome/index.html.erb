@@ -4,13 +4,10 @@
   <%= render "shared/canonical", href: root_url %>
 <% end %>
 
-<<<<<<< HEAD
-=======
 <% if has_banners? %>
   <%= render "shared/banner" %>
 <% end %>
 
->>>>>>> v0.16
 <% provide :social_media_meta_tags do %>
   <%= render "shared/social_media_meta_tags",
               social_url: root_url %>

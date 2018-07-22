@@ -141,8 +141,6 @@
           <div class="callout warning">
             <%= t("budgets.investments.show.project_unfeasible_html") %>
           </div>
-<<<<<<< HEAD
-=======
         <% elsif investment.winner? %>
           <div class="callout success">
             <strong><%= t("budgets.investments.show.project_winner") %></strong>
@@ -151,23 +149,11 @@
           <div class="callout success">
             <%= t("budgets.investments.show.project_selected_html") %>
           </div>
->>>>>>> v0.16
         <% elsif !investment.selected? %>
           <div class="callout warning">
             <%= t("budgets.investments.show.project_not_selected_html") %>
           </div>
         <% end %>
-<<<<<<< HEAD
-      <% end %>
-      <% if investment.should_show_price? %>
-        <div class="sidebar-divider"></div>
-        <h2><%= t("budgets.investments.show.price") %></h2>
-        <div class="supports text-center">
-          <p class="investment-project-amount">
-            <%= investment.formatted_price %>
-          </p>
-        </div>
-=======
         <% if investment.should_show_price? %>
           <div class="sidebar-divider"></div>
           <h2><%= t("budgets.investments.show.price") %></h2>
@@ -177,7 +163,6 @@
             </p>
           </div>
         <% end %>
->>>>>>> v0.16
       <% end %>
       <%= render partial: 'shared/social_share', locals: {
         share_title: t("budgets.investments.show.share"),

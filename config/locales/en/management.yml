@@ -1,28 +1,3 @@
-<<<<<<< HEAD
----
-en:
-  management:
-    account:
-      alert:
-        unverified_user: No verified user logged in yet
-      edit:
-        back: Back
-        password:
-          password: Password
-          print: Print password
-          print_help: You will be able to print the password when it is saved.
-          random: Generate random password
-          reset_email_send: Email correctly sent.
-          reseted: Password reseted successfully
-          save: Save
-          send_email: Send reset password email
-        title: 'Edit user account: Reset password'
-      menu:
-        reset_password_email: Reset password via email
-        reset_password_manually: Reset password manually
-      show:
-        title: User account
-=======
 en:
   management:
     account:
@@ -45,7 +20,6 @@ en:
           save: Save password
           print: Print password
           print_help: You will be able to print the password when it is saved.
->>>>>>> v0.16
     account_info:
       change_user: Change user
       document_number_label: 'Document number:'
@@ -53,62 +27,26 @@ en:
       email_label: 'Email:'
       identified_label: 'Identified as:'
       username_label: 'Username:'
-<<<<<<< HEAD
-    budget_investments:
-      alert:
-        unverified_user: User is not verified
-      create: Create a budget investment
-      filters:
-        heading: Concepto
-        unfeasible: Unfeasible investment
-      print:
-        print_button: Print
-      search_results:
-        one: " containing the term '%{search_term}'"
-        other: " containing the term '%{search_term}'"
-    budgets:
-      create_new_investment: Create New Investment
-      print_investments: Print Budget Investments
-      support_investments: Support Budget Investments
-    check: Check
-    dashboard:
-      index:
-        info: Here you can manage users through all actions listed in the left menu.
-        title: Management
-    date_of_birth: Date of birth
-=======
     check: Check document
     dashboard:
       index:
         title: Management
         info: Here you can manage users through all actions listed in the left menu.
->>>>>>> v0.16
     document_number: Document number
     document_type_label: Document type
     document_verifications:
       already_verified: This user account is already verified.
       has_no_account_html: In order to create an account, go to %{link} and click in <b>'Register'</b> in the upper-left part of the screen.
-<<<<<<< HEAD
-      in_census_has_following_permissions: 'This user can participate in the website with the following permissions:'
-      link: CONSUL
-=======
       link: CONSUL
       in_census_has_following_permissions: 'This user can participate in the website with the following permissions:'
->>>>>>> v0.16
       not_in_census: This document is not registered.
       not_in_census_info: 'Citizens not in the Census can participate in the website with the following permissions:'
       please_check_account_data: Please check that the account data above are correct.
       title: User management
-<<<<<<< HEAD
-      under_age: You don't have the required age to verify your account.
-      verify: Verify
-    email_label: Email
-=======
       under_age: "You don't have the required age to verify your account."
       verify: Verify
     email_label: Email
     date_of_birth: Date of birth
->>>>>>> v0.16
     email_verifications:
       already_verified: This user account is already verified.
       choose_options: 'Please choose one of the following options:'
@@ -121,20 +59,6 @@ en:
       introduce_email: 'Please introduce the email used on the account:'
       send_email: Send verification email
     menu:
-<<<<<<< HEAD
-      create_budget_investment: Create budget investment
-      create_proposal: Create proposal
-      create_spending_proposal: Create spending proposal
-      edit_user_accounts: Edit user account
-      print_budget_investments: Print Budget Investments
-      print_proposals: Print proposals
-      print_spending_proposals: Print spending proposals
-      support_budget_investments: Support Budget Investments
-      support_proposals: Support proposals
-      support_spending_proposals: Support spending proposals
-      user_invites: User's invites
-      users: Users
-=======
       create_proposal: Create proposal
       print_proposals: Print proposals
       support_proposals: Support proposals
@@ -147,28 +71,19 @@ en:
       users: Users management
       user_invites: Send invitations
       select_user: Select user
->>>>>>> v0.16
     permissions:
       create_proposals: Create proposals
       debates: Engage in debates
       support_proposals: Support proposals
       vote_proposals: Vote proposals
     print:
-<<<<<<< HEAD
-      budget_investments_info: Participate at http://url.consul
-      budget_investments_note: Participatory budget will be assigned to the most voted budget investment.
-=======
->>>>>>> v0.16
       proposals_info: Create yor proposal on http://url.consul
       proposals_note: The proposals more supported will be voted. If are accepted by a majority, the city Council shall be carried out.
       proposals_title: 'Proposals:'
       spending_proposals_info: Participate at http://url.consul
       spending_proposals_note: Participatory budget will be assigned to the most voted budget investment.
-<<<<<<< HEAD
-=======
       budget_investments_info: Participate at http://url.consul
       budget_investments_note: Participatory budget will be assigned to the most voted budget investment.
->>>>>>> v0.16
     print_info: Print this info
     proposals:
       alert:
@@ -176,11 +91,6 @@ en:
       create_proposal: Create proposal
       print:
         print_button: Print
-<<<<<<< HEAD
-    sessions:
-      signed_out: Signed out successfully.
-      signed_out_managed_user: User session signed out successfully.
-=======
       index:
         title: Support proposals
     budgets:
@@ -203,49 +113,18 @@ en:
       search_results:
         one: " containing the term '%{search_term}'"
         other: " containing the term '%{search_term}'"
->>>>>>> v0.16
     spending_proposals:
       alert:
         unverified_user: User is not verified
       create: Create spending proposal
       filters:
-<<<<<<< HEAD
-        by_geozone: 'Investment projects with scope: %{geozone}'
-        unfeasible: Unfeasible investment projects
-=======
         unfeasible: Unfeasible investment projects
         by_geozone: "Investment projects with scope: %{geozone}"
->>>>>>> v0.16
       print:
         print_button: Print
       search_results:
         one: " containing the term '%{search_term}'"
         other: " containing the term '%{search_term}'"
-<<<<<<< HEAD
-    user_invites:
-      create:
-        success_html: "<strong>%{count} invitations</strong> have been sent."
-        title: User's invites
-      new:
-        info: Enter the emails separated by commas (',')
-        label: Emails
-        submit: Send invites
-        title: User's invites
-    username_label: Username
-    users:
-      autogenerated_password_html: Autogenerated password is <b>%{password}</b>, you can change it in the 'My account' section of the web
-      create_user: Create a new account
-      create_user_info: 'We will create an account with the following data:'
-      create_user_submit: Create user
-      create_user_success_html: We have sent an email to the email address <b>%{email}</b> in order to verify that it belongs to this user. It contains a link they have to click. Then they will have to set their access password before being able to log in to the website
-      email_optional_label: Email (optional)
-      erase_account_confirm: Are you sure you want to erase the account? This action can not be undone
-      erase_account_link: Delete user
-      erase_submit: Delete account
-      erase_warning: This action can not be undone. Please make sure you want to erase this account.
-      erased_by_manager: 'Deleted by manager: %{manager}'
-      erased_notice: User account deleted.
-=======
     sessions:
       signed_out: Signed out successfully.
       signed_out_managed_user: User session signed out successfully.
@@ -272,4 +151,3 @@ en:
       create:
         success_html: <strong>%{count} invitations</strong> have been sent.
         title: Send invitations
->>>>>>> v0.16
