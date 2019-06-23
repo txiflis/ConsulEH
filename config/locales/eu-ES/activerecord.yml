@@ -303,7 +303,7 @@ eu-ES:
         proposal:
           attributes:
             tag_list:
-              less_than_or_equal_to: "los temas deben ser menor o igual que %{count}"
+              less_than_or_equal_to: "gaiak %{count} ala %{count} baino gutxiago izan behar dira"
         budget/investment:
           attributes:
             tag_list:

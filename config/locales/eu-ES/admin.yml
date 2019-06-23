@@ -364,8 +364,8 @@ eu-ES:
           enabled: Habilitado
           process: Prosezua
           debate_phase: Eztabaida fasea
-          allegations_phase: Alegazio fasea
-          proposals_phase: Idazketa fasea
+          allegations_phase: Idazketa fasea
+          proposals_phase: Proposamen fasea
           start: Hasiera
           end: Amaiera
           use_markdown: Markdown erabili testua formateatzeko

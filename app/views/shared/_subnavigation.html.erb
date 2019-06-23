@@ -1,14 +1,9 @@
-<div class="small-12 medium-9 column">
+<div class="small-12 medium-10 column">
   <ul>
-    <% if feature?(:debates) %>
-      <li>
-        <%= layout_menu_link_to t("layouts.header.debates"),
-                                debates_path,
-                                controller_name == 'debates',
-                                accesskey: "1",
-                                title: t("shared.go_to_page") + t("layouts.header.debates") %>
-      </li>
-    <% end %>
+    
+
+    
+
     <% if feature?(:proposals) %>
       <li>
         <%= layout_menu_link_to t("layouts.header.proposals"),
@@ -18,6 +13,8 @@
                                 title: t("shared.go_to_page") + t("layouts.header.proposals") %>
       </li>
     <% end %>
+
+
     <% if feature?(:polls) %>
       <li>
         <%= layout_menu_link_to t("layouts.header.poll_questions"),
@@ -27,22 +24,8 @@
                                   title: t("shared.go_to_page") + t("layouts.header.poll_questions") %>
       </li>
     <% end %>
-    <% if feature?(:legislation) %>
-      <li>
-        <%= layout_menu_link_to t("layouts.header.collaborative_legislation"),
-                                legislation_processes_path,
-                                controller.class.parent == Legislation,
-                                accesskey: "4" %>
-      </li>
-    <% end %>
-    <% if feature?(:spending_proposals) %>
-      <li>
-        <%= layout_menu_link_to t("layouts.header.spending_proposals"),
-                                  spending_proposals_path,
-                                  controller_name == 'spending_proposals',
-                                  accesskey: "s" %>
-      </li>
-    <% end %>
+
+
     <% if feature?(:budgets) %>
       <li>
         <%= layout_menu_link_to t("layouts.header.budgets"),
@@ -52,6 +35,41 @@
                                   title: t("shared.go_to_page") + t("layouts.header.budgets") %>
       </li>
     <% end %>
+
+
+    <% if feature?(:legislation) %>
+      <li>
+        <%= layout_menu_link_to t("layouts.header.collaborative_legislation"),
+                                legislation_processes_path,
+                                controller.class.parent == Legislation,
+                                accesskey: "4" %>
+      </li>
+    <% end %>
+
+
+    <% if feature?(:spending_proposals) %>
+      <li>
+        <%= layout_menu_link_to t("layouts.header.spending_proposals"),
+                                  spending_proposals_path,
+                                  controller_name == 'spending_proposals',
+                                  accesskey: "s" %>
+      </li>
+    <% end %>
+
+
+
+    <% if feature?(:debates) %>
+      <li>
+        <%= layout_menu_link_to t("layouts.header.debates"),
+                                debates_path,
+                                controller_name == 'debates',
+                                accesskey: "1",
+                                title: t("shared.go_to_page") + t("layouts.header.debates") %>
+      </li>
+    <% end %>
+
+
+
     <li>
       <%= link_to t("layouts.header.help"),
                     help_path,
@@ -59,5 +77,8 @@
                     class: ("is-active" if current_page?(help_path)),
                     title: t("shared.go_to_page") + t("layouts.header.help") %>
     </li>
+
+
+
   </ul>
 </div>

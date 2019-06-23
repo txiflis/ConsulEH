@@ -13,7 +13,7 @@ eu-ES:
         voted_info_html: "Fasea hau itxi arte edozein momentutan aldatu dezakezu zure bozka.<br> Ez duzu zertan diru guztia gastatu behar."
         zero: Oraindik ez duzu gastu proiekturik bozkatu.
       reasons_for_not_balloting:
-        not_logged_in: Jarraitzeko %{signin} o %{signup} egin behar duzu.
+        not_logged_in: Jarraitzeko %{signin} edo %{signup} egin behar zara.
         not_verified: Gastu proiektuak egiaztatutako erabiltzaileek soilik babes ditzakete, %{verify_account}.
         organization: Erakundeek ezin dute bozkatu.
         not_selected: Ezin dira bozkatu proiektu bideragarriezinak .

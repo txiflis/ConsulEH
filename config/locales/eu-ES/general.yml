@@ -160,7 +160,7 @@ eu-ES:
       comments_title: Iruzkinak
       edit_debate_link: Eztabaida editatu
       flag: Eztabaida hau desegoki moduan markatu da zenbait erabiltzaileengaitik.
-      login_to_comment: "Iruzkindu ahal izateko %{signin} edo %{signup} egin behar duzu."
+      login_to_comment: "Iruzkindu ahal izateko %{signin} edo %{signup} egin behar zara."
       share: Partekatu
       author: Sortzailea
     update:
@@ -456,7 +456,7 @@ eu-ES:
       comments_tab: Iruzkinak
       edit_proposal_link: Proposamena editatu
       flag: Eztabaida hau desegoki moduan markatu da zenbait erabiltzaileengaitik.
-      login_to_comment: Iruzkindu ahal izateko %{signin} edo %{signup} egin behar duzu.
+      login_to_comment: Iruzkindu ahal izateko %{signin} edo %{signup} egin behar zara.
       notifications_tab: Jakinarazpenak
       retired_warning: "Proposamen honen sortzaileak ez dituela babes gehiago behar erabaki du."
       retired_warning_link_to_explanation: Azalpena berriz aztertu babestu aurretik.
@@ -503,9 +503,9 @@ eu-ES:
       already_voted_in_booth: "Bozkaketa honetan hautetsontzi presentzialetan bozkatu duzu jada, ezin duzu berriz bozkatu."
       already_voted_in_web: "Bozkaketa honetan parte hartu duzu jada. Berriz bozkatu ezkero zure bozka gainidatziko duzu."
       back: Bozkaketetara itzuli
-      cant_answer_not_logged_in: "%{signin} edo %{signup} egin behar duzu parte hartu ahal izateko."
+      cant_answer_not_logged_in: "%{signin} edo %{signup} egin behar zara parte hartu ahal izateko."
       comments_tab: Iruzkinak
-      login_to_comment: "%{signin} edo %{signup} egin behar duzu iruzkindu ahal izateko."
+      login_to_comment: "%{signin} edo %{signup} egin behar zara iruzkindu ahal izateko."
       signin: Saioa hasi
       signup: Erregistratu
       cant_answer_verify_html: "Mesedez %{verify_link} erantzun ahal izateko."
@@ -730,7 +730,7 @@ eu-ES:
         title_label: Izenburua
         verified_only: "%{verify_account}-ri mezu pribatu bat bidaltzeko"
         verify_account: zure kontua egiaztatu
-        authenticate: "%{signin} edo %{signup} egin behar duzu."
+        authenticate: "%{signin} edo %{signup} egin behar zara."
         signin: Saioa hasi
         signup: Erregistratu
       show:
@@ -774,23 +774,23 @@ eu-ES:
   votes:
     agree: Ados nago
     anonymous: Bozka anonimo larregi, %{verify_account} bozkatu ahal izateko.
-    comment_unauthenticated: Bozkatu ahal izateko %{signin} edo %{signup} egin behar duzu.
+    comment_unauthenticated: Bozkatu ahal izateko %{signin} edo %{signup} egin behar zara.
     disagree: Ez nago ados
     organizations: Erakundeek ezin dute bozkatu
     signin: Saioa hasi
     signup: Erregistratu
     supports: Babesak
-    unauthenticated: Jarraitu ahal izateko %{signin} o %{signup} egin behar duzu.
+    unauthenticated: Jarraitu ahal izateko %{signin} edo %{signup} egin behar zara.
     verified_only: Proposamenak egiaztatutako erabiltzaileek soilik bozka ditzakete, %{verify_account}.
     verify_account: zure kontua egiaztatu
     spending_proposals:
-      not_logged_in: Jarraitu ahal izateko %{signin} o %{signup} egin behar duzu.
+      not_logged_in: Jarraitu ahal izateko %{signin} edo %{signup} egin behar zara.
       not_verified: Inbertsio proposamenak egiaztatutako erabiltzaileek soilik bozka ditzakete, %{verify_account}.
       organization: Erakundeek ezin dute bozkatu.
       unfeasible: Proposamen bideragarriezinak ezin dira bozkatu.
       not_voting_allowed: Bozka epea itxita dago.
     budget_investments:
-      not_logged_in: Jarraitu ahal izateko %{signin} o %{signup} egin behar duzu.
+      not_logged_in: Jarraitu ahal izateko %{signin} edo %{signup} egin behar zara.
       not_verified: Gastu proposamenak egiaztatutako erabiltzaileek soilik bozka ditzakete, %{verify_account}.
       organization: Erakundeek ezin dute bozkatu.
       unfeasible: Proposamen bideragarriezinak ezin dira bozkatu.

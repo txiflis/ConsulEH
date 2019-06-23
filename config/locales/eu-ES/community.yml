@@ -57,4 +57,4 @@ eu-ES:
         recommendation_three: Espazio honetaz gozatu, betetzen duten ahotsetaz, zurea ere bada.
   topics:
     show:
-      login_to_comment: Necesitas %{signin} o %{signup} para comentar.
+      login_to_comment: Iruzkindu ahal izateko %{signin} edo %{signup} egin behar zara.
