@@ -1,0 +1,94 @@
+00:00 rvm1:hook
+      01 mkdir -p /home/deploy/consul/rvm1scripts/
+    ✔ 01 deploy@167.71.5.9 2.280s
+      Uploading /var/lib/gems/2.3.0/gems/rvm1-capistrano3-1.4.0/script/rvm-auto.sh 100.0%
+      02 chmod +x /home/deploy/consul/rvm1scripts/rvm-auto.sh
+    ✔ 02 deploy@167.71.5.9 0.587s
+00:04 rvm1:install:rvm
+      01 mkdir -p /home/deploy/consul/rvm1scripts/
+    ✔ 01 deploy@167.71.5.9 0.429s
+      Uploading /var/lib/gems/2.3.0/gems/rvm1-capistrano3-1.4.0/script/install-rvm.sh 100.0%
+      02 chmod +x /home/deploy/consul/rvm1scripts/install-rvm.sh
+    ✔ 02 deploy@167.71.5.9 0.434s
+      03 /home/deploy/consul/rvm1scripts/install-rvm.sh
+      03 Downloading https://github.com/rvm/rvm/archive/1.29.8.tar.gz
+      03 
+      03 Downloading https://github.com/rvm/rvm/releases/download/1.29.8/1.29.8.tar.gz.asc
+      03 
+      03 gpg: 
+      03 Signature made Wed 08 May 2019 04:14:49 PM CEST using RSA key ID 39499BDB
+      03 
+      03 gpg: 
+      03 Good signature from "Piotr Kuczynski <piotr.kuczynski@gmail.com>"
+      03 
+      03 gpg: 
+      03 WARNING: This key is not certified with a trusted signature!
+      03 
+      03 gpg: 
+      03          There is no indication that the signature belongs to the owner.
+      03 
+      03 Primary key fingerprint:
+      03  7D2B
+      03  AF1C
+      03  F37B
+      03  13E2
+      03  069D
+      03  
+      03  6956
+      03  105B
+      03  D0E7
+      03  3949
+      03  9BDB
+      03 
+      03 GPG verified '/home/deploy/.rvm/archives/rvm-1.29.8.tgz'
+      03 
+      03 Upgrading the RVM installation in /home/deploy/.rvm/
+      03 
+      03 
+      03     RVM PATH line found in /home/deploy/.mkshrc /home/deploy/.profile /home/deploy/.bashrc /home/deploy/.zshrc.
+      03 
+      03     RVM sourcing line found in /home/deploy/.profile /home/deploy/.bash_profile /home/deploy/.zlogin.
+      03 
+      03 Upgrade of RVM in /home/deploy/.rvm/ is complete.
+      03 
+      03 
+      03 
+      03 Thanks for installing RVM 🙏
+      03 
+      03 Please consider donating to our open collective to help us maintain RVM.
+      03 
+      03 
+      03 👉  Donate: https://opencollective.com/rvm/donate
+      03 
+      03 
+      03 
+      03 
+      03 
+    ✔ 03 deploy@167.71.5.9 9.493s
+00:15 git:wrapper
+      01 mkdir -p /tmp
+    ✔ 01 deploy@167.71.5.9 0.429s
+      Uploading /tmp/git-ssh-consul-production-pc02.sh 100.0%
+      02 chmod 700 /tmp/git-ssh-consul-production-pc02.sh
+    ✔ 02 deploy@167.71.5.9 0.448s
+00:17 git:clone
+      The repository mirror is at /home/deploy/consul/repo
+00:18 git:update
+      01 git remote set-url origin https://github.com/Txiflis-EH/consul.git
+    ✔ 01 deploy@167.71.5.9 0.440s
+      02 git remote update --prune
+      02 Fetching origin
+      02 
+    ✔ 02 deploy@167.71.5.9 1.172s
+00:20 git:create_release
+      01 mkdir -p /home/deploy/consul/releases/20190627133015
+    ✔ 01 deploy@167.71.5.9 0.429s
+      02 git archive stable | /usr/bin/env tar -x -f - -C /home/deploy/consul/releases/20190627133015
+      02 fatal: Not a valid object name
+      02 
+      02 tar: 
+      02 This does not look like a tar archive
+      02 
+      02 tar: 
+      02 Exiting with failure status due to previous errors
+      02 
