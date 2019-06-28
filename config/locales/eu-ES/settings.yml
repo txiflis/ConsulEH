@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 eu-ES:
   settings:
     comments_body_max_length: "Iruzkinen gehienezko luzera"
@@ -63,3 +64,6 @@ eu-ES:
     verification_offices_url: Egiaztatze bulegoen URL-a
     min_age_to_participate: Parte hartzeko gutxienezko adina
     proposal_improvement_path: Proposamenak hobetzeko informazio linka
+=======
+eu:
+>>>>>>> upstream/capistrano

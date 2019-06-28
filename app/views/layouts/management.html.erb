@@ -29,6 +29,18 @@
               </li>
             </ul>
           </div>
+          <% if show_admin_menu?(manager_logged_in) %>
+            <div id="responsive_menu">
+
+              <div class="top-bar-right">
+                <ul class="menu" data-responsive-menu="medium-dropdown">
+                  <%= render "shared/admin_login_items", current_user: manager_logged_in %>
+                  <%= render "devise/menu/login_items", current_user: manager_logged_in %>
+                </ul>
+              </div>
+
+            </div>
+          <% end %>
         </div>
       </div>
     </header>
@@ -41,7 +53,7 @@
       <%= render "management/account_info" %>
 
       <div class="admin-content small-12 medium-9 column">
-        <%= render 'layouts/flash' %>
+        <%= render "layouts/flash" %>
         <%= yield %>
       </div>
     </main>

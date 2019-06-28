@@ -1,5 +1,5 @@
 class Budget::Investment::Exporter
-  require 'csv'
+  require "csv"
 
   def initialize(investments)
     @investments = investments
@@ -16,16 +16,18 @@ class Budget::Investment::Exporter
 
   def headers
     [
-      I18n.t("admin.budget_investments.index.table_id"),
-      I18n.t("admin.budget_investments.index.table_title"),
-      I18n.t("admin.budget_investments.index.table_supports"),
-      I18n.t("admin.budget_investments.index.table_admin"),
-      I18n.t("admin.budget_investments.index.table_valuator"),
-      I18n.t("admin.budget_investments.index.table_valuation_group"),
-      I18n.t("admin.budget_investments.index.table_geozone"),
-      I18n.t("admin.budget_investments.index.table_feasibility"),
-      I18n.t("admin.budget_investments.index.table_valuation_finished"),
-      I18n.t("admin.budget_investments.index.table_selection")
+      I18n.t("admin.budget_investments.index.list.id"),
+      I18n.t("admin.budget_investments.index.list.title"),
+      I18n.t("admin.budget_investments.index.list.supports"),
+      I18n.t("admin.budget_investments.index.list.admin"),
+      I18n.t("admin.budget_investments.index.list.valuator"),
+      I18n.t("admin.budget_investments.index.list.valuation_group"),
+      I18n.t("admin.budget_investments.index.list.geozone"),
+      I18n.t("admin.budget_investments.index.list.feasibility"),
+      I18n.t("admin.budget_investments.index.list.valuation_finished"),
+      I18n.t("admin.budget_investments.index.list.selected"),
+      I18n.t("admin.budget_investments.index.list.visible_to_valuators"),
+      I18n.t("admin.budget_investments.index.list.author_username")
     ]
   end
 
@@ -35,12 +37,14 @@ class Budget::Investment::Exporter
       investment.title,
       investment.total_votes.to_s,
       admin(investment),
-      investment.assigned_valuators || '-',
-      investment.assigned_valuation_groups || '-',
+      investment.assigned_valuators || "-",
+      investment.assigned_valuation_groups || "-",
       investment.heading.name,
       price(investment),
-      investment.valuation_finished? ? I18n.t('shared.yes') : I18n.t('shared.no'),
-      investment.selected? ? I18n.t('shared.yes') : I18n.t('shared.no')
+      investment.valuation_finished? ? I18n.t("shared.yes") : I18n.t("shared.no"),
+      investment.selected? ? I18n.t("shared.yes") : I18n.t("shared.no"),
+      investment.visible_to_valuators? ? I18n.t("shared.yes") : I18n.t("shared.no"),
+      investment.author.username
     ]
   end
 
@@ -54,6 +58,10 @@ class Budget::Investment::Exporter
 
   def price(investment)
     price_string = "admin.budget_investments.index.feasibility.#{investment.feasibility}"
-    I18n.t(price_string, price: investment.formatted_price)
+    if investment.feasible?
+      "#{I18n.t(price_string)} (#{investment.formatted_price})"
+    else
+      I18n.t(price_string)
+    end
   end
 end

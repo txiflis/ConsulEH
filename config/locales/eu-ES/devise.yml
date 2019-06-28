@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 eu-ES:
   devise:
     password_expired:
@@ -63,3 +64,6 @@ eu-ES:
         one: "Errore batek %{resource} hau gordetzea eragotzi du. Mesedez, markatutako eremuak berriz begiratu nola konpondu jakiteko:"
         other: "%{count} errorek %{resource} hau gordetzea eragotzi du. Mesedez, markatutako eremuak berriz begiratu nola konpondu jakiteko:"
       equal_to_current_password: "Orain duzun pasahitzaren ezberdina izan behar du"
+=======
+eu:
+>>>>>>> upstream/capistrano

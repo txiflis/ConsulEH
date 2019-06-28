@@ -1,28 +1,31 @@
-class Poll::Question < ActiveRecord::Base
+class Poll::Question < ApplicationRecord
   include Measurable
   include Searchable
 
   acts_as_paranoid column: :hidden_at
   include ActsAsParanoidAliases
 
+  translates :title, touch: true
+  include Globalizable
+
   belongs_to :poll
-  belongs_to :author, -> { with_hidden }, class_name: 'User', foreign_key: 'author_id'
+  belongs_to :author, -> { with_hidden }, class_name: "User", foreign_key: "author_id"
 
   has_many :comments, as: :commentable
-  has_many :answers, class_name: 'Poll::Answer'
-  has_many :question_answers, -> { order 'given_order asc' }, class_name: 'Poll::Question::Answer'
+  has_many :answers, class_name: "Poll::Answer"
+  has_many :question_answers, -> { order "given_order asc" }, class_name: "Poll::Question::Answer", dependent: :destroy
   has_many :partial_results
   belongs_to :proposal
 
-  validates :title, presence: true
+  validates_translation :title, presence: true, length: { minimum: 4 }
   validates :author, presence: true
-  validates :poll_id, presence: true
+  validates :poll_id, presence: true, if: Proc.new { |question| question.poll.nil? }
 
-  validates :title, length: { minimum: 4 }
+  accepts_nested_attributes_for :question_answers, reject_if: :all_blank, allow_destroy: true
 
   scope :by_poll_id,    ->(poll_id) { where(poll_id: poll_id) }
 
-  scope :sort_for_list, -> { order('poll_questions.proposal_id IS NULL', :created_at)}
+  scope :sort_for_list, -> { order("poll_questions.proposal_id IS NULL", :created_at)}
   scope :for_render,    -> { includes(:author, :proposal) }
 
   def self.search(params)
@@ -33,10 +36,10 @@ class Poll::Question < ActiveRecord::Base
   end
 
   def searchable_values
-    { title                 => 'A',
-      proposal.try(:title)  => 'A',
-      author.username       => 'C',
-      author_visible_name   => 'C' }
+    { title                 => "A",
+      proposal.try(:title)  => "A",
+      author.username       => "C",
+      author_visible_name   => "C" }
   end
 
   def copy_attributes_from_proposal(proposal)
@@ -44,7 +47,7 @@ class Poll::Question < ActiveRecord::Base
       self.author = proposal.author
       self.author_visible_name = proposal.author.name
       self.proposal_id = proposal.id
-      self.title = proposal.title
+      send(:"#{localized_attr_name_for(:title, Globalize.locale)}=", proposal.title)
     end
   end
 
@@ -56,7 +59,10 @@ class Poll::Question < ActiveRecord::Base
   end
 
   def answers_total_votes
-    question_answers.map { |a| Poll::Answer.where(question_id: self, answer: a.title).count }.sum
+    question_answers.inject(0) { |total, question_answer| total + question_answer.total_votes }
   end
 
+  def most_voted_answer_id
+    question_answers.max_by { |answer| answer.total_votes }.id
+  end
 end

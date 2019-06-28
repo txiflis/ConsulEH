@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 eu-ES:
   flash:
     actions:
@@ -36,3 +37,6 @@ eu-ES:
         topic: "Gaia ezabatuta."
         poll_question_answer_video: "Erantzun bideoa ezabatuta."
         valuator_group: "Ebaluatzaile taldea ondo ezabatuta"
+=======
+eu:
+>>>>>>> upstream/capistrano

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 eu-ES:
   budgets:
     ballots:
@@ -183,3 +184,6 @@ eu-ES:
         dates_range_invalid: "Hasiera data ezin da amaiera data baino handiago edo berdina izan"
         prev_phase_dates_invalid: "Hasiera data gaitutako aurreko fasearen (%{phase_name}) hasiera data baino beranduagokoa izan behar da"
         next_phase_dates_invalid: "Amaiera data gaitutako huerrengo fasearen (%{phase_name}) amaiera data aurreragokoa izan behar da"
+=======
+eu:
+>>>>>>> upstream/capistrano

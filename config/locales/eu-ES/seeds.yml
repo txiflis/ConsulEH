@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 eu-ES:
   seeds:
     settings:
@@ -53,3 +54,6 @@ eu-ES:
       recounting_poll: "Bozkaketa zenbatzen ari da"
       expired_poll_without_stats: "Bozkaketa Amaituta (Emaitzik eta estatistikarik gabe)"
       expired_poll_with_stats: "Bozkaketa Amaituta (Emaitza eta estatistikarekin)"
+=======
+eu:
+>>>>>>> upstream/capistrano

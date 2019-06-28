@@ -35,7 +35,7 @@
     <%= render "shared/section_header", i18n_namespace: "debates.index.section_header", image: "debates" %>
   <% end %>
 
-  <% if feature?('user.recommendations') && @recommended_debates.present? %>
+  <% if feature?("user.recommendations") && @recommended_debates.present? %>
     <%= render "shared/recommended_index", recommended: @recommended_debates,
                                            disable_recommendations_path: recommendations_disable_debates_path,
                                            namespace: "debates" %>
@@ -71,7 +71,7 @@
           <%= render @debates %>
         <% else %>
           <% @debates.each do |debate| %>
-            <%= render partial: 'debates/debate_minimal', locals: { debate: debate } %>
+            <%= render partial: "debates/debate_minimal", locals: { debate: debate } %>
           <% end %>
         <% end %>
       <% else %>
@@ -88,9 +88,6 @@
           <p><%= t("debates.index.section_footer.help_text_1") %></p>
           <p><%= t("debates.index.section_footer.help_text_2",
                     org: link_to(setting["org_name"], new_user_registration_path)).html_safe %></p>
-          <p><%= t("debates.index.section_footer.help_text_3",
-                    proposal: link_to(t("debates.index.section_footer.proposals_link"), proposals_path),
-                    budget: link_to(t("debates.index.section_footer.budget_link"), budgets_path)).html_safe %>
           </p>
         </div>
       <% end %>

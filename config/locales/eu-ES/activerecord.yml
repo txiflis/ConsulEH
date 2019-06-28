@@ -1,9 +1,14 @@
+<<<<<<< HEAD
 eu-ES:
+=======
+eu:
+>>>>>>> upstream/capistrano
   activerecord:
     models:
       activity:
         one: "jarduera"
         other: "jarduerak"
+<<<<<<< HEAD
       budget:
         one: "Partaidetzazko aurrekontua"
         other: "Partaidetzazko aurrekontuak"
@@ -88,10 +93,16 @@ eu-ES:
       legislation/question_options:
         one: "Erantzuk itxiko aukera"
         other: "Erantzuk itxiko aukerak"
+=======
+      legislation/questions:
+        one: "Galdera"
+        other: "Galderak"
+>>>>>>> upstream/capistrano
       legislation/answers:
         one: "Erantzuna"
         other: "Erantzunak"
       documents:
+<<<<<<< HEAD
         one: "Agiria"
         other: "Agiriak"
       images:
@@ -202,11 +213,39 @@ eu-ES:
         more_info_flag: Laguntza orrian erakutsi
         print_content_flag: Edukia inprimitzeko botoia
         locale: Hizkuntza
+=======
+        one: "Dokumentua"
+        other: "Dokumentuak"
+      images:
+        one: "Irudia"
+        other: "Irudiak"
+    attributes:
+      budget:
+        name: "Izena"
+      milestone/status:
+        name: "Izena"
+      comment:
+        body: "Iruzkin"
+        user: "Erabiltzailea"
+      proposal:
+        question: "Galdera"
+      user:
+        email: "E-mail"
+      poll:
+        name: "Izena"
+      poll/translation:
+        name: "Izena"
+      poll/question:
+        title: "Galdera"
+      poll/question/translation:
+        title: "Galdera"
+>>>>>>> upstream/capistrano
       site_customization/image:
         name: Izena
         image: Irudia
       site_customization/content_block:
         name: Izena
+<<<<<<< HEAD
         locale: Hizkuntza
         body: Edukia
       legislation/process:
@@ -335,3 +374,11 @@ eu-ES:
         restrict_dependent_destroy:
           has_one: "Ezin daiteke erregiztroa ezabatu menpeko %{record} bat baitago"
           has_many: "Ezin daiteke erregiztroa ezabatu menpeko %{record} baitaude"
+=======
+      legislation/annotation:
+        text: Iruzkin
+      poll/question/answer:
+        title: Erantzuna
+      poll/question/answer/translation:
+        title: Erantzuna
+>>>>>>> upstream/capistrano

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 eu-ES:
   mailers:
     no_reply: "Mezu hau erantzunik onartzen ez duen helbide elektroniko batetik bidali da."
@@ -90,3 +91,6 @@ eu-ES:
       thanks: "Eskerrak berriz ere zure partaidetzagaitik."
       sincerely: "Adeitasunez"
       signatory: "HERRITARREN PARTAIDETZA SAIL OROKORRA"
+=======
+eu:
+>>>>>>> upstream/capistrano

@@ -33,6 +33,7 @@
 //= require moderator_comment
 //= require moderator_debates
 //= require moderator_proposals
+//= require moderator_budget_investments
 //= require moderator_proposal_notifications
 //= require prevent_double_submission
 //= require gettext
@@ -57,6 +58,8 @@
 //= require markdown-it
 //= require markdown_editor
 //= require cocoon
+//= require answers
+//= require questions
 //= require legislation_admin
 //= require legislation
 //= require legislation_allegations
@@ -79,8 +82,12 @@
 //= require send_newsletter_alert
 //= require managers
 //= require globalize
+//= require send_admin_notification_alert
+//= require settings
 
 var initialize_modules = function() {
+  App.Answers.initialize();
+  App.Questions.initialize();
   App.Comments.initialize();
   App.Users.initialize();
   App.Votes.initialize();
@@ -124,12 +131,14 @@ var initialize_modules = function() {
   App.SendNewsletterAlert.initialize();
   App.Managers.initialize();
   App.Globalize.initialize();
+  App.SendAdminNotificationAlert.initialize();
+  App.Settings.initialize();
 };
 
 $(function(){
   Turbolinks.enableProgressBar();
 
   $(document).ready(initialize_modules);
-  $(document).on('page:load', initialize_modules);
-  $(document).on('ajax:complete', initialize_modules);
+  $(document).on("page:load", initialize_modules);
+  $(document).on("ajax:complete", initialize_modules);
 });

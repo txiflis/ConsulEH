@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 eu-ES:
   account:
     show:
@@ -869,3 +870,22 @@ eu-ES:
       text_sign_in: saioa hasi
       text_sign_up: Erregistratu zaitez
       title: "Zelan iruzkindu dezaket agiri hau?"
+=======
+eu:
+  comments_helper:
+    comment_link: Iruzkin
+  form:
+    debate: Eztabaida
+    budget/investment: Inbertsioa
+    poll/question/answer: Erantzuna
+    document: Dokumentua
+    image: Irudia
+  polls:
+    show:
+      documents: Dokumentuak
+      results:
+        title: "Galderak"
+  related_content:
+    content_title:
+      debate: "Eztabaida"
+>>>>>>> upstream/capistrano

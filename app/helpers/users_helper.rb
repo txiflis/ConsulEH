@@ -16,8 +16,8 @@ module UsersHelper
     if commentable.nil?
       deleted_commentable_text(comment)
     elsif commentable.hidden?
-      content_tag(:del, commentable.title) + ' ' +
-      content_tag(:span, '(' + deleted_commentable_text(comment) + ')', class: 'small')
+      content_tag(:del, commentable.title) + " " +
+      content_tag(:span, "(" + deleted_commentable_text(comment) + ")", class: "small")
     else
       link_to(commentable.title, comment)
     end
@@ -52,15 +52,22 @@ module UsersHelper
     current_user && current_user.manager?
   end
 
-  def show_admin_menu?
-    current_administrator? || current_moderator? || current_valuator? || current_manager?
+  def current_poll_officer?
+    current_user && current_user.poll_officer?
+  end
+
+  def show_admin_menu?(user = nil)
+    unless namespace == "officing"
+      current_administrator? || current_moderator? || current_valuator? || current_manager? ||
+      (user && user.administrator?) || current_poll_officer?
+    end
   end
 
   def interests_title_text(user)
     if current_user == user
-      t('account.show.public_interests_my_title_list')
+      t("account.show.public_interests_my_title_list")
     else
-      t('account.show.public_interests_user_title_list')
+      t("account.show.public_interests_user_title_list")
     end
   end
 

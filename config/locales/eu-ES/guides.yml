@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 eu-ES:
   guides:
     title: "%{org}-rentzako ideiarik daukazu?"
@@ -16,3 +17,6 @@ eu-ES:
       feature_3_html: "Edozein moemntutan aktibatzen dira; Babesak lortzeko <strong>urte bat</strong> daukazu"
       feature_4_html: "Bozkaketan onartu ezkero, Udaletxeak proposamena bere gain hartuko du"
       new_button: Proposamen bat sortu nahi dut
+=======
+eu:
+>>>>>>> upstream/capistrano

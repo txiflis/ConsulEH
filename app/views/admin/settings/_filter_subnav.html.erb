@@ -1,7 +1,19 @@
-<ul class="tabs" data-tabs id="settings-tabs">
+<ul class="tabs"
+    id="settings-tabs"
+    data-deep-link="true"
+    data-update-history="true"
+    data-deep-link-smudge="true"
+    data-deep-link-smudge-delay="500"
+    data-tabs>
   <li class="tabs-title is-active">
     <%= link_to "#tab-configuration" do %>
       <%= t("admin.settings.index.title") %>
+    <% end %>
+  </li>
+
+  <li class="tabs-title">
+    <%= link_to "#tab-participation-processes" do %>
+      <%= t("admin.settings.index.participation_processes") %>
     <% end %>
   </li>
 
@@ -11,21 +23,15 @@
     <% end %>
   </li>
 
-  <li class="tabs-title">
-    <%= link_to "#tab-banner-styles" do %>
-      <%= t("admin.settings.index.banners") %>
-    <% end %>
-  </li>
-
-  <li class="tabs-title">
-    <%= link_to "#tab-banner-images" do %>
-      <%= t("admin.settings.index.banner_imgs") %>
-    <% end %>
-  </li>
-
   <li class="tabs-title" id="map-tab">
     <%= link_to "#tab-map-configuration" do %>
       <%= t("admin.settings.index.map.title") %>
+    <% end %>
+  </li>
+
+  <li class="tabs-title" id="proposals-tab">
+    <%= link_to "#tab-proposals" do %>
+      <%= t("admin.settings.index.dashboard.title") %>
     <% end %>
   </li>
 </ul>

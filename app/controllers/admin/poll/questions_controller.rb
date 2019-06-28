@@ -1,11 +1,12 @@
 class Admin::Poll::QuestionsController < Admin::Poll::BaseController
   include CommentableActions
+  include Translatable
 
   load_and_authorize_resource :poll
-  load_and_authorize_resource :question, class: 'Poll::Question'
+  load_and_authorize_resource :question, class: "Poll::Question"
 
   def index
-    @polls = Poll.all
+    @polls = Poll.not_budget
     @search = search_params[:search]
 
     @questions = @questions.search(search_params).page(params[:page]).order("created_at DESC")
@@ -55,11 +56,15 @@ class Admin::Poll::QuestionsController < Admin::Poll::BaseController
   private
 
     def question_params
-      params.require(:poll_question).permit(:poll_id, :title, :question, :proposal_id)
+      attributes = [:poll_id, :question, :proposal_id]
+      params.require(:poll_question).permit(*attributes, translation_params(Poll::Question))
     end
 
     def search_params
       params.permit(:poll_id, :search)
     end
 
+    def resource
+      @poll_question ||= Poll::Question.find(params[:id])
+    end
 end

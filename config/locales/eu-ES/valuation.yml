@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 eu-ES:
   valuation:
     header:
@@ -125,3 +126,10 @@ eu-ES:
         save: Datuak gorde
       notice:
         valuate: "Txoztena eguneratuta"
+=======
+eu:
+  valuation:
+    budgets:
+      index:
+        table_name: Izena
+>>>>>>> upstream/capistrano

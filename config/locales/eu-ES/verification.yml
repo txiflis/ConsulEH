@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 es:
   verification:
     alert:
@@ -109,3 +110,14 @@ es:
         phone_title: Telefonoak
         title: Eskuragarri dagoen informazioa
         use_another_phone: Beste telefono bat erabili
+=======
+eu:
+  verification:
+    residence:
+      new:
+        date_of_birth: Jaiotze data
+        document_type_label: Agiri mota
+        postal_code: Posta-kodea
+    step_1: Bizilekua
+    step_2: Konfirmazio kodea
+>>>>>>> upstream/capistrano

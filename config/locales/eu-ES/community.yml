@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 eu-ES:
   community:
     sidebar:
@@ -58,3 +59,6 @@ eu-ES:
   topics:
     show:
       login_to_comment: Iruzkindu ahal izateko %{signin} edo %{signup} egin behar zara.
+=======
+eu:
+>>>>>>> upstream/capistrano

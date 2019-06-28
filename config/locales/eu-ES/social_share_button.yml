@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 eu-ES:
   social_share_button:
     share_to: "%{name}-(e)n partekatu"
@@ -18,3 +19,8 @@ eu-ES:
     pinterest: "Pinterest"
     email: "Email"
     telegram: "Telegram"
+=======
+eu:
+  social_share_button:
+    email: "E-mail"
+>>>>>>> upstream/capistrano

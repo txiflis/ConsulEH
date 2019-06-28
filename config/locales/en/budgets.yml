@@ -10,7 +10,8 @@ en:
         voted_html:
           one: "You have voted <span>one</span> investment."
           other: "You have voted <span>%{count}</span> investments."
-        voted_info_html: "You can change your vote at any time until the close of this phase.<br> No need to spend all the money available."
+        voted_info_html: "Your ballot is confirmed!"
+        voted_info_2: "But you can change your vote at any time until this phase is closed."
         zero: You have not voted any investment project.
       reasons_for_not_balloting:
         not_logged_in: You must %{signin} or %{signup} to continue.
@@ -21,6 +22,7 @@ en:
         no_ballots_allowed: Selecting phase is closed
         different_heading_assigned_html: "You have already voted a different heading: %{heading_link}"
         change_ballot: change your votes
+        casted_offline: You have already participated offline
     groups:
       show:
         title: Select an option
@@ -56,11 +58,8 @@ en:
       see_results: See results
       section_footer:
         title: Help with participatory budgets
-        description: With the participatory budgets the citizens decide to which projects presented by the neighbors is destined a part of the municipal budget.
-        help_text_1: "Participatory budgets are processes in which citizens decide directly on what is spent part of the municipal budget. Any registered person over 16 years old can propose an investment project that is preselected in a phase of citizen supports."
-        help_text_2: "The most voted projects are evaluated and passed to a final vote in which they decide the actions to be carried out by the City Council once the municipal budgets of the next year are approved."
-        help_text_3: "The presentation of participatory budgeting projects takes place from January and over a period of one and a half months. To participate and propose proposals for the entire city and / or districts, you must sign up on %{org} and verify your account."
-        help_text_4: "To get as many supports and votes as possible, choose a descriptive and understandable headline for your project. Then you have a space to develop the approach of your proposal. Provide all the data and explanations, and even documents and images, to help other participants to better understand what you are proposing."
+        description: With the participatory budgets the citizens decide to which projects is destined a part of the budget.
+      milestones: Milestones
     investments:
       form:
         tag_category_label: "Categories"
@@ -75,7 +74,7 @@ en:
       index:
         title: Participatory budgeting
         unfeasible: Unfeasible investment projects
-        unfeasible_text: "The investments must meet a number of criteria (legality, concreteness, be the responsibility of the city, not exceed the limit of the budget) to be declared viable and reach the stage of final vote. All investments don't meet these criteria are marked as unfeasible and published in the following list, along with its report of infeasibility."
+        unfeasible_text: "The investments must meet a number of criteria (legality, concreteness, not exceed the limit of the budget) to be declared viable and reach the stage of final vote. All investments don't meet these criteria are marked as unfeasible and published in the following list, along with its report of infeasibility."
         by_heading: "Investment projects with scope: %{heading}"
         search_form:
           button: Search
@@ -93,7 +92,7 @@ en:
           voted_info_link: change your vote
           different_heading_assigned_html: "You have active votes in another heading: %{heading_link}"
           change_ballot: "If your change your mind you can remove your votes in %{check_ballot} and start again."
-          check_ballot_link: "check my ballot"
+          check_ballot_link: "check and confirm my ballot"
           zero: You have not voted any investment project in this group.
           verified_only: "To create a new budget investment %{verify}."
           verify_account: "verify your account"
@@ -108,13 +107,15 @@ en:
           random: random
           confidence_score: highest rated
           price: by price
+      share:
+        message: "I created the investment project %{title} in %{handle}. Create an investment project too!"
       show:
         author_deleted: User deleted
         price_explanation: Price explanation
         unfeasibility_explanation: Unfeasibility explanation
-        code_html: 'Investment project code: <strong>%{code}</strong>'
-        location_html: 'Location: <strong>%{location}</strong>'
-        organization_name_html: 'Proposed on behalf of: <strong>%{name}</strong>'
+        code_html: "Investment project code: <strong>%{code}</strong>"
+        location_html: "Location: <strong>%{location}</strong>"
+        organization_name_html: "Proposed on behalf of: <strong>%{name}</strong>"
         share: Share
         title: Investment project
         supports: Supports
@@ -122,14 +123,12 @@ en:
         price: Price
         comments_tab: Comments
         milestones_tab: Milestones
-        no_milestones: Don't have defined milestones
-        milestone_publication_date: "Published %{publication_date}"
-        milestone_status_changed: Investment status changed to
         author: Author
-        project_unfeasible_html: 'This investment project <strong>has been marked as not feasible</strong> and will not go to balloting phase.'
-        project_selected_html: 'This investment project <strong>has been selected</strong> for balloting phase.'
-        project_winner: 'Winning investment project'
-        project_not_selected_html: 'This investment project <strong>has not been selected</strong> for balloting phase.'
+        project_unfeasible_html: "This investment project <strong>has been marked as not feasible</strong> and will not go to balloting phase."
+        project_selected_html: "This investment project <strong>has been selected</strong> for balloting phase."
+        project_winner: "Winning investment project"
+        project_not_selected_html: "This investment project <strong>has not been selected</strong> for balloting phase."
+        see_price_explanation: See price explanation
       wrong_price_format: Only integer numbers
       investment:
         add: Vote
@@ -145,11 +144,11 @@ en:
           zero: No supports
         give_support: Support
       header:
-        check_ballot: Check my ballot
+        check_ballot: Check and confirm my ballot
         different_heading_assigned_html: "You have active votes in another heading: %{heading_link}"
         change_ballot: "If your change your mind you can remove your votes in %{check_ballot} and start again."
-        check_ballot_link: "check my ballot"
-        price: "This heading have a budget of"
+        check_ballot_link: "check and confirm my ballot"
+        price: "This heading has a budget of"
     progress_bar:
       assigned: "You have assigned: "
       available: "Available budget: "
@@ -167,7 +166,7 @@ en:
       heading: "Participatory budget results"
       heading_selection_title: "By district"
       spending_proposal: Proposal title
-      ballot_lines_count: Times selected
+      ballot_lines_count: Votes
       hide_discarded_link: Hide discarded
       show_all_link: Show all
       price: Price
@@ -178,8 +177,49 @@ en:
       investment_proyects: List of all investment projects
       unfeasible_investment_proyects: List of all unfeasible investment projects
       not_selected_investment_proyects: List of all investment projects not selected for balloting
+    executions:
+      link: "Milestones"
+      page_title: "%{budget} - Milestones"
+      heading: "Participatory budget Milestones"
+      heading_selection_title: "By district"
+      no_winner_investments: "No winner investments in this state"
+      filters:
+        label: "Project's current state"
+        all: "All (%{count})"
     phases:
       errors:
         dates_range_invalid: "Start date can't be equal or later than End date"
         prev_phase_dates_invalid: "Start date must be later than the start date of the previous enabled phase (%{phase_name})"
         next_phase_dates_invalid: "End date must be earlier than the end date of the next enabled phase (%{phase_name})"
+    stats:
+      title: Participation stats
+      link: Stats
+      page_title: "%{budget} - Participation stats"
+      total_participants: Total Participants
+      total_budget_investments: Total Proposed Investments
+      total_selected_investments: Proposals on final phase
+      total_unfeasible_investments: Unfeasible proposals
+      total_participants_support_phase: Support phase
+      total_participants_web: Vote phase web participants
+      total_participants_booths: Vote phase booth participants
+      participants: Participants
+      supports: Supports
+      by_gender: "Participants by gender"
+      total_male_participants: Mens
+      total_female_participants: Women
+      by_age: "Participants by age groups"
+      age: Age
+      total: Total
+      more_than: More than
+      years: years
+      by_heading: "Participants by heading"
+      heading: Heading
+      investments_sent_html: "Investment proposals sent"
+      participants_support_phase: Participants support phase
+      participants_voting_phase: Participants voting phase
+      participants_total: Total Participants
+      percent_total_participants_html: "% <br>Total<br>Participants"
+      percent_heading_census_html: "% <br>Heading<br>Census"
+      no_demographic_data: "* There is no demographic data for %{total} participants."
+      participatory_disclaimer: "** The numbers of total participation refer to persons that created, supported or voted investment proposals."
+      heading_disclaimer: "*** Data about headings refer to the heading where each user voted, not necessarily the one that person is registered on."

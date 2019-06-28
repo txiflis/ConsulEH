@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 eu-ES:
   management:
     account:
@@ -151,3 +152,12 @@ eu-ES:
       create:
         success_html: <strong>%{count} gonbidapen</strong> bidali dira.
         title: Gonbidapenak bidali
+=======
+eu:
+  management:
+    document_type_label: Agiri mota
+    email_label: E-mail
+    date_of_birth: Jaiotze data
+    budgets:
+      table_name: Izena
+>>>>>>> upstream/capistrano

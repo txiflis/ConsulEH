@@ -1,8 +1,8 @@
-class Image < ActiveRecord::Base
+class Image < ApplicationRecord
   include ImagesHelper
   include ImageablesHelper
 
-  TITLE_LEGHT_RANGE = 4..80
+  TITLE_LENGTH_RANGE = 4..80
   MIN_SIZE = 475
   MAX_IMAGE_SIZE = 1.megabyte
   ACCEPTED_CONTENT_TYPE = %w(image/jpeg image/jpg).freeze
@@ -23,7 +23,7 @@ class Image < ActiveRecord::Base
   validate :attachment_presence
   validate :validate_attachment_content_type,         if: -> { attachment.present? }
   validate :validate_attachment_size,                 if: -> { attachment.present? }
-  validates :title, presence: true, length: { in: TITLE_LEGHT_RANGE }
+  validates :title, presence: true, length: { in: TITLE_LENGTH_RANGE }
   validates :user_id, presence: true
   validates :imageable_id, presence: true,         if: -> { persisted? }
   validates :imageable_type, presence: true,       if: -> { persisted? }
@@ -79,23 +79,24 @@ class Image < ActiveRecord::Base
     def validate_attachment_size
       if imageable_class &&
          attachment_file_size > 1.megabytes
-        errors[:attachment] = I18n.t("images.errors.messages.in_between",
-                                      min: "0 Bytes",
-                                      max: "#{imageable_max_file_size} MB")
+        errors.add(:attachment, I18n.t("images.errors.messages.in_between",
+                                     min: "0 Bytes",
+                                     max: "#{imageable_max_file_size} MB"))
       end
     end
 
     def validate_attachment_content_type
       if imageable_class && !attachment_of_valid_content_type?
-        errors[:attachment] = I18n.t("images.errors.messages.wrong_content_type",
-                                      content_type: attachment_content_type,
-                                      accepted_content_types: imageable_humanized_accepted_content_types)
+        message = I18n.t("images.errors.messages.wrong_content_type",
+                         content_type: attachment_content_type,
+                         accepted_content_types: imageable_humanized_accepted_content_types)
+        errors.add(:attachment, message)
       end
     end
 
     def attachment_presence
       if attachment.blank? && cached_attachment.blank?
-        errors[:attachment] = I18n.t("errors.messages.blank")
+        errors.add(:attachment, I18n.t("errors.messages.blank"))
       end
     end
 

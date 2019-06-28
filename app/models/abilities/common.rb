@@ -16,6 +16,26 @@ module Abilities
       can :update, Proposal do |proposal|
         proposal.editable_by?(user)
       end
+      can :publish, Proposal do |proposal|
+        proposal.draft? && proposal.author.id == user.id && !proposal.retired?
+      end
+      can :dashboard, Proposal do |proposal|
+        proposal.author.id == user.id
+      end
+      can :manage_polls, Proposal do |proposal|
+        proposal.author.id == user.id
+      end
+      can :manage_mailing, Proposal do |proposal|
+        proposal.author.id == user.id
+      end
+      can :manage_poster, Proposal do |proposal|
+        proposal.author.id == user.id
+      end
+
+      can :results, Poll do |poll|
+        poll.related&.author&.id == user.id
+      end
+
       can [:retire_form, :retire], Proposal, author_id: user.id
 
       can :read, Legislation::Proposal
@@ -26,7 +46,7 @@ module Abilities
 
       can :create, Comment
       can :create, Debate
-      can :create, Proposal
+      can [:create, :created], Proposal
       can :create, Legislation::Proposal
 
       can :suggest, Debate
@@ -46,9 +66,14 @@ module Abilities
       can [:flag, :unflag], Legislation::Proposal
       cannot [:flag, :unflag], Legislation::Proposal, author_id: user.id
 
+      can [:flag, :unflag], Budget::Investment
+      cannot [:flag, :unflag], Budget::Investment, author_id: user.id
+
       can [:create, :destroy], Follow
 
-      can [:destroy], Document, documentable: { author_id: user.id }
+      can [:destroy], Document do |document|
+        document.documentable.try(:author_id) == user.id
+      end
 
       can [:destroy], Image, imageable: { author_id: user.id }
 
@@ -60,7 +85,9 @@ module Abilities
       end
 
       if user.level_two_or_three_verified?
-        can :vote, Proposal
+        can :vote, Proposal do |proposal|
+          proposal.published?
+        end
         can :vote_featured, Proposal
         can :vote, SpendingProposal
         can :create, SpendingProposal
@@ -88,9 +115,6 @@ module Abilities
       end
 
       can [:create, :show], ProposalNotification, proposal: { author_id: user.id }
-
-      can :create, Annotation
-      can [:update, :destroy], Annotation, user_id: user.id
 
       can [:create], Topic
       can [:update, :destroy], Topic, author_id: user.id

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 eu-ES:
   helpers:
     page_entries_info:
@@ -20,3 +21,6 @@ eu-ES:
       next: Hurrengoa
       previous: Aurrekoa
       truncate: "&hellip;"
+=======
+eu:
+>>>>>>> upstream/capistrano
