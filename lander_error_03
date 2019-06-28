@@ -1,0 +1,252 @@
+00:00 rvm1:hook
+      01 mkdir -p /home/deploy/consul/rvm1scripts/
+    ✔ 01 deploy@167.71.5.9 0.941s
+      Uploading /var/lib/gems/2.3.0/gems/rvm1-capistrano3-1.4.0/script/rvm-auto.sh 100.0%
+      02 chmod +x /home/deploy/consul/rvm1scripts/rvm-auto.sh
+    ✔ 02 deploy@167.71.5.9 0.157s
+00:01 rvm1:install:rvm
+      01 mkdir -p /home/deploy/consul/rvm1scripts/
+    ✔ 01 deploy@167.71.5.9 0.154s
+      Uploading /var/lib/gems/2.3.0/gems/rvm1-capistrano3-1.4.0/script/install-rvm.sh 100.0%
+      02 chmod +x /home/deploy/consul/rvm1scripts/install-rvm.sh
+    ✔ 02 deploy@167.71.5.9 0.162s
+      03 /home/deploy/consul/rvm1scripts/install-rvm.sh
+      03 Downloading https://github.com/rvm/rvm/archive/1.29.8.tar.gz
+      03 
+      03 Downloading https://github.com/rvm/rvm/releases/download/1.29.8/1.29.8.tar.gz.asc
+      03 
+      03 gpg: 
+      03 Signature made Wed 08 May 2019 04:14:49 PM CEST using RSA key ID 39499BDB
+      03 
+      03 gpg: 
+      03 Good signature from "Piotr Kuczynski <piotr.kuczynski@gmail.com>"
+      03 
+      03 gpg: 
+      03 WARNING: This key is not certified with a trusted signature!
+      03 
+      03 gpg: 
+      03          There is no indication that the signature belongs to the owner.
+      03 
+      03 Primary key fingerprint:
+      03  7D2B
+      03  AF1C
+      03  F37B
+      03  13E2
+      03  069D
+      03  
+      03  6956
+      03  105B
+      03  D0E7
+      03  3949
+      03  9BDB
+      03 
+      03 GPG verified '/home/deploy/.rvm/archives/rvm-1.29.8.tgz'
+      03 
+      03 Upgrading the RVM installation in /home/deploy/.rvm/
+      03 
+      03 
+      03     RVM PATH line found in /home/deploy/.mkshrc /home/deploy/.profile /home/deploy/.bashrc /home/deploy/.zshrc.
+      03 
+      03     RVM sourcing line found in /home/deploy/.profile /home/deploy/.bash_profile /home/deploy/.zlogin.
+      03 
+      03 Upgrade of RVM in /home/deploy/.rvm/ is complete.
+      03 
+      03 
+      03 
+      03 Thanks for installing RVM 🙏
+      03 
+      03 Please consider donating to our open collective to help us maintain RVM.
+      03 
+      03 
+      03 👉  Donate: https://opencollective.com/rvm/donate
+      03 
+      03 
+      03 
+      03 
+      03 
+    ✔ 03 deploy@167.71.5.9 5.817s
+00:07 git:wrapper
+      01 mkdir -p /tmp
+    ✔ 01 deploy@167.71.5.9 0.154s
+      Uploading /tmp/git-ssh-consul-production-pc02.sh 100.0%
+      02 chmod 700 /tmp/git-ssh-consul-production-pc02.sh
+    ✔ 02 deploy@167.71.5.9 0.158s
+00:08 git:clone
+      The repository mirror is at /home/deploy/consul/repo
+00:08 git:update
+      01 git remote set-url origin https://github.com/Txiflis-EH/consul.git
+    ✔ 01 deploy@167.71.5.9 0.844s
+      02 git remote update --prune
+      02 Fetching origin
+      02 
+    ✔ 02 deploy@167.71.5.9 2.147s
+00:12 git:create_release
+      01 mkdir -p /home/deploy/consul/releases/20190628083632
+    ✔ 01 deploy@167.71.5.9 0.161s
+      02 git archive master | /usr/bin/env tar -x -f - -C /home/deploy/consul/releases/20190628083632
+    ✔ 02 deploy@167.71.5.9 1.587s
+00:14 deploy:set_current_revision
+      01 echo "5618063a94a8fd051d8f171c56cb1a3533f80750" >> REVISION
+    ✔ 01 deploy@167.71.5.9 0.157s
+00:14 deploy:symlink:linked_files
+      01 mkdir -p /home/deploy/consul/releases/20190628083632/config
+    ✔ 01 deploy@167.71.5.9 0.153s
+      02 ln -s /home/deploy/consul/shared/config/database.yml /home/deploy/consul/releases/20190628083632/config/database.yml
+    ✔ 02 deploy@167.71.5.9 0.156s
+      03 ln -s /home/deploy/consul/shared/config/secrets.yml /home/deploy/consul/releases/20190628083632/config/secrets.yml
+    ✔ 03 deploy@167.71.5.9 0.152s
+00:15 deploy:symlink:linked_dirs
+      01 mkdir -p /home/deploy/consul/releases/20190628083632 /home/deploy/consul/releases/20190628083632/public
+    ✔ 01 deploy@167.71.5.9 0.158s
+      02 rm -rf /home/deploy/consul/releases/20190628083632/log
+    ✔ 02 deploy@167.71.5.9 0.151s
+      03 ln -s /home/deploy/consul/shared/log /home/deploy/consul/releases/20190628083632/log
+    ✔ 03 deploy@167.71.5.9 0.153s
+      04 ln -s /home/deploy/consul/shared/tmp /home/deploy/consul/releases/20190628083632/tmp
+    ✔ 04 deploy@167.71.5.9 0.157s
+      05 ln -s /home/deploy/consul/shared/public/system /home/deploy/consul/releases/20190628083632/public/system
+    ✔ 05 deploy@167.71.5.9 0.154s
+      06 ln -s /home/deploy/consul/shared/public/assets /home/deploy/consul/releases/20190628083632/public/assets
+    ✔ 06 deploy@167.71.5.9 0.156s
+00:17 rvm1:install:ruby
+      01 /home/deploy/consul/rvm1scripts/rvm-auto.sh rvm --install install 2.3.2
+      01 Already installed ruby-2.3.2.
+      01 
+      01 To reinstall use:
+      01 
+      01 
+      01     rvm reinstall ruby-2.3.2
+      01 
+      01 
+      01 
+      01 
+    ✔ 01 deploy@167.71.5.9 0.837s
+00:18 install_bundler_gem
+      01 rvm use 2.3.2; gem install bundler
+      01 bash: rvm: command not found
+      01 
+      01 Successfully installed bundler-2.0.2
+      01 
+      01 Parsing documentation for bundler-2.0.2
+      01 
+      01 Done installing documentation for bundler after 9 seconds
+      01 
+      01 1 gem installed
+      01 
+    ✔ 01 deploy@167.71.5.9 10.220s
+00:28 git:check
+      01 git ls-remote https://github.com/Txiflis-EH/consul.git HEAD
+      01 5618063a94a8fd051d8f171c56cb1a3533f80750
+      01 	HEAD
+      01 
+    ✔ 01 deploy@167.71.5.9 0.709s
+00:29 deploy:check:directories
+      01 mkdir -p /home/deploy/consul/shared /home/deploy/consul/releases
+    ✔ 01 deploy@167.71.5.9 0.159s
+00:29 deploy:check:linked_dirs
+      01 mkdir -p /home/deploy/consul/shared/log /home/deploy/consul/shared/tmp /home/deploy/consul/shared/public/system /home/deploy/consul/shared/public/assets
+    ✔ 01 deploy@167.71.5.9 0.153s
+00:29 deploy:check:make_linked_dirs
+      01 mkdir -p /home/deploy/consul/shared/config
+    ✔ 01 deploy@167.71.5.9 0.159s
+00:33 bundler:install
+      01 /home/deploy/consul/rvm1scripts/rvm-auto.sh 2.3.2 bundle install --path /home/deploy/consul/shared/bundle --without development test --deployment --quiet
+    ✔ 01 deploy@167.71.5.9 1.703s
+00:35 deploy:assets:precompile
+      01 /home/deploy/consul/rvm1scripts/rvm-auto.sh 2.3.2 bundle exec rake assets:precompile
+      01 The PGconn, PGresult, and PGError constants are deprecated, and will be
+      01 
+      01 removed as of version 1.0.
+      01 
+      01 
+      01 You should use PG::Connection, PG::Result, and PG::Error instead, respectively.
+      01 
+      01 
+      01 Called from /home/deploy/consul/shared/bundle/ruby/2.3.0/gems/activesupport-4.2.10/lib/active_support/dependencies.rb:240:in `load_dependency'
+      01 
+      01 rake aborted!
+      01 ExecJS::RuntimeError: 
+      01 <--- Last few GCs --->
+      01 
+      01   135524 ms: Mark-sweep 135.7 (588414.5) -> 135.1 (588414.5) MB, 325.4 / 0.0 ms [allocation failure] [scavenge might not succeed].
+      01   136538 ms: Mark-sweep 135.9 (588414.5) -> 135.3 (588415.5) MB, 404.0 / 2.8 ms [allocation failure] [scavenge might not succeed].
+      01   137160 ms: Mark-sweep 136.1 (588415.5) -> 135.5 (588415.5) MB, 370.6 / 0.5 ms [allocation failure] [scavenge might not succeed].
+      01 
+      01 
+      01 <--- JS stacktrace --->
+      01 
+      01 ==== JS stack trace =========================================
+      01 
+      01 Security context: 0x38ba662cf781 <JS Object>
+      01     3: token(aka token) [/tmp/execjs20190628-15990-3ba0e5js:3626] [pc=0x3b4c51aaeb00] (this=0x38ba66204381 <undefined>,type=0x20eeb4b86149 <String[4]: punc>,value=0x38ba662eae69 <String[1]: }>,is_comment=0x38ba66204381 <undefined>)
+      01     4: arguments adaptor frame: 2->3
+      01     5: input(aka next_token) [/tmp/execjs20190628-15990-3ba0e5js:~3626] [pc=0x3b4c51a29b8e] (this=0x3a9c473dc341 <an Object with...
+      01 
+      01 FATAL ERROR: Committing semi space failed. Allocation failed - process out of memory
+      01  1: node::Abort() [nodejs]
+      01  2: 0x10a1b5c [nodejs]
+      01  3: v8::Utils::ReportApiFailure(char const*, char const*) [nodejs]
+      01  4: v8::internal::V8::FatalProcessOutOfMemory(char const*, bool) [nodejs]
+      01  5: v8::internal::Heap::PerformGarbageCollection(v8::internal::GarbageCollector, v8::GCCallbackFlags) [nodejs]
+      01  6: v8::internal::Heap::CollectGarbage(v8::internal::GarbageCollector, char const*, char const*, v8::GCCallbackFlags) [nodejs]
+      01  7: v8::internal::Factory::NewFillerObject(int, bool, v8::internal::AllocationSpace) [nodejs]
+      01  8: v8::internal::Runtime_AllocateInNewSpace(int, v8::internal::Object**, v8::internal::Isolate*) [nodejs]
+      01  9: 0x3b4c517092a7
+      01 (execjs):1
+      01 /home/deploy/consul/shared/bundle/ruby/2.3.0/gems/execjs-2.7.0/lib/execjs/external_runtime.rb:219:in `exec_runtime'
+      01 /home/deploy/consul/shared/bundle/ruby/2.3.0/gems/execjs-2.7.0/lib/execjs/external_runtime.rb:39:in `exec'
+      01 /home/deploy/consul/shared/bundle/ruby/2.3.0/gems/execjs-2.7.0/lib/execjs/external_runtime.rb:21:in `eval'
+      01 /home/deploy/consul/shared/bundle/ruby/2.3.0/gems/execjs-2.7.0/lib/execjs/external_runtime.rb:46:in `call'
+      01 /home/deploy/consul/shared/bundle/ruby/2.3.0/gems/uglifier-4.1.3/lib/uglifier.rb:216:in `run_uglifyjs'
+      01 /home/deploy/consul/shared/bundle/ruby/2.3.0/gems/uglifier-4.1.3/lib/uglifier.rb:168:in `compile'
+      01 /home/deploy/consul/shared/bundle/ruby/2.3.0/gems/sprockets-3.7.2/lib/sprockets/uglifier_compressor.rb:53:in `call'
+      01 /home/deploy/consul/shared/bundle/ruby/2.3.0/gems/sprockets-3.7.2/lib/sprockets/uglifier_compressor.rb:28:in `call'
+      01 /home/deploy/consul/shared/bundle/ruby/2.3.0/gems/sprockets-3.7.2/lib/sprockets/processor_utils.rb:75:in `call_processor'
+      01 /home/deploy/consul/shared/bundle/ruby/2.3.0/gems/sprockets-3.7.2/lib/sprockets/processor_utils.rb:57:in `block in call_processors'
+      01 /home/deploy/consul/shared/bundle/ruby/2.3.0/gems/sprockets-3.7.2/lib/sprockets/processor_utils.rb:56:in `reverse_each'
+      01 /home/deploy/consul/shared/bundle/ruby/2.3.0/gems/sprockets-3.7.2/lib/sprockets/processor_utils.rb:56:in `call_processors'
+      01 /home/deploy/consul/shared/bundle/ruby/2.3.0/gems/sprockets-3.7.2/lib/sprockets/loader.rb:134:in `load_from_unloaded'
+      01 /home/deploy/consul/shared/bundle/ruby/2.3.0/gems/sprockets-3.7.2/lib/sprockets/loader.rb:60:in `block in load'
+      01 /home/deploy/consul/shared/bundle/ruby/2.3.0/gems/sprockets-3.7.2/lib/sprockets/loader.rb:317:in `fetch_asset_from_dependency_cache'
+      01 /home/deploy/consul/shared/bundle/ruby/2.3.0/gems/sprockets-3.7.2/lib/sprockets/loader.rb:44:in `load'
+      01 /home/deploy/consul/shared/bundle/ruby/2.3.0/gems/sprockets-3.7.2/lib/sprockets/cached_environment.rb:20:in `block in initialize'
+      01 /home/deploy/consul/shared/bundle/ruby/2.3.0/gems/sprockets-3.7.2/lib/sprockets/cached_environment.rb:47:in `load'
+      01 /home/deploy/consul/shared/bundle/ruby/2.3.0/gems/sprockets-3.7.2/lib/sprockets/base.rb:66:in `find_asset'
+      01 /home/deploy/consul/shared/bundle/ruby/2.3.0/gems/sprockets-3.7.2/lib/sprockets/base.rb:73:in `find_all_linked_assets'
+      01 /home/
+      01 deploy/consul/shared/bundle/ruby/2.3.0/gems/sprockets-3.7.2/lib/sprockets/manifest.rb:142:in `block in find'
+      01 /home/deploy/consul/shared/bundle/ruby/2.3.0/gems/sprockets-3.7.2/lib/sprockets/legacy.rb:114:in `block (2 levels) in logical_paths'
+      01 /home/deploy/consul/shared/bundle/ruby/2.3.0/gems/sprockets-3.7.2/lib/sprockets/path_utils.rb:228:in `block in stat_tree'
+      01 /home/deploy/consul/shared/bundle/ruby/2.3.0/gems/sprockets-3.7.2/lib/sprockets/path_utils.rb:212:in `block in stat_directory'
+      01 /home/deploy/consul/shared/bundle/ruby/2.3.0/gems/sprockets-3.7.2/lib/sprockets/path_utils.rb:209:in `each'
+      01 /home/deploy/consul/shared/bundle/ruby/2.3.0/gems/sprockets-3.7.2/lib/sprockets/path_utils.rb:209:in `stat_directory'
+      01 /home/deploy/consul/shared/bundle/ruby/2.3.0/gems/sprockets-3.7.2/lib/sprockets/path_utils.rb:227:in `stat_tree'
+      01 /home/deploy/consul/shared/bundle/ruby/2.3.0/gems/sprockets-3.7.2/lib/sprockets/legacy.rb:105:in `each'
+      01 /home/deploy/consul/shared/bundle/ruby/2.3.0/gems/sprockets-3.7.2/lib/sprockets/legacy.rb:105:in `block in logical_paths'
+      01 /home/deploy/consul/shared/bundle/ruby/2.3.0/gems/sprockets-3.7.2/lib/sprockets/legacy.rb:104:in `each'
+      01 /home/deploy/consul/shared/bundle/ruby/2.3.0/gems/sprockets-3.7.2/lib/sprockets/legacy.rb:104:in `logical_paths'
+      01 /home/deploy/consul/shared/bundle/ruby/2.3.0/gems/sprockets-3.7.2/lib/sprockets/manifest.rb:140:in `find'
+      01 /home/deploy/consul/shared/bundle/ruby/2.3.0/gems/sprockets-3.7.2/lib/sprockets/manifest.rb:186:in `compile'
+      01 /home/deploy/consul/shared/bundle/ruby/2.3.0/gems/sprockets-rails-3.2.1/lib/sprockets/rails/task.rb:68:in `block (3 levels) in define'
+      01 /home/deploy/consul/shared/bundle/ruby/2.3.0/gems/sprockets-3.7.2/lib/rake/sprocketstask.rb:147:in `with_logger'
+      01 /home/deploy/consul/shared/bundle/ruby/2.3.0/gems/sprockets-rails-3.2.1/lib/sprockets/rails/task.rb:67:in `block (2 levels) in define'
+      01 /home/deploy/consul/shared/bundle/ruby/2.3.0/gems/rake-12.3.1/exe/rake:27:in `<top (required)>'
+      01 /home/deploy/.rvm/gems/ruby-2.3.2@global/gems/bundler-2.0.2/lib/bundler/cli/exec.rb:74:in `load'
+      01 /home/deploy/.rvm/gems/ruby-2.3.2@global/gems/bundler-2.0.2/lib/bundler/cli/exec.rb:74:in `kernel_load'
+      01 /home/deploy/.rvm/gems/ruby-2.3.2@global/gems/bundler-2.0.2/lib/bundler/cli/exec.rb:28:in `run'
+      01 /home/deploy/.rvm/gems/ruby-2.3.2@global/gems/bundler-2.0.2/lib/bundler/cli.rb:465:in `exec'
+      01 /home/deploy/.rvm/gems/ruby-2.3.2@global/gems/bundler-2.0.2/lib/bundler/vendor/thor/lib/thor/command.rb:27:in `run'
+      01 /home/deploy/.rvm/gems/ruby-2.3.2@global/gems/bundler-2.0.2/lib/bundler/vendor/thor/lib/thor/invocation.rb:126:in `invoke_command'
+      01 /home/deploy/.rvm/gems/ruby-2.3.2@global/gems/bundler-2.0.2/lib/bundler/vendor/thor/lib/thor.rb:387:in `dispatch'
+      01 /home/deploy/.rvm/gems/ruby-2.3.2@global/gems/bundler-2.0.2/lib/bundler/cli.rb:27:in `dispatch'
+      01 /home/deploy/.rvm/gems/ruby-2.3.2@global/gems/bundler-2.0.2/lib/bundler/vendor/thor/lib/thor/base.rb:466:in `start'
+      01 /home/deploy/.rvm/gems/ruby-2.3.2@global/gems/bundler-2.0.2/lib/bundler/cli.rb:18:in `start'
+      01 /home/deploy/.rvm/gems/ruby-2.3.2@global/gems/bundler-2.0.2/exe/bundle:30:in `block in <top (required)>'
+      01 /home/deploy/.rvm/gems/ruby-2.3.2@global/gems/bundler-2.0.2/lib/bundler/friendly_errors.rb:124:in `with_friendly_errors'
+      01 /home/deploy/.rvm/gems/ruby-2.3.2@global/gems/bundler-2.0.2/exe/bundle:22:in `<top (required)>'
+      01 /home/deploy/.rvm/gems/ruby-2.3.2@global/bin/bundle:22:in `load'
+      01 /home/deploy/.rvm/gems/ruby-2.3.2@global/bin/bundle:22:in `<main>'
+      01 /home/deploy/.rvm/gems/ruby-2.3.2/bin/ruby_executable_hooks:15:in `eval'
+      01 /home/deploy/.rvm/gems/ruby-2.3.2/bin/ruby_executable_hooks:15:in `<main>'
+      01 Tasks: TOP => assets:precompile
+      01 (See full trace by running task with --trace)
