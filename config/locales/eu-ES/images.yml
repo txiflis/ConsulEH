@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 eu-ES:
   images:
     remove_image: Irudia ezabatu
@@ -20,9 +19,3 @@ eu-ES:
       messages:
         in_between: "%{min} eta %{max} artean egon behar da"
         wrong_content_type: Irudiaren %{content_type} eduki mota baimendutako mota bat berarekin ere ez dator bat %{accepted_content_types}
-=======
-eu:
-  images:
-    form:
-      admin_title: "Irudia"
->>>>>>> upstream/capistrano

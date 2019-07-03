@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 eu-ES:
   legislation:
     annotations:
@@ -125,16 +124,3 @@ eu-ES:
         tags_label: "Mailak"
       not_verified: "%{verify_account} proposamenak bozkatzeko."
       closed: "Prosezu hau amaitu da eta jada ezin da bozkarik jaso."
-=======
-eu:
-  legislation:
-    annotations:
-      show:
-        title: Iruzkin
-    processes:
-      shared:
-        debate_dates: Eztabaida
-    questions:
-      question:
-        debate: Eztabaida
->>>>>>> upstream/capistrano

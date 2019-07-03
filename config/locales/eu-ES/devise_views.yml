@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 eu-ES:
   devise_views:
     confirmations:
@@ -128,26 +127,3 @@ eu-ES:
           instructions_2_html: Egiaztatu eta gero, parte hartzen hasi zintezke.
           thank_you_html: Eskerrik asko web orrian erregistratzeagaitik. Orain <b>zure korreoa egiaztatu</b> behar duzu.
           title: Zure korreoa begiratu
-=======
-eu:
-  devise_views:
-    confirmations:
-      new:
-        email_label: E-mail
-    organizations:
-      registrations:
-        new:
-          email_label: E-mail
-    passwords:
-      new:
-        email_label: E-mail
-    unlocks:
-      new:
-        email_label: E-mail
-    users:
-      registrations:
-        edit:
-          email_label: E-mail
-        new:
-          email_label: E-mail
->>>>>>> upstream/capistrano

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 eu-ES:
   officing:
     header:
@@ -67,13 +66,3 @@ eu-ES:
         success: "Bozkatuta!"
       can_vote:
         submit_disable_with: "Itxaron, bozka baieztatzen..."
-=======
-eu:
-  officing:
-    results:
-      index:
-        table_answer: Erantzuna
-    residence:
-      new:
-        document_number: "Dokumentu zenbakia (letrak barne)"
->>>>>>> upstream/capistrano

@@ -1,8 +1,8 @@
 require "rails_helper"
 
-feature "Admin polls" do
+describe "Admin polls" do
 
-  background do
+  before do
     admin = create(:administrator)
     login_as(admin.user)
   end
@@ -42,6 +42,17 @@ feature "Admin polls" do
     expect(poll_3.name).to appear_before(poll_1.name)
     expect(poll_1.name).to appear_before(poll_2.name)
     expect(page).not_to have_content "There are no polls"
+  end
+
+  scenario "Index do not show polls created by users from proposals dashboard" do
+    create(:poll, name: "Poll created by admin")
+    create(:poll, name: "Poll from user's proposal", related_type: "Proposal")
+
+    visit admin_polls_path
+
+    expect(page).to have_css ".poll", count: 1
+    expect(page).to have_content "Poll created by admin"
+    expect(page).not_to have_content "Poll from user's proposal"
   end
 
   scenario "Show" do
@@ -139,6 +150,7 @@ feature "Admin polls" do
 
       expect(page).to     have_content("Poll deleted successfully")
       expect(page).not_to have_content(poll.name)
+
       expect(Poll::Question.count).to eq(0)
       expect(Poll::Question::Answer.count). to eq(0)
     end
@@ -236,14 +248,17 @@ feature "Admin polls" do
       scenario "Question list", :js do
         poll = create(:poll)
         question = create(:poll_question, poll: poll)
+        votation_type_question = create(:poll_question_unique, poll: poll)
         other_question = create(:poll_question)
 
         visit admin_poll_path(poll)
 
-        expect(page).to have_content "Questions (1)"
+        expect(page).to have_content "Questions (2)"
         expect(page).to have_content question.title
+        expect(page).to have_content votation_type_question.title
         expect(page).not_to have_content other_question.title
         expect(page).not_to have_content "There are no questions assigned to this poll"
+
       end
 
     end
@@ -273,7 +288,7 @@ feature "Admin polls" do
         end
 
         2.times do
-          create(:poll_voter, poll: poll, booth_assignment: booth_assignment_final_recounted)
+          create(:poll_voter, :from_booth, poll: poll, booth_assignment: booth_assignment_final_recounted)
         end
 
         create(:poll_recount,

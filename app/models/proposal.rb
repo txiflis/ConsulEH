@@ -1,3 +1,5 @@
+require "csv"
+
 class Proposal < ApplicationRecord
   include Rails.application.routes.url_helpers
   include Flaggable
@@ -15,9 +17,6 @@ class Proposal < ApplicationRecord
   include Mappable
   include Notifiable
   include Documentable
-  documentable max_documents_allowed: 3,
-               max_file_size: 3.megabytes,
-               accepted_content_types: [ "application/pdf" ]
   include EmbedVideosHelper
   include Relationable
   include Milestoneable
@@ -36,6 +35,12 @@ class Proposal < ApplicationRecord
   has_many :dashboard_executed_actions, dependent: :destroy, class_name: "Dashboard::ExecutedAction"
   has_many :dashboard_actions, through: :dashboard_executed_actions, class_name: "Dashboard::Action"
   has_many :polls, as: :related
+
+  extend DownloadSettings::ProposalCsv
+  delegate :name, :email, to: :author, prefix: true
+
+  extend DownloadSettings::ProposalCsv
+  delegate :name, :email, to: :author, prefix: true
 
   validates :title, presence: true
   validates :summary, presence: true
@@ -74,6 +79,8 @@ class Proposal < ApplicationRecord
   scope :successful,               -> { where("cached_votes_up >= ?", Proposal.votes_needed_for_success) }
   scope :unsuccessful,             -> { where("cached_votes_up < ?", Proposal.votes_needed_for_success) }
   scope :public_for_api,           -> { all }
+  scope :selected,                 -> { where(selected: true) }
+  scope :not_selected,             -> { where(selected: false) }
   scope :not_supported_by_user,    ->(user) { where.not(id: user.find_voted_items(votable_type: "Proposal").compact.map(&:id)) }
   scope :published,                -> { where.not(published_at: nil) }
   scope :draft,                    -> { where(published_at: nil) }

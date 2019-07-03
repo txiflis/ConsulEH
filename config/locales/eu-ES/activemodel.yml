@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 eu-ES:
-=======
-eu:
->>>>>>> upstream/capistrano
   activemodel:
     models:
       verification:
@@ -12,28 +8,15 @@ eu:
       verification:
         residence:
           document_type: "Agiri mota"
-<<<<<<< HEAD
           document_number: "Agiri zenbakia (letrak barne)"
-=======
-          document_number: "Dokumentu zenbakia (letrak barne)"
->>>>>>> upstream/capistrano
           date_of_birth: "Jaiotze data"
           postal_code: "Posta-kodea"
         sms:
           phone: "Telefonoa"
-<<<<<<< HEAD
           confirmation_code: "Baieztapen kodea"
         email:
           recipient: "Emaila"
       officing/residence:
         document_type: "Agiri mota"
         document_number: "Agiri zenbakia (letrak barne)"
-=======
-          confirmation_code: "Konfirmazio kodea"
-        email:
-          recipient: "E-mail"
-      officing/residence:
-        document_type: "Agiri mota"
-        document_number: "Dokumentu zenbakia (letrak barne)"
->>>>>>> upstream/capistrano
         year_of_birth: "Jaiotako urtea"

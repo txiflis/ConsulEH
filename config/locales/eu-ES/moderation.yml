@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 eu-ES:
   moderation:
     comments:
@@ -96,15 +95,3 @@ eu-ES:
         search_placeholder: erabiltzailea edo emaila
         title: Erabiltzaileak blokeatu
 notice_hide: Erabiltzailea blokeatuta. Erabiltzaile honen eztabaida eta iruzkin guztiak ezkutatu dira.
-=======
-eu:
-  moderation:
-    comments:
-      index:
-        headers:
-          comment: Iruzkin
-    debates:
-      index:
-        headers:
-          debate: Eztabaida
->>>>>>> upstream/capistrano

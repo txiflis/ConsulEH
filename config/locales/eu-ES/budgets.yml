@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 eu-ES:
   budgets:
     ballots:
@@ -171,7 +170,7 @@ eu-ES:
       ballot_lines_count: Bozkak
       hide_discarded_link: Beztertutakoak ezkutatu
       show_all_link: Guztiak erakusi
-      price: Prezioa gustira
+      price: Prezioa guztira
       amount_available: Aurrekontu eskuragarria
       accepted: 'Onartutako gastu proiektua: '
       discarded: 'Baztertutako gastu proiektua: '
@@ -184,6 +183,3 @@ eu-ES:
         dates_range_invalid: "Hasiera data ezin da amaiera data baino handiago edo berdina izan"
         prev_phase_dates_invalid: "Hasiera data gaitutako aurreko fasearen (%{phase_name}) hasiera data baino beranduagokoa izan behar da"
         next_phase_dates_invalid: "Amaiera data gaitutako huerrengo fasearen (%{phase_name}) amaiera data aurreragokoa izan behar da"
-=======
-eu:
->>>>>>> upstream/capistrano

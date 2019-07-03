@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 eu-ES:
   pages:
     census_terms: Kontua egiaztatzeko gutxienez 16 urte izan behar dituzu. Aurreko errolda datuak aurkeztu behar dituzu, datu hauek kontrastatu egingo ditugu. Egiaztatze prosezua onartzen baduzu, informazio kontrastatzeko oneritzia ematen diguzu, baita ere, fitxategi horietan ager daitezkeen harreman bitartekariak. Web atariko erabilera baldintzetan azaldutako moduan, datuak fitxategi batean gordeko dira eta bertan tratatuko ditugu.
@@ -94,9 +93,3 @@ eu-ES:
       password: Pasahitza
       submit: Nire kontua egiaztatu
       title: Zure kontua egiaztatu
-=======
-eu:
-  pages:
-    verify:
-      email: E-mail
->>>>>>> upstream/capistrano
