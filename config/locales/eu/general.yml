@@ -1,4 +1,4 @@
-eu-ES:
+eu:
   account:
     show:
       change_credentials_link: Nire sarrera datuak aldatu
@@ -224,7 +224,7 @@ eu-ES:
     header:
       administration_menu: Admin
       administration: Administrazioa
-      available_locales: Hizkuntzak eskuragarri
+      available_locales: "Hizkuntzak:"
       collaborative_legislation: Legegintza prosezuak
       debates: Eztabaidak
       external_link_blog: Bloga
