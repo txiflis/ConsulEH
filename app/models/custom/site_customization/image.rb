@@ -6,7 +6,7 @@ class SiteCustomization::Image < ApplicationRecord
     "apple-touch-icon-200" => [200, 200],
     "budget_execution_no_image" => [800, 600],
     "map" => [420, 500],
-    "logo_email" => [400, 80]
+    "logo_email" => [80, 80]
   }
 
   has_attached_file :image
